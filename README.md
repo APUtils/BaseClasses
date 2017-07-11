@@ -5,11 +5,15 @@
 [![License](https://img.shields.io/cocoapods/l/BaseClasses.svg?style=flat)](http://cocoapods.org/pods/BaseClasses)
 [![Platform](https://img.shields.io/cocoapods/p/BaseClasses.svg?style=flat)](http://cocoapods.org/pods/BaseClasses)
 
+TODO
+
 ## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
 ## GIF animation
+
+TODO
 
 ## Installation
 
@@ -23,6 +27,8 @@ pod 'BaseClasses'
 ```
 
 ## Usage
+
+TODO
 
 See example project for more details.
 
