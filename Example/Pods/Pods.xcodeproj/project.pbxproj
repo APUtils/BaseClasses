@@ -119,6 +119,7 @@
 		B0239F551F150677000EF132 /* TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0239F501F150677000EF132 /* TableView.swift */; };
 		B0239F561F150677000EF132 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0239F511F150677000EF132 /* TableViewCell.swift */; };
 		B0239F571F150677000EF132 /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0239F521F150677000EF132 /* TextField.swift */; };
+		B06FD07F1F2F75C600FB968F /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06FD07E1F2F75C600FB968F /* NavigationController.swift */; };
 		B07EB19A58CFE1D2CD213365A066D69C /* QCKDSL.m in Sources */ = {isa = PBXBuildFile; fileRef = E741C70862BB3ED4451E935E6A745DA7 /* QCKDSL.m */; };
 		B0D318811F20C00D003320CC /* FullSizeCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D318801F20C00D003320CC /* FullSizeCollectionView.swift */; };
 		B102ABE4E54B71B3D2C2118E2782FAB9 /* BeLessThan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2EEEA6E480B661AE6D375672436A15 /* BeLessThan.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
@@ -360,6 +361,7 @@
 		B0239F511F150677000EF132 /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		B0239F521F150677000EF132 /* TextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
 		B04C8BA06D67E62082913A210799B2CB /* BaseClasses-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BaseClasses-prefix.pch"; sourceTree = "<group>"; };
+		B06FD07E1F2F75C600FB968F /* NavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		B0D318801F20C00D003320CC /* FullSizeCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FullSizeCollectionView.swift; sourceTree = "<group>"; };
 		B1AA4EB0D4E7F45CF4558722592A5057 /* NMBExceptionCapture.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NMBExceptionCapture.h; path = Sources/NimbleObjectiveC/NMBExceptionCapture.h; sourceTree = "<group>"; };
 		B250DB9938D26EE47395351C47272DC3 /* UIImage+Snapshot.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Snapshot.m"; path = "FBSnapshotTestCase/Categories/UIImage+Snapshot.m"; sourceTree = "<group>"; };
@@ -594,6 +596,7 @@
 			children = (
 				B0239F4E1F150677000EF132 /* CollectionView.swift */,
 				B0D318801F20C00D003320CC /* FullSizeCollectionView.swift */,
+				B06FD07E1F2F75C600FB968F /* NavigationController.swift */,
 				B0239F4F1F150677000EF132 /* ScrollView.swift */,
 				B0239F501F150677000EF132 /* TableView.swift */,
 				B0239F511F150677000EF132 /* TableViewCell.swift */,
@@ -1220,6 +1223,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B0239F561F150677000EF132 /* TableViewCell.swift in Sources */,
+				B06FD07F1F2F75C600FB968F /* NavigationController.swift in Sources */,
 				B0239F531F150677000EF132 /* CollectionView.swift in Sources */,
 				B0239F551F150677000EF132 /* TableView.swift in Sources */,
 				B0239F571F150677000EF132 /* TextField.swift in Sources */,
