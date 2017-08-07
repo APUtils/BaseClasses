@@ -7,6 +7,12 @@ Released on 07/11/2017.
 
 #### Added
 - NavigationBar class to allow scroll touches
+- README usage section
+- Example project
+  - Added by [Anton Plebanovich](https://github.com/anton-plebanovich).
+
+#### Fixed
+- Fixed access level for some classes
   - Added by [Anton Plebanovich](https://github.com/anton-plebanovich).
 
 ## [1.1.0](https://github.com/APUtils/BaseClasses/releases/tag/1.1.0)
