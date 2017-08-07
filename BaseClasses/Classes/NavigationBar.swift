@@ -18,7 +18,7 @@ open class NavigationBar: UINavigationBar {
     // Make navigation bar transparent for touches so user could scroll over it if it's translucent
     override open func hitTest(_ point: CGPoint, with event: UIEvent?) -> UIView? {
         let result = super.hitTest(point, with: event)
-        if result == self && isTranslucent { return nil }
+        if result == self && isTranslucent && point.x > 100 { return nil }
         
         return result
     }
