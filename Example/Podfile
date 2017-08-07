@@ -7,6 +7,7 @@ use_frameworks!
 
 target 'BaseClasses_Example' do
     pod 'BaseClasses', :path => '../'
+    pod 'StretchScrollView'
 
     target 'BaseClasses_Tests' do
         inherit! :search_paths

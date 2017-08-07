@@ -10,13 +10,13 @@ import UIKit
 
 
 /// Collection view that resizes it's cells to be the same size as collection view.
-class FullSizeCollectionView: CollectionView {
+open class FullSizeCollectionView: CollectionView {
     
     //-----------------------------------------------------------------------------
     // MARK: - UIView Properties
     //-----------------------------------------------------------------------------
     
-    override var bounds: CGRect { willSet { configure(newSize: newValue.size) } }
+    override open var bounds: CGRect { willSet { configure(newSize: newValue.size) } }
     
     //-----------------------------------------------------------------------------
     // MARK: - Private Properties
@@ -45,7 +45,7 @@ class FullSizeCollectionView: CollectionView {
     // MARK: - UIView Methods
     //-----------------------------------------------------------------------------
     
-    override func awakeFromNib() {
+    override open func awakeFromNib() {
         super.awakeFromNib()
         
         setup()
