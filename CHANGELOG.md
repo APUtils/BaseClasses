@@ -2,6 +2,12 @@
 All notable changes to this project will be documented in this file.
 `BaseClasses` adheres to [Semantic Versioning](http://semver.org/).
 
+## [1.2.2](https://github.com/APUtils/BaseClasses/releases/tag/1.2.2)
+Released on 08/08/2017.
+
+#### Added
+- Carthage support
+
 ## [1.2.1](https://github.com/APUtils/BaseClasses/releases/tag/1.2.1)
 Released on 08/07/2017.
 
