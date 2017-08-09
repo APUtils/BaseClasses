@@ -4,7 +4,7 @@
 [![Version](https://img.shields.io/cocoapods/v/BaseClasses.svg?style=flat)](http://cocoapods.org/pods/BaseClasses)
 [![License](https://img.shields.io/cocoapods/l/BaseClasses.svg?style=flat)](http://cocoapods.org/pods/BaseClasses)
 [![Platform](https://img.shields.io/cocoapods/p/BaseClasses.svg?style=flat)](http://cocoapods.org/pods/BaseClasses)
-[![CI Status](http://img.shields.io/travis/anton-plebanovich/BaseClasses.svg?style=flat)](https://travis-ci.org/anton-plebanovich/BaseClasses)
+[![CI Status](http://img.shields.io/travis/APUtils/BaseClasses.svg?style=flat)](https://travis-ci.org/APUtils/BaseClasses)
 
 Default configuration for some UI classes through inheritance.
 
