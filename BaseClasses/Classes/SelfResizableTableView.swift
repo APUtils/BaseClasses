@@ -21,6 +21,12 @@ open class SelfResizableTableView: TableView {
     }
     
     open override var intrinsicContentSize: CGSize {
-        return contentSize
+        var intrinsicContentSize = contentSize
+        intrinsicContentSize.height += contentInset.top
+        intrinsicContentSize.height += contentInset.bottom
+        intrinsicContentSize.width += contentInset.left
+        intrinsicContentSize.width += contentInset.right
+        
+        return intrinsicContentSize
     }
 }
