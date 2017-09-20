@@ -10,13 +10,13 @@ import UIKit
 
 
 /// Text view with zero paddings between text and frame and self sizable depending on content.
-class SelfResizableTextView: TextView {
+open class SelfResizableTextView: TextView {
     
     //-----------------------------------------------------------------------------
     // MARK: - Initialization and Setup
     //-----------------------------------------------------------------------------
     
-    override func awakeFromNib() {
+    override open func awakeFromNib() {
         super.awakeFromNib()
         
         setup()

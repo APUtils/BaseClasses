@@ -10,13 +10,13 @@ import UIKit
 
 
 /// Text view with zero paddings between text and frame
-class TextView: UITextView {
+open class TextView: UITextView {
     
     //-----------------------------------------------------------------------------
     // MARK: - Initialization and Setup
     //-----------------------------------------------------------------------------
     
-    override func awakeFromNib() {
+    override open func awakeFromNib() {
         super.awakeFromNib()
         
         setup()
