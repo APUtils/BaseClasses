@@ -30,6 +30,15 @@ open class LabelLikeTextView: SelfResizableTextView {
         setup()
     }
     
+    convenience init(layoutManager: NSLayoutManager) {
+        let storage = NSTextStorage()
+        storage.addLayoutManager(layoutManager)
+        let textContainer = NSTextContainer(size: .zero)
+        layoutManager.addTextContainer(textContainer)
+        
+        self.init(frame: .zero, textContainer: textContainer)
+    }
+    
     private func setup() {
         isSelectable = true
         isEditable = false
