@@ -2,6 +2,17 @@
 All notable changes to this project will be documented in this file.
 `BaseClasses` adheres to [Semantic Versioning](http://semver.org/).
 
+## [2.0.0](https://github.com/APUtils/BaseClasses/releases/tag/2.0.0)
+Released on 09/21/2017.
+
+Swift 4 migration
+
+#### Added
+- SelfResizableTableView
+- TextView
+- SelfResizableTextView
+- LabelLikeTextView
+
 ## [1.2.2](https://github.com/APUtils/BaseClasses/releases/tag/1.2.2)
 Released on 08/08/2017.
 
