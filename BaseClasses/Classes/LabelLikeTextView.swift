@@ -6,7 +6,7 @@
 //  Copyright © 2017 Anton Plebanovich. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 
 /// Text view that acts like UILabel (self sizing, can not be edit or scroll),
@@ -30,7 +30,8 @@ open class LabelLikeTextView: SelfResizableTextView {
         setup()
     }
     
-    convenience init(layoutManager: NSLayoutManager) {
+    /// Init with custom `layoutManager`
+    public convenience init(layoutManager: NSLayoutManager) {
         let storage = NSTextStorage()
         storage.addLayoutManager(layoutManager)
         let textContainer = NSTextContainer(size: .zero)
