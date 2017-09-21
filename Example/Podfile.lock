@@ -1,5 +1,5 @@
 PODS:
-  - APExtensions (3.3.0)
+  - APExtensions/ViewState (3.7.0)
   - BaseClasses (1.2.2)
   - FBSnapshotTestCase (2.1.4):
     - FBSnapshotTestCase/SwiftSupport (= 2.1.4)
@@ -13,9 +13,8 @@ PODS:
     - FBSnapshotTestCase (~> 2.0)
     - Nimble (~> 7.0)
   - Quick (1.1.0)
-  - StretchScrollView (2.0.0):
-    - APExtensions (>= 3.3.0)
-    - BaseClasses
+  - StretchScrollView (2.2.1):
+    - APExtensions/ViewState (>= 3.4.5)
 
 DEPENDENCIES:
   - BaseClasses (from `../`)
@@ -30,13 +29,13 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  APExtensions: 0fa7e60c8ced5b343c9ad56b64cad39ab781794a
+  APExtensions: 27a0cf839093dc8adae120325c6884bddd610cb9
   BaseClasses: f656dff449b4f33ba1ec551928d25457e98e82ae
   FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
   Nimble: 657d000e11df8aebe27cdaf9d244de7f30ed87f7
   Nimble-Snapshots: 31c8ef7fcebf0e68b4dff83f6e2160813a4a116b
   Quick: dafc587e21eed9f4cab3249b9f9015b0b7a7f71d
-  StretchScrollView: f900b7a8a33e465cc2ff22ab8d3fe72f1b2d8591
+  StretchScrollView: 72f94ecea65fa2afdaf6ec0e6b6a38a921aa0204
 
 PODFILE CHECKSUM: 32ce90bb2c616068d25fc980534ea0a24f3f39f6
 
