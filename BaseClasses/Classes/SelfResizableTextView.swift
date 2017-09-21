@@ -9,20 +9,28 @@
 import UIKit
 
 
-/// Text view with zero paddings between text and frame and self sizable depending on content.
+/// Text view with zero paddings between text and frame and self sizable depending on content. Is not scrollable.
 open class SelfResizableTextView: TextView {
     
     //-----------------------------------------------------------------------------
     // MARK: - Initialization and Setup
     //-----------------------------------------------------------------------------
     
-    override open func awakeFromNib() {
-        super.awakeFromNib()
+    public override init(frame: CGRect, textContainer: NSTextContainer?) {
+        super.init(frame: frame, textContainer: textContainer)
+        
+        setup()
+    }
+    
+    public required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
         
         setup()
     }
     
     private func setup() {
+        isScrollEnabled = false
         textContainer.heightTracksTextView = true
+        textContainer.widthTracksTextView = true
     }
 }

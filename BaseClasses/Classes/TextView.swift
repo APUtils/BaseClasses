@@ -16,8 +16,14 @@ open class TextView: UITextView {
     // MARK: - Initialization and Setup
     //-----------------------------------------------------------------------------
     
-    override open func awakeFromNib() {
-        super.awakeFromNib()
+    public override init(frame: CGRect, textContainer: NSTextContainer?) {
+        super.init(frame: frame, textContainer: textContainer)
+        
+        setup()
+    }
+    
+    public required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
         
         setup()
     }
