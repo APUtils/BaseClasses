@@ -12,7 +12,7 @@ import Foundation
 /// Text view that acts like UILabel (self sizing, can not be edit or scroll),
 /// but has various detections (address, links, etc) that UITextView has.
 /// Also process clicks on links.
-class LabelLikeTextView: SelfResizableTextView {
+open class LabelLikeTextView: SelfResizableTextView {
     
     //-----------------------------------------------------------------------------
     // MARK: - Initialization and Setup
