@@ -1,6 +1,14 @@
 PODS:
-  - APExtensions/ViewState (3.7.0)
-  - BaseClasses (1.2.2)
+  - APExtensions (4.1.1):
+    - APExtensions/Abstractions (= 4.1.1)
+    - APExtensions/Core (= 4.1.1)
+    - APExtensions/Storyboard (= 4.1.1)
+    - APExtensions/ViewState (= 4.1.1)
+  - APExtensions/Abstractions (4.1.1)
+  - APExtensions/Core (4.1.1)
+  - APExtensions/Storyboard (4.1.1)
+  - APExtensions/ViewState (4.1.1)
+  - BaseClasses (2.0.1)
   - FBSnapshotTestCase (2.1.4):
     - FBSnapshotTestCase/SwiftSupport (= 2.1.4)
   - FBSnapshotTestCase/Core (2.1.4)
@@ -13,10 +21,11 @@ PODS:
     - FBSnapshotTestCase (~> 2.0)
     - Nimble (~> 7.0)
   - Quick (1.1.0)
-  - StretchScrollView (2.2.1):
+  - StretchScrollView (3.0.2):
     - APExtensions/ViewState (>= 3.4.5)
 
 DEPENDENCIES:
+  - APExtensions
   - BaseClasses (from `../`)
   - FBSnapshotTestCase
   - Nimble
@@ -29,14 +38,14 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  APExtensions: 27a0cf839093dc8adae120325c6884bddd610cb9
-  BaseClasses: f656dff449b4f33ba1ec551928d25457e98e82ae
+  APExtensions: e706c0e9935d05514655fce1f2b418192820fb78
+  BaseClasses: 7835976e570af8f9cfb3d75ced2c5302cfb6081e
   FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
   Nimble: 657d000e11df8aebe27cdaf9d244de7f30ed87f7
   Nimble-Snapshots: 31c8ef7fcebf0e68b4dff83f6e2160813a4a116b
   Quick: dafc587e21eed9f4cab3249b9f9015b0b7a7f71d
-  StretchScrollView: 72f94ecea65fa2afdaf6ec0e6b6a38a921aa0204
+  StretchScrollView: 4f30f736fe863f0d5001087c3f50aec746287c26
 
-PODFILE CHECKSUM: 32ce90bb2c616068d25fc980534ea0a24f3f39f6
+PODFILE CHECKSUM: 988fd0e482578e4c576ac5dad4686d3ea3815c3b
 
 COCOAPODS: 1.3.1

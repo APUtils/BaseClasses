@@ -21,6 +21,7 @@
 		B0A072AF1F3897D6001B8CC6 /* FullSizeCollection.gif in Resources */ = {isa = PBXBuildFile; fileRef = B0A072AE1F3897D6001B8CC6 /* FullSizeCollection.gif */; };
 		B0A072B91F3899B7001B8CC6 /* TableViewCellExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A072B41F3899B7001B8CC6 /* TableViewCellExampleViewController.swift */; };
 		B0A072BB1F389C07001B8CC6 /* TableViewCell.gif in Resources */ = {isa = PBXBuildFile; fileRef = B0A072BA1F389C07001B8CC6 /* TableViewCell.gif */; };
+		B0D3A02E1F79A1740062AD2B /* podUpdate.command in Resources */ = {isa = PBXBuildFile; fileRef = B0D3A02D1F79A1740062AD2B /* podUpdate.command */; };
 		FA3CABF8734B503C476A540B /* Pods_BaseClasses_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26F8D40E4239F3A2DA06FA54 /* Pods_BaseClasses_Example.framework */; };
 /* End PBXBuildFile section */
 
@@ -62,6 +63,7 @@
 		B0A072AE1F3897D6001B8CC6 /* FullSizeCollection.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = FullSizeCollection.gif; sourceTree = "<group>"; };
 		B0A072B41F3899B7001B8CC6 /* TableViewCellExampleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCellExampleViewController.swift; sourceTree = "<group>"; };
 		B0A072BA1F389C07001B8CC6 /* TableViewCell.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = TableViewCell.gif; sourceTree = "<group>"; };
+		B0D3A02D1F79A1740062AD2B /* podUpdate.command */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = podUpdate.command; sourceTree = "<group>"; };
 		CD381469004915A2C67C0474 /* Pods-BaseClasses_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseClasses_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-BaseClasses_Example/Pods-BaseClasses_Example.release.xcconfig"; sourceTree = "<group>"; };
 		CDEC9C43C759C9E03CB76AC9 /* Pods-BaseClasses_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseClasses_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BaseClasses_Example/Pods-BaseClasses_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		CF7BB0AC436CB7E716CDD269 /* podCheck.command */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; name = podCheck.command; path = ../podCheck.command; sourceTree = "<group>"; };
@@ -185,6 +187,7 @@
 				CF7BB0AC436CB7E716CDD269 /* podCheck.command */,
 				B02A385D1F333300002E29F0 /* podInstall.command */,
 				7912CE63AE269A1F8D9B54DD /* podPush.command */,
+				B0D3A02D1F79A1740062AD2B /* podUpdate.command */,
 				247DB7C522442F4C94F5B011 /* README.md */,
 			);
 			name = "Podspec Metadata";
@@ -299,6 +302,7 @@
 			files = (
 				B0A072BB1F389C07001B8CC6 /* TableViewCell.gif in Resources */,
 				B0A072AF1F3897D6001B8CC6 /* FullSizeCollection.gif in Resources */,
+				B0D3A02E1F79A1740062AD2B /* podUpdate.command in Resources */,
 				B0A072AB1F388D0C001B8CC6 /* ScrollView.gif in Resources */,
 				B0A072A71F3888D7001B8CC6 /* baseClass.png in Resources */,
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,

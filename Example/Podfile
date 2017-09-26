@@ -10,6 +10,7 @@ install! 'cocoapods',
 
 
 target 'BaseClasses_Example' do
+    pod 'APExtensions'
     pod 'BaseClasses', :path => '../'
     pod 'StretchScrollView'
 
@@ -20,5 +21,20 @@ target 'BaseClasses_Example' do
         pod 'Nimble'
         pod 'FBSnapshotTestCase'
         pod 'Nimble-Snapshots'
+    end
+end
+
+
+post_install do |installer|
+    # TODO: Remove pods when they converted to Swift 4
+    # Your list of targets here.
+    myTargets = ['Quick', 'Nimble', 'Nimble-Snapshots']
+    
+    installer.pods_project.targets.each do |target|
+        if myTargets.include? target.name
+            target.build_configurations.each do |config|
+                config.build_settings['SWIFT_VERSION'] = '3.2'
+            end
+        end
     end
 end
