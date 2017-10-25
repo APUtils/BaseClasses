@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'BaseClasses'
-  s.version          = '2.0.2'
+  s.version          = '2.1.0'
   s.summary          = 'Default configuration for some UI classes through inheritance'
 
 # This description is used to generate tags and improve search results.

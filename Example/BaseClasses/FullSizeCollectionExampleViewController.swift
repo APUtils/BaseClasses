@@ -18,7 +18,7 @@ class FullSizeCollectionExampleViewController: UIViewController {
     //-----------------------------------------------------------------------------
     
     @IBOutlet private weak var scrollView: StretchScrollView!
-    @IBOutlet fileprivate weak var pageControl: UIPageControl!
+    @IBOutlet private weak var pageControl: UIPageControl!
     
     //-----------------------------------------------------------------------------
     // MARK: - Initialization and Setup
