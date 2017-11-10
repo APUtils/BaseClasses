@@ -30,8 +30,21 @@ private extension UIView {
 open class TableViewCell: UITableViewCell {
     
     //-----------------------------------------------------------------------------
-    // MARK: - UITableViewCell Methods
+    // MARK: - Public Properties
     //-----------------------------------------------------------------------------
+    
+    /// Increases every time cell was reused. May be used to determine if async update should be performed in this cell.
+    final private(set) public var reuseId: UInt = 0
+    
+    //-----------------------------------------------------------------------------
+    // MARK: - UITableViewCell Overrides
+    //-----------------------------------------------------------------------------
+    
+    open override func prepareForReuse() {
+        super.prepareForReuse()
+        
+        changeReuseId()
+    }
     
     // Preventing backgroundColor change
     override open func setSelected(_ selected: Bool, animated: Bool) {
@@ -62,6 +75,13 @@ open class TableViewCell: UITableViewCell {
     //-----------------------------------------------------------------------------
     // MARK: - Private Methods
     //-----------------------------------------------------------------------------
+    
+    private func changeReuseId() {
+        reuseId += 1
+        if reuseId == UInt.max {
+            reuseId = 0
+        }
+    }
     
     private func getViewsBackgrounds() -> [UIView: UIColor?] {
         var viewsBackgrounds: [UIView: UIColor?] = [:]
