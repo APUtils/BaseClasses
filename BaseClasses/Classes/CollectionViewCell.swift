@@ -9,7 +9,7 @@
 import UIKit
 
 
-class CollectionViewCell: UICollectionViewCell {
+open class CollectionViewCell: UICollectionViewCell {
     
     //-----------------------------------------------------------------------------
     // MARK: - Public Properties
