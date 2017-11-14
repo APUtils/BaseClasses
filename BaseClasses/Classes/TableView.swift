@@ -95,7 +95,7 @@ open class TableView: UITableView {
     }
     
     private func configureEmptyLabel() {
-        emptyLabel.isHidden = contentSize.height != 0 || emptyText == nil || emptyText?.isEmpty == true
+        emptyLabel.isHidden = (contentSize.height <= 0 && contentSize.width <= 0) || emptyText == nil || emptyText?.isEmpty == true
     }
     
     //-----------------------------------------------------------------------------

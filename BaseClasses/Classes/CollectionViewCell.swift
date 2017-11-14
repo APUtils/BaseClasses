@@ -9,6 +9,7 @@
 import UIKit
 
 
+/// CollectionViewCell with `reuseId` property.
 open class CollectionViewCell: UICollectionViewCell {
     
     //-----------------------------------------------------------------------------

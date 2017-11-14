@@ -26,7 +26,7 @@ private extension UIView {
 // MARK: - Class Implementation
 //-----------------------------------------------------------------------------
 
-/// TableViewCell with disabled views background color change
+/// TableViewCell with disabled views background color change and `reuseId` property.
 open class TableViewCell: UITableViewCell {
     
     //-----------------------------------------------------------------------------
