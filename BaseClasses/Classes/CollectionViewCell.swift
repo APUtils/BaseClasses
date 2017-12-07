@@ -34,9 +34,6 @@ open class CollectionViewCell: UICollectionViewCell {
     //-----------------------------------------------------------------------------
     
     private func changeReuseId() {
-        reuseId += 1
-        if reuseId == UInt.max {
-            reuseId = 0
-        }
+        reuseId = reuseId &+ 1
     }
 }

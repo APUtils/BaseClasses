@@ -168,6 +168,7 @@
 		AE4DA49ECD693BF384CD824DF02D7C6E /* NMBStringify.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E6BF15764ADD67917B304AE64B42954 /* NMBStringify.m */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		AED58B976AB8F62FBFB0DA437861E088 /* PrettyDynamicTypeSyntax.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635DF796A1C6B95CFC370B7072378148 /* PrettyDynamicTypeSyntax.swift */; };
 		AF1174085D9BC5D50FCE0480E9C2BE94 /* BeGreaterThan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131AC4B10903E1D9B1C27E1BBA36B217 /* BeGreaterThan.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
+		B00BC2B21FD92FFB00761B1D /* UIView+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00BC2B11FD92FFB00761B1D /* UIView+Utils.swift */; };
 		B03D60FBA7DCBDCCEAC91FEEA9899789 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8FEFC31AAD5107B9CB4FFBFE3724BC1 /* NavigationController.swift */; };
 		B071065A1FB5C9B1002E5ED7 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07106591FB5C9B1002E5ED7 /* CollectionViewCell.swift */; };
 		B07EB19A58CFE1D2CD213365A066D69C /* QCKDSL.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CCD4DE744D15362D1CD0A2631A99420 /* QCKDSL.m */; };
@@ -524,6 +525,7 @@
 		AE18FC57EDDD0DF2894F66A0FA15CA83 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		AEDE3796EF7FBC191231BF34032A8F61 /* StretchScrollView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StretchScrollView.swift; path = StretchScrollView/Classes/StretchScrollView.swift; sourceTree = "<group>"; };
 		AFC36910F5FD5AE88C35A22E54A59852 /* Match.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Match.swift; path = Sources/Nimble/Matchers/Match.swift; sourceTree = "<group>"; };
+		B00BC2B11FD92FFB00761B1D /* UIView+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Utils.swift"; sourceTree = "<group>"; };
 		B07106591FB5C9B1002E5ED7 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CollectionViewCell.swift; path = BaseClasses/Classes/CollectionViewCell.swift; sourceTree = "<group>"; };
 		B07EE231414B9A92AE3663AB69F62EAC /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		B10172232854E2F25326D620D679718E /* ThrowError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ThrowError.swift; path = Sources/Nimble/Matchers/ThrowError.swift; sourceTree = "<group>"; };
@@ -952,6 +954,7 @@
 				494267578E2D369D185F68AFD388C725 /* TableViewCell.swift */,
 				DD3B81DEE074958282892DD4BAF239F2 /* TextField.swift */,
 				80743D839096A566406F3A82F8205B6E /* TextView.swift */,
+				B00BC2B11FD92FFB00761B1D /* UIView+Utils.swift */,
 				32375DAC38034C565F2991819459AEAE /* Support Files */,
 			);
 			name = BaseClasses;
@@ -1608,6 +1611,7 @@
 				ACC3F8BD36409E3C878CFC8B7EA5CF7B /* NavigationBar.swift in Sources */,
 				B03D60FBA7DCBDCCEAC91FEEA9899789 /* NavigationController.swift in Sources */,
 				B230B7350D369C61D5D5FE59340C8B74 /* ScrollView.swift in Sources */,
+				B00BC2B21FD92FFB00761B1D /* UIView+Utils.swift in Sources */,
 				FE62C25C208CCCEE27D6DCE70A875769 /* SelfResizableTableView.swift in Sources */,
 				7BC0EAA2772BDBF02FCA61A30205179D /* SelfResizableTextView.swift in Sources */,
 				C19A1F4699CA9F79A48CA30E355D7D66 /* TableView.swift in Sources */,

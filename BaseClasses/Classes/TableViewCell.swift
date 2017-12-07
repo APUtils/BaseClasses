@@ -77,10 +77,7 @@ open class TableViewCell: UITableViewCell {
     //-----------------------------------------------------------------------------
     
     private func changeReuseId() {
-        reuseId += 1
-        if reuseId == UInt.max {
-            reuseId = 0
-        }
+        reuseId = reuseId &+ 1
     }
     
     private func getViewsBackgrounds() -> [UIView: UIColor?] {
