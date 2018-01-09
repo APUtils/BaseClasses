@@ -15,9 +15,6 @@ import APExtensions
 
 private let FadeOutOffset: CGFloat = 60
 private let NavigationFadeInFinishOffset: CGFloat = 60
-private let StatusBarHeight: CGFloat = 20
-private let NavigationBarHeight: CGFloat = 44
-private let TopBarsHeight: CGFloat = StatusBarHeight + NavigationBarHeight
 
 //-----------------------------------------------------------------------------
 // MARK: - Class Implementation
@@ -78,7 +75,7 @@ public class StretchScrollView: UIScrollView {
         let navigationBarBackgroundView = UIView()
         navigationBarBackgroundView.isUserInteractionEnabled = false
         navigationBarBackgroundView.backgroundColor = navigationBackgroundColor
-        navigationBarBackgroundView.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: TopBarsHeight)
+        navigationBarBackgroundView.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 64)
         navigationBarBackgroundView.autoresizingMask = [.flexibleWidth]
         
         return navigationBarBackgroundView
@@ -122,10 +119,11 @@ public class StretchScrollView: UIScrollView {
             makeTransparent()
             _viewController?.automaticallyAdjustsScrollViewInsets = false
             
-            if #available(iOS 11.0, *) {
-                contentInsetAdjustmentBehavior = .never
-            }
+            if #available(iOS 11.0, *) { contentInsetAdjustmentBehavior = .never }
         }
+        
+        // Stretch scroll view conflicts with navigation bar stretch. Force disable it.
+        if #available(iOS 11.0, *) { _viewController?.navigationItem.largeTitleDisplayMode = .never }
         
         configureNavigationBarBackgroundView()
     }
@@ -179,7 +177,7 @@ public class StretchScrollView: UIScrollView {
     // MARK: - Configuration
     //-----------------------------------------------------------------------------
     
-    fileprivate func configure() {
+    private func configure() {
         configureStretchedView()
         configureVisibility()
     }
@@ -190,22 +188,16 @@ public class StretchScrollView: UIScrollView {
             
         case .topAndHeight(let topConstraint, let heightConstraint, let defaultHeight):
             let compensatedContentOffsetY: CGFloat
-            if #available(iOS 11.0, *) {
-                compensatedContentOffsetY = contentOffset.y + adjustedContentInset.top
-            } else {
-                compensatedContentOffsetY = contentOffset.y + contentInset.top
-            }
+            if #available(iOS 11.0, *) { compensatedContentOffsetY = contentOffset.y + adjustedContentInset.top }
+            else { compensatedContentOffsetY = contentOffset.y + contentInset.top }
             
             topConstraint.constant = min(0, compensatedContentOffsetY)
             heightConstraint.constant = max(defaultHeight, defaultHeight - compensatedContentOffsetY)
             
         case .topAndSides(let topConstraint, let leftConstraint, let rightConstraint, let aspectRatio):
             let compensatedContentOffsetY: CGFloat
-            if #available(iOS 11.0, *) {
-                compensatedContentOffsetY = contentOffset.y + adjustedContentInset.top
-            } else {
-                compensatedContentOffsetY = contentOffset.y + contentInset.top
-            }
+            if #available(iOS 11.0, *) { compensatedContentOffsetY = contentOffset.y + adjustedContentInset.top }
+            else { compensatedContentOffsetY = contentOffset.y + contentInset.top }
             
             let newTopConstant = min(0, compensatedContentOffsetY)
             let newSidesConstant = newTopConstant * aspectRatio / 2
@@ -219,11 +211,8 @@ public class StretchScrollView: UIScrollView {
         configureNavigationBarBackgroundView()
         
         let compensatedContentOffsetY: CGFloat
-        if #available(iOS 11.0, *) {
-            compensatedContentOffsetY = contentOffset.y + adjustedContentInset.top
-        } else {
-            compensatedContentOffsetY = contentOffset.y + contentInset.top
-        }
+        if #available(iOS 11.0, *) { compensatedContentOffsetY = contentOffset.y + adjustedContentInset.top }
+        else { compensatedContentOffsetY = contentOffset.y + contentInset.top }
         
         // Fade views and navigation bar
         var newAlpha = (FadeOutOffset + compensatedContentOffsetY) / FadeOutOffset
@@ -233,11 +222,8 @@ public class StretchScrollView: UIScrollView {
         
         // Navigation bar alpha won't be changed if content inset top is not zero or navigation bar is not translucent.
         let shouldChangeNavigationBarAlpha: Bool
-        if #available(iOS 11.0, *) {
-            shouldChangeNavigationBarAlpha = adjustedContentInset.top == 0 && navigationBar?.isTranslucent == true
-        } else {
-            shouldChangeNavigationBarAlpha = contentInset.top == 0 && navigationBar?.isTranslucent == true
-        }
+        if #available(iOS 11.0, *) { shouldChangeNavigationBarAlpha = adjustedContentInset.top == 0 && navigationBar?.isTranslucent == true }
+        else { shouldChangeNavigationBarAlpha = contentInset.top == 0 && navigationBar?.isTranslucent == true }
         
         if shouldChangeNavigationBarAlpha {
             navigationBar?.subviews.forEach({ $0.alpha = newAlpha })
@@ -268,6 +254,14 @@ public class StretchScrollView: UIScrollView {
         super.awakeFromNib()
         
         setup()
+    }
+    
+    public override func layoutSubviews() {
+        super.layoutSubviews()
+        
+        if let navigationBar = navigationBar {
+            navigationBarBackgroundView.frame = CGRect(x: 0, y: 0, width: navigationBar.bounds.width, height: navigationBar.frame.maxY)
+        }
     }
     
     //-----------------------------------------------------------------------------
