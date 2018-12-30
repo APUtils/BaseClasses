@@ -47,7 +47,7 @@ open class SelfResizableTextView: TextView {
     }
     
     private func setupNotifications() {
-        NotificationCenter.default.addObserver(self, selector: #selector(onTextChange(_:)), name: .UITextViewTextDidChange, object: self)
+        NotificationCenter.default.addObserver(self, selector: #selector(onTextChange(_:)), name: UITextView.textDidChangeNotification, object: self)
     }
     
     //-----------------------------------------------------------------------------

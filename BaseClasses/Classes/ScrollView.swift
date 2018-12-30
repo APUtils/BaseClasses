@@ -53,7 +53,7 @@ open class ScrollView: UIScrollView {
     
     /// Activity indicator that always stays in center.
     private(set) public lazy var activityIndicatorView: UIActivityIndicatorView = {
-        let activityIndicatorView = UIActivityIndicatorView(activityIndicatorStyle: .gray)
+        let activityIndicatorView = UIActivityIndicatorView(style: .gray)
         
         return activityIndicatorView
     }()
@@ -118,7 +118,7 @@ open class ScrollView: UIScrollView {
     }
     
     private func layoutActivityIndicatorView() {
-        bringSubview(toFront: activityIndicatorView)
+        bringSubviewToFront(activityIndicatorView)
         activityIndicatorView.center = CGPoint(x: bounds.midX, y: bounds.midY)
     }
     
