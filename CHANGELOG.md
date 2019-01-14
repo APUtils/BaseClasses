@@ -2,6 +2,18 @@
 All notable changes to this project will be documented in this file.
 `BaseClasses` adheres to [Semantic Versioning](http://semver.org/).
 
+## [3.0.0](https://github.com/APUtils/BaseClasses/releases/tag/3.0.0)
+Released on 12/30/2018.
+
+#### Added
+- Swift 4.2 support
+- ScrollView, TableView and CollectionView empty content label and activity indicator that stays in center.
+- TableViewCell and CollectionViewCell .reuseId property
+- SelfResizableTextView rework to make it scrollable when allowed height is not enough
+- TextView .textSideInset
+- PassTouchesView
+
+
 ## [2.0.2](https://github.com/APUtils/BaseClasses/releases/tag/2.0.2)
 Released on 09/25/2017.
 

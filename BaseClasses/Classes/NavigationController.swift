@@ -14,7 +14,7 @@ open class NavigationController: UINavigationController {
     
     // ******************************* MARK: - UIViewController Methods
     
-    override open var childViewControllerForStatusBarStyle: UIViewController? {
+    override open var childForStatusBarStyle: UIViewController? {
         return topViewController
     }
 }
