@@ -13,25 +13,19 @@ import StretchScrollView
 
 class FullSizeCollectionExampleViewController: UIViewController {
 
-    //-----------------------------------------------------------------------------
-    // MARK: - @IBOutlets
-    //-----------------------------------------------------------------------------
+    // ******************************* MARK: - @IBOutlets
     
     @IBOutlet private weak var scrollView: StretchScrollView!
     @IBOutlet private weak var pageControl: UIPageControl!
     
-    //-----------------------------------------------------------------------------
-    // MARK: - Initialization and Setup
-    //-----------------------------------------------------------------------------
+    // ******************************* MARK: - Initialization and Setup
     
     private func setup() {
         scrollView.addFadeViews([pageControl])
     }
 }
 
-//-----------------------------------------------------------------------------
-// MARK: - UICollectionViewDelegate, UICollectionViewDataSource
-//-----------------------------------------------------------------------------
+// ******************************* MARK: - UICollectionViewDelegate, UICollectionViewDataSource
 
 extension FullSizeCollectionExampleViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -49,9 +43,7 @@ extension FullSizeCollectionExampleViewController: UICollectionViewDelegate, UIC
     }
 }
 
-//-----------------------------------------------------------------------------
-// MARK: - UIScrollViewDelegate
-//-----------------------------------------------------------------------------
+// ******************************* MARK: - UIScrollViewDelegate
 
 extension FullSizeCollectionExampleViewController: UIScrollViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {

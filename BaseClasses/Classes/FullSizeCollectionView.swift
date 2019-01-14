@@ -12,21 +12,15 @@ import UIKit
 /// Collection view that resizes it's cells to be the same size as collection view.
 open class FullSizeCollectionView: CollectionView {
     
-    //-----------------------------------------------------------------------------
-    // MARK: - UIView Properties
-    //-----------------------------------------------------------------------------
+    // ******************************* MARK: - UIView Properties
     
     override open var bounds: CGRect { willSet { configure(newSize: newValue.size) } }
     
-    //-----------------------------------------------------------------------------
-    // MARK: - Private Properties
-    //-----------------------------------------------------------------------------
+    // ******************************* MARK: - Private Properties
     
     private var previousSize: CGSize = .zero
     
-    //-----------------------------------------------------------------------------
-    // MARK: - Initialization, Setup and Configuration
-    //-----------------------------------------------------------------------------
+    // ******************************* MARK: - Initialization, Setup and Configuration
     
     private func setup() {
         configure(newSize: bounds.size)
@@ -44,15 +38,13 @@ open class FullSizeCollectionView: CollectionView {
         
         guard previousSize != withoutInsetsSize, let flowLayout = collectionViewLayout as? UICollectionViewFlowLayout else { return }
         
-        previousSize = newSize
+        previousSize = withoutInsetsSize
         
         flowLayout.itemSize = withoutInsetsSize
         collectionViewLayout.invalidateLayout()
     }
     
-    //-----------------------------------------------------------------------------
-    // MARK: - UIView Methods
-    //-----------------------------------------------------------------------------
+    // ******************************* MARK: - UIView Methods
     
     override open func awakeFromNib() {
         super.awakeFromNib()

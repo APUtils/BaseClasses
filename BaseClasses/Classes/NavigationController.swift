@@ -12,9 +12,7 @@ import UIKit
 /// NavigationControler that pays attantion to its child controlers for status bar style
 open class NavigationController: UINavigationController {
     
-    //-----------------------------------------------------------------------------
-    // MARK: - UIViewController Methods
-    //-----------------------------------------------------------------------------
+    // ******************************* MARK: - UIViewController Methods
     
     override open var childViewControllerForStatusBarStyle: UIViewController? {
         return topViewController

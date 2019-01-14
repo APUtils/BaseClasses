@@ -13,9 +13,7 @@ import UIKit
 /// It also have activity indicator that always stays in center.
 open class ScrollView: UIScrollView {
     
-    //-----------------------------------------------------------------------------
-    // MARK: - UIView Properties
-    //-----------------------------------------------------------------------------
+    // ******************************* MARK: - UIView Properties
     
     open override var contentSize: CGSize {
         didSet {
@@ -25,9 +23,7 @@ open class ScrollView: UIScrollView {
         }
     }
     
-    //-----------------------------------------------------------------------------
-    // MARK: - @IBInspectable
-    //-----------------------------------------------------------------------------
+    // ******************************* MARK: - @IBInspectable
     
     /// Text displayed in the middle of table view when it's content is empty
     @IBInspectable public var emptyText: String? {
@@ -38,9 +34,7 @@ open class ScrollView: UIScrollView {
         }
     }
     
-    //-----------------------------------------------------------------------------
-    // MARK: - Private Properties
-    //-----------------------------------------------------------------------------
+    // ******************************* MARK: - Private Properties
     
     /// Label that displays `emptyText` string. You could configure it's params, but it's still better to set text using `emptyText` property.
     private(set) public lazy var emptyLabel: UILabel = {
@@ -58,9 +52,7 @@ open class ScrollView: UIScrollView {
         return activityIndicatorView
     }()
     
-    //-----------------------------------------------------------------------------
-    // MARK: - Initialization and Setup
-    //-----------------------------------------------------------------------------
+    // ******************************* MARK: - Initialization and Setup
     
     init() {
         super.init(frame: CGRect(x: 0, y: 0, width: 320, height: 568))
@@ -85,9 +77,7 @@ open class ScrollView: UIScrollView {
         delaysContentTouches = false
     }
     
-    //-----------------------------------------------------------------------------
-    // MARK: - Configuration
-    //-----------------------------------------------------------------------------
+    // ******************************* MARK: - Configuration
     
     private func configure() {
         configureEmptyLabel()
@@ -97,9 +87,7 @@ open class ScrollView: UIScrollView {
         emptyLabel.isHidden = contentSize.height != 0 || contentSize.width != 0 || emptyText == nil || emptyText?.isEmpty == true
     }
     
-    //-----------------------------------------------------------------------------
-    // MARK: - UIView Overrides
-    //-----------------------------------------------------------------------------
+    // ******************************* MARK: - UIView Overrides
     
     open override func layoutSubviews() {
         super.layoutSubviews()
@@ -122,9 +110,7 @@ open class ScrollView: UIScrollView {
         activityIndicatorView.center = CGPoint(x: bounds.midX, y: bounds.midY)
     }
     
-    //-----------------------------------------------------------------------------
-    // MARK: - UIScrollView Methods
-    //-----------------------------------------------------------------------------
+    // ******************************* MARK: - UIScrollView Methods
     
     override open func touchesShouldCancel(in view: UIView) -> Bool {
         if view is UIButton {

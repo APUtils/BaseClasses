@@ -14,9 +14,7 @@ import UIKit
 /// Also process clicks on links.
 open class LabelLikeTextView: SelfResizableTextView {
     
-    //-----------------------------------------------------------------------------
-    // MARK: - Initialization and Setup
-    //-----------------------------------------------------------------------------
+    // ******************************* MARK: - Initialization and Setup
     
     public override init(frame: CGRect, textContainer: NSTextContainer?) {
         super.init(frame: frame, textContainer: textContainer)

@@ -6,11 +6,12 @@
 //  Copyright © 2017 Anton Plebanovich. All rights reserved.
 //
 
+import UIKit
+
+
 open class SelfResizableTableView: TableView {
     
-    //-----------------------------------------------------------------------------
-    // MARK: - UIView Overrides
-    //-----------------------------------------------------------------------------
+    // ******************************* MARK: - UIView Overrides
     
     open override var contentSize: CGSize {
         didSet {

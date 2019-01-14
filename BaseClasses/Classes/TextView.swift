@@ -12,7 +12,7 @@ import UIKit
 /// Text view with zero paddings between text and frame
 open class TextView: UITextView {
     
-    // ******************************* MARK: - IBInspectable
+    // ******************************* MARK: -  IBInspectable
     
     @IBInspectable public var textSideInset: CGFloat = 0 {
         didSet {
@@ -20,7 +20,7 @@ open class TextView: UITextView {
         }
     }
     
-    // ******************************* MARK: - Initialization and Setup
+    // ******************************* MARK: -  Initialization and Setup
     
     public override init(frame: CGRect, textContainer: NSTextContainer?) {
         super.init(frame: frame, textContainer: textContainer)
@@ -44,7 +44,7 @@ open class TextView: UITextView {
         configure()
     }
     
-    // ******************************* MARK: - Configuration
+    // ******************************* MARK: -  Configuration
     
     private func configure() {
         configureInsets()

@@ -11,9 +11,7 @@ import UIKit
 
 open class NavigationBar: UINavigationBar {
     
-    //-----------------------------------------------------------------------------
-    // MARK: - UIView Methods
-    //-----------------------------------------------------------------------------
+    // ******************************* MARK: - UIView Methods
     
     // Make navigation bar transparent for touches so user could scroll over it if it's translucent
     override open func hitTest(_ point: CGPoint, with event: UIEvent?) -> UIView? {
