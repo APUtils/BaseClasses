@@ -12,9 +12,7 @@ import APExtensions
 
 final class TableViewCellExampleViewController: UIViewController {}
 
-//-----------------------------------------------------------------------------
-// MARK: - UITableViewDelegate, UITableViewDataSource
-//-----------------------------------------------------------------------------
+// ******************************* MARK: - UITableViewDelegate, UITableViewDataSource
 
 extension TableViewCellExampleViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

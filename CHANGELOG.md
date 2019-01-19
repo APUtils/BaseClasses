@@ -2,6 +2,15 @@
 All notable changes to this project will be documented in this file.
 `BaseClasses` adheres to [Semantic Versioning](http://semver.org/).
 
+
+## [3.1.0](https://github.com/APUtils/BaseClasses/releases/tag/3.1.0)
+Released on 01/14/2019.
+
+#### Fixed
+- SelfResizableTextView better size change animation
+- FullSizeCollectionView fix for insets case
+
+
 ## [3.0.0](https://github.com/APUtils/BaseClasses/releases/tag/3.0.0)
 Released on 12/30/2018.
 

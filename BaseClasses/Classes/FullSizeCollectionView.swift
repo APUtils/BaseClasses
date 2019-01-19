@@ -38,7 +38,7 @@ open class FullSizeCollectionView: CollectionView {
         
         guard previousSize != withoutInsetsSize, let flowLayout = collectionViewLayout as? UICollectionViewFlowLayout else { return }
         
-        previousSize = newSize
+        previousSize = withoutInsetsSize
         
         flowLayout.itemSize = withoutInsetsSize
         collectionViewLayout.invalidateLayout()
