@@ -1,12 +1,15 @@
 //
-//  SelfResizableTableView.swift
+//  SelfResizeableCollectionView.swift
 //  Base Classes
 //
-//  Created by Anton Plebanovich on 9/14/17.
+//  Created by Anton Plebanovich on 1/19/19.
 //  Copyright © 2019 Anton Plebanovich. All rights reserved.
 //
 
-open class SelfResizableTableView: TableView {
+import Foundation
+
+
+open class SelfResizeableCollectionView: CollectionView {
     
     // ******************************* MARK: - UIView Overrides
     

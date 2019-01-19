@@ -20,6 +20,7 @@
 		094973D2D2F1E3B2E772F93C8147C6B9 /* UIApplication+StrictKeyWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB9686FF1786121B1AABADF6136BFB2 /* UIApplication+StrictKeyWindow.m */; };
 		0A54C1F9D2D803488A89DA43AD4D6F06 /* FailureMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164454881B5EB68515649504849E7FC9 /* FailureMessage.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		0D5ABA37FE1A70751027EA74688585F0 /* UIImageView+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71AB2D3A90CF637D95F67D5F7EA18594 /* UIImageView+Utils.swift */; };
+		0DAD0A4321F3694400F0B3BC /* SelfResizeableCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DAD0A4221F3694400F0B3BC /* SelfResizeableCollectionView.swift */; };
 		0DF5131FB6EE82F7CFEB97E0FF61CF6D /* NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E125A628B10CD56C46AD1DE0F8E60787 /* NavigationBar.swift */; };
 		0E14447BE1610E7150BF0D2695136CF5 /* HaveValidSnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528043B2F9257FA319CA2D7320D5BA5D /* HaveValidSnapshot.swift */; };
 		0EA488E1AD1360F2AB0F98F1E7231226 /* iOSSnapshotTestCase-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E3405216AED5A4A1611808561340E4E /* iOSSnapshotTestCase-dummy.m */; };
@@ -393,6 +394,7 @@
 		0B72EEC3F5F96251A5229978B8AA85E2 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0CEC4AC729C3EDF900B6A862957BADC8 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0D16E80451B95AD60534FECA4F0088C3 /* Nimble.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Nimble.modulemap; sourceTree = "<group>"; };
+		0DAD0A4221F3694400F0B3BC /* SelfResizeableCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SelfResizeableCollectionView.swift; path = BaseClasses/Classes/SelfResizeableCollectionView.swift; sourceTree = "<group>"; };
 		0E93ECEE6CE6CDDE7FA2E1AF9AC312DF /* UIImage+Snapshot.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+Snapshot.h"; path = "FBSnapshotTestCase/Categories/UIImage+Snapshot.h"; sourceTree = "<group>"; };
 		0FBD041DE1868BD1C41333985BE43947 /* APExtensionsLoader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = APExtensionsLoader.h; path = APExtensions/Classes/Core/APExtensionsLoader.h; sourceTree = "<group>"; };
 		1031C0D4C709527283C977DA6FBF73C9 /* FBSnapshotTestCase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSnapshotTestCase.h; path = FBSnapshotTestCase/FBSnapshotTestCase.h; sourceTree = "<group>"; };
@@ -1089,6 +1091,7 @@
 				C073C978FAD929FE8BEC0075BD65B03F /* ScrollView.swift */,
 				B1B3C4723124FC028C119580054D72B1 /* SelfResizableTableView.swift */,
 				F537017B51F64B26AE9D6E480F1B5FC4 /* SelfResizableTextView.swift */,
+				0DAD0A4221F3694400F0B3BC /* SelfResizeableCollectionView.swift */,
 				1CCA0D40ACAAC29471D190165FCD2F6F /* TableView.swift */,
 				08A7AA59488B9607F0E6EC8F5C419759 /* TableViewCell.swift */,
 				3153FA8639E4B72B11D7D59A77AC8244 /* TextField.swift */,
@@ -1953,6 +1956,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4985C1541C92F7CCFF23D4445E369546 /* BaseClasses-dummy.m in Sources */,
+				0DAD0A4321F3694400F0B3BC /* SelfResizeableCollectionView.swift in Sources */,
 				2CCD44F258CC0D528B614F41E736A289 /* CollectionView.swift in Sources */,
 				96ED9FEBA8370590E902D820404C79A4 /* CollectionViewCell.swift in Sources */,
 				F33E888C0C863DDFD926E9678806C052 /* FullSizeCollectionView.swift in Sources */,

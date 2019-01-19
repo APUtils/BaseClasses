@@ -3,7 +3,7 @@
 //  Base Classes
 //
 //  Created by Anton Plebanovich on 19.05.16.
-//  Copyright © 2016 Anton Plebanovich. All rights reserved.
+//  Copyright © 2019 Anton Plebanovich. All rights reserved.
 //
 
 import UIKit
@@ -13,9 +13,7 @@ import UIKit
 /// It also have activity indicator that always stays in center.
 open class TableView: UITableView {
     
-    //-----------------------------------------------------------------------------
-    // MARK: - UIView Properties
-    //-----------------------------------------------------------------------------
+    // ******************************* MARK: - UIView Properties
     
     open override var contentSize: CGSize {
         didSet {
@@ -25,9 +23,7 @@ open class TableView: UITableView {
         }
     }
     
-    //-----------------------------------------------------------------------------
-    // MARK: - @IBInspectable
-    //-----------------------------------------------------------------------------
+    // ******************************* MARK: - @IBInspectable
     
     /// Text displayed in the middle of table view when it's content is empty
     @IBInspectable public var emptyText: String? {
@@ -38,9 +34,7 @@ open class TableView: UITableView {
         }
     }
     
-    //-----------------------------------------------------------------------------
-    // MARK: - Private Properties
-    //-----------------------------------------------------------------------------
+    // ******************************* MARK: - Private Properties
     
     /// Label that displays `emptyText` string. You could configure it's params, but it's still better to set text using `emptyText` property.
     private(set) public lazy var emptyLabel: UILabel = {
@@ -58,9 +52,7 @@ open class TableView: UITableView {
         return activityIndicatorView
     }()
     
-    //-----------------------------------------------------------------------------
-    // MARK: - Initialization and Setup
-    //-----------------------------------------------------------------------------
+    // ******************************* MARK: - Initialization and Setup
     
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -86,9 +78,7 @@ open class TableView: UITableView {
         }
     }
     
-    //-----------------------------------------------------------------------------
-    // MARK: - Configuration
-    //-----------------------------------------------------------------------------
+    // ******************************* MARK: - Configuration
     
     private func configure() {
         configureEmptyLabel()
@@ -98,9 +88,7 @@ open class TableView: UITableView {
         emptyLabel.isHidden = (contentSize.height <= 0 && contentSize.width <= 0) || emptyText == nil || emptyText?.isEmpty == true
     }
     
-    //-----------------------------------------------------------------------------
-    // MARK: - UIView Overrides
-    //-----------------------------------------------------------------------------
+    // ******************************* MARK: - UIView Overrides
     
     open override func layoutSubviews() {
         super.layoutSubviews()
@@ -123,9 +111,7 @@ open class TableView: UITableView {
         activityIndicatorView.center = CGPoint(x: bounds.midX, y: bounds.midY)
     }
     
-    //-----------------------------------------------------------------------------
-    // MARK: - UIScrollView Overrides
-    //-----------------------------------------------------------------------------
+    // ******************************* MARK: - UIScrollView Overrides
     
     override open func touchesShouldCancel(in view: UIView) -> Bool {
         if view is UIButton {

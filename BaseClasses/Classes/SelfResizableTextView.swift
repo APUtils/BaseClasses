@@ -3,7 +3,7 @@
 //  Base Classes
 //
 //  Created by Anton Plebanovich on 9/20/17.
-//  Copyright © 2017 Anton Plebanovich. All rights reserved.
+//  Copyright © 2019 Anton Plebanovich. All rights reserved.
 //
 
 import UIKit
@@ -12,9 +12,7 @@ import UIKit
 /// Text view with zero paddings between text and frame and self sizable depending on content.
 open class SelfResizableTextView: TextView {
     
-    //-----------------------------------------------------------------------------
-    // MARK: - Public properties
-    //-----------------------------------------------------------------------------
+    // ******************************* MARK: - Public properties
     
     override open var contentSize: CGSize { didSet { didSetContentSize() } }
     
@@ -22,9 +20,7 @@ open class SelfResizableTextView: TextView {
     
     private var previousContentSize = CGSize.zero
     
-    //-----------------------------------------------------------------------------
-    // MARK: - Initialization and Setup
-    //-----------------------------------------------------------------------------
+    // ******************************* MARK: - Initialization and Setup
     
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -50,9 +46,7 @@ open class SelfResizableTextView: TextView {
         NotificationCenter.default.addObserver(self, selector: #selector(onTextChange(_:)), name: UITextView.textDidChangeNotification, object: self)
     }
     
-    //-----------------------------------------------------------------------------
-    // MARK: - UIView Overrides
-    //-----------------------------------------------------------------------------
+    // ******************************* MARK: - UIView Overrides
     
     override open var intrinsicContentSize : CGSize {
         var intrinsicContentSize = contentSize
@@ -74,9 +68,7 @@ open class SelfResizableTextView: TextView {
         }, completion: nil)
     }
     
-    //-----------------------------------------------------------------------------
-    // MARK: - Private Methods - didSet/willSet
-    //-----------------------------------------------------------------------------
+    // ******************************* MARK: - Private Methods - didSet/willSet
     
     fileprivate func didSetContentSize() {
         guard previousContentSize != contentSize else { return }

@@ -3,7 +3,7 @@
 //  Base Classes
 //
 //  Created by Anton Plebanovich on 7/14/17.
-//  Copyright © 2017 Anton Plebanovich. All rights reserved.
+//  Copyright © 2019 Anton Plebanovich. All rights reserved.
 //
 
 import UIKit
@@ -12,21 +12,15 @@ import UIKit
 /// Collection view that resizes it's cells to be the same size as collection view.
 open class FullSizeCollectionView: CollectionView {
     
-    //-----------------------------------------------------------------------------
-    // MARK: - UIView Properties
-    //-----------------------------------------------------------------------------
+    // ******************************* MARK: - UIView Properties
     
     override open var bounds: CGRect { willSet { configure(newSize: newValue.size) } }
     
-    //-----------------------------------------------------------------------------
-    // MARK: - Private Properties
-    //-----------------------------------------------------------------------------
+    // ******************************* MARK: - Private Properties
     
     private var previousSize: CGSize = .zero
     
-    //-----------------------------------------------------------------------------
-    // MARK: - Initialization, Setup and Configuration
-    //-----------------------------------------------------------------------------
+    // ******************************* MARK: - Initialization, Setup and Configuration
     
     private func setup() {
         configure(newSize: bounds.size)
@@ -50,9 +44,7 @@ open class FullSizeCollectionView: CollectionView {
         collectionViewLayout.invalidateLayout()
     }
     
-    //-----------------------------------------------------------------------------
-    // MARK: - UIView Methods
-    //-----------------------------------------------------------------------------
+    // ******************************* MARK: - UIView Methods
     
     override open func awakeFromNib() {
         super.awakeFromNib()
