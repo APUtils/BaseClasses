@@ -46,7 +46,7 @@ post_install do |installer|
     # Carthage support.
     # It puts swift files into public headers so @IBInspectable won't be stripped out.
     headersBuildPhase = installer.pods_project.targets.select{ |x| x.name == 'BaseClasses' }[0].headers_build_phase
-    publicHeaders = ['TableView.swift']
+    publicHeaders = ['TableView.swift', 'ScreenSideRelativeConstraint.swift']
     headers = installer.pods_project.development_pods['BaseClasses']
     headers.files.each { |header|
         next if not publicHeaders.include? header.path.split('/').last
