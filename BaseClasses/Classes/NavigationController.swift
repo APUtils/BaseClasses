@@ -14,7 +14,11 @@ open class NavigationController: UINavigationController {
     
     // ******************************* MARK: - UIViewController Methods
     
-    override open var childForStatusBarStyle: UIViewController? {
+    open override var childForScreenEdgesDeferringSystemGestures: UIViewController? {
+        return topViewController
+    }
+    
+    open override var childForStatusBarStyle: UIViewController? {
         return topViewController
     }
 }
