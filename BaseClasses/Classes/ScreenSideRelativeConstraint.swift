@@ -63,7 +63,7 @@ public final class ScreenSideRelativeConstraint: NSLayoutConstraint {
     }
     
     private func setup() {
-        super.constant = _multiplier * (isWidthRelative ? UIScreen.main.bounds.width : UIScreen.main.bounds.height)
+        super.constant = relativeConstant
         isSetupDone = true
     }
 }
