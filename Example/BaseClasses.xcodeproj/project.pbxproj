@@ -359,7 +359,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-BaseClasses_Tests/Pods-BaseClasses_Tests-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-BaseClasses_Tests/Pods-BaseClasses_Tests-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/FBSnapshotTestCase/FBSnapshotTestCase.framework",
 				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
 				"${BUILT_PRODUCTS_DIR}/Nimble-Snapshots/Nimble_Snapshots.framework",
@@ -375,7 +375,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BaseClasses_Tests/Pods-BaseClasses_Tests-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BaseClasses_Tests/Pods-BaseClasses_Tests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F5E327822B6141320908E864 /* [CP] Embed Pods Frameworks */ = {
@@ -384,7 +384,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-BaseClasses_Example/Pods-BaseClasses_Example-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-BaseClasses_Example/Pods-BaseClasses_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/APExtensions/APExtensions.framework",
 				"${BUILT_PRODUCTS_DIR}/BaseClasses/BaseClasses.framework",
 				"${BUILT_PRODUCTS_DIR}/StretchScrollView/StretchScrollView.framework",
@@ -397,7 +397,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BaseClasses_Example/Pods-BaseClasses_Example-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BaseClasses_Example/Pods-BaseClasses_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
