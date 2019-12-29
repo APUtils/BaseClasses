@@ -33,6 +33,8 @@ open class SelfResizeableCollectionView: CollectionView {
         intrinsicContentSize.height += contentInset.bottom
         intrinsicContentSize.width += contentInset.left
         intrinsicContentSize.width += contentInset.right
+        intrinsicContentSize.width.round(.up)
+        intrinsicContentSize.height.round(.up)
         
         return intrinsicContentSize
     }
