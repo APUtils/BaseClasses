@@ -9,5 +9,4 @@
 import UIKit
 import BaseClasses
 
-
 class NavigationController: BaseClasses.NavigationController {}
