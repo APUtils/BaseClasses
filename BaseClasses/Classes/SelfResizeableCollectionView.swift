@@ -16,7 +16,13 @@ open class SelfResizeableCollectionView: CollectionView {
     open override var contentSize: CGSize {
         didSet {
             guard oldValue != contentSize else { return }
-            
+            invalidateIntrinsicContentSize()
+        }
+    }
+    
+    open override var contentInset: UIEdgeInsets {
+        didSet {
+            guard oldValue != contentInset else { return }
             invalidateIntrinsicContentSize()
         }
     }
