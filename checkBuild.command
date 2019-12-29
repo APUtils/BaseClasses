@@ -8,7 +8,7 @@ cd "$base_dir"
 echo ""
 echo ""
 echo "Building Pods project..."
-set -o pipefail && xcodebuild -workspace "BaseClasses.xcworkspace" -scheme "BaseClasses-Example" -configuration "Release"  -sdk iphonesimulator | xcpretty
+set -o pipefail && xcodebuild -workspace "Example/BaseClasses.xcworkspace" -scheme "BaseClasses-Example" -configuration "Release"  -sdk iphonesimulator | xcpretty
 
 echo -e "\nBuilding Carthage project..."
 set -o pipefail && xcodebuild -project "Carthage Project/BaseClasses.xcodeproj" -sdk iphonesimulator -target "Example" | xcpretty
