@@ -4,9 +4,9 @@ platform :ios, '8.1'
 use_frameworks!
 
 target 'BaseClasses_Example' do
-  pod 'APExtensions'
+  pod 'APExtensions', :git => 'https://github.com/APUtils/APExtensions', :branch => 'master'
   pod 'BaseClasses', :path => '../'
-  pod 'StretchScrollView'
+  pod 'StretchScrollView', :git => 'https://github.com/APUtils/StretchScrollView', :branch => 'master'
   
   target 'BaseClasses_Tests' do
     inherit! :search_paths

@@ -4,12 +4,10 @@ PODS:
     - APExtensions/Core (= 7.0.1)
     - APExtensions/Storyboard (= 7.0.1)
     - APExtensions/ViewConfiguration (= 7.0.1)
-    - APExtensions/ViewState (= 7.0.1)
   - APExtensions/Abstractions (7.0.1)
   - APExtensions/Core (7.0.1)
   - APExtensions/Storyboard (7.0.1)
   - APExtensions/ViewConfiguration (7.0.1)
-  - APExtensions/ViewState (7.0.1)
   - BaseClasses (4.0.0)
   - FBSnapshotTestCase (2.1.4):
     - FBSnapshotTestCase/SwiftSupport (= 2.1.4)
@@ -33,31 +31,43 @@ PODS:
   - ViewState (1.0.0)
 
 DEPENDENCIES:
-  - APExtensions
+  - APExtensions (from `https://github.com/APUtils/APExtensions`, branch `master`)
   - BaseClasses (from `../`)
   - FBSnapshotTestCase
   - Nimble
   - Nimble-Snapshots
   - Quick
-  - StretchScrollView
+  - StretchScrollView (from `https://github.com/APUtils/StretchScrollView`, branch `master`)
 
 SPEC REPOS:
   trunk:
-    - APExtensions
     - FBSnapshotTestCase
     - iOSSnapshotTestCase
     - Nimble
     - Nimble-Snapshots
     - Quick
-    - StretchScrollView
     - ViewState
 
 EXTERNAL SOURCES:
+  APExtensions:
+    :branch: master
+    :git: https://github.com/APUtils/APExtensions
   BaseClasses:
     :path: "../"
+  StretchScrollView:
+    :branch: master
+    :git: https://github.com/APUtils/StretchScrollView
+
+CHECKOUT OPTIONS:
+  APExtensions:
+    :commit: 188393bd2fb316635ade747a5ba092734d06b483
+    :git: https://github.com/APUtils/APExtensions
+  StretchScrollView:
+    :commit: 35759b53a203e806147392633dc94d6c6710c760
+    :git: https://github.com/APUtils/StretchScrollView
 
 SPEC CHECKSUMS:
-  APExtensions: 9a7a7b6ff5b9785b245962de89fbbdaf4c10f10e
+  APExtensions: 681fbb94d87100ff8eeb74e78ace0ff9612979e9
   BaseClasses: e75a0ee46c79256b63b6ca207b5918720e54d524
   FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
   iOSSnapshotTestCase: 2d51aa06775e95cecb0a1fb9c5c159ccd1dd4596
@@ -67,6 +77,6 @@ SPEC CHECKSUMS:
   StretchScrollView: 24e5bd834c0f439642540e20c2d45ea707e01185
   ViewState: 78aa77483e74e592c22e841619b853bc686843be
 
-PODFILE CHECKSUM: 1173900dc849fd030c4d8a4f10cc1be88864b7cb
+PODFILE CHECKSUM: 2ef871e73b345a7d932ea77d7a27b068e593f0a1
 
 COCOAPODS: 1.8.4

@@ -224,7 +224,7 @@ final class LabelVC: UIViewController {
     
     @IBAction private func onAnimateTap(_ sender: Any) {
         g.animate(2) {
-            let attributedText = self.texts.random?.asMutableAttributedString
+            let attributedText = self.texts.randomElement()?.asMutableAttributedString
             if Bool.random() {
                 attributedText?.setStrikethrough()
             }

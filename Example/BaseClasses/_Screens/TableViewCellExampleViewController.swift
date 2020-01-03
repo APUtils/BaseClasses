@@ -10,7 +10,19 @@ import UIKit
 import APExtensions
 
 
-final class TableViewCellExampleViewController: UIViewController {}
+final class TableViewCellExampleViewController: UIViewController {
+    
+    // ******************************* MARK: - @IBOutlets
+    
+    @IBOutlet private var tableView: UITableView!
+    
+    // ******************************* MARK: - Initialization and Setup
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        print(tableView!)
+    }
+}
 
 // ******************************* MARK: - UITableViewDelegate, UITableViewDataSource
 
