@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0D33EA7923BF0FFD00DE5C50 /* UIScrollView+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D33EA7823BF0FFD00DE5C50 /* UIScrollView+Utils.swift */; };
+		0D47E41523BF20BA00C4BFDC /* APExtensions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D47E41323BF203D00C4BFDC /* APExtensions.framework */; };
 		0D4DBCD223BE93BA003D5F8B /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4DBCCE23BE93B6003D5F8B /* MainVC.swift */; };
 		0D4DBCD423BE9534003D5F8B /* LabelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4DBCD323BE9534003D5F8B /* LabelVC.swift */; };
 		0D4DBCD623BE957E003D5F8B /* Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4DBCD523BE957E003D5F8B /* Label.swift */; };
@@ -98,6 +99,7 @@
 /* Begin PBXFileReference section */
 		0491600AEA500A849511DBA7 /* FBSnapshotTestCase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSnapshotTestCase.framework; path = Carthage/Build/iOS/FBSnapshotTestCase.framework; sourceTree = "<group>"; };
 		0D33EA7823BF0FFD00DE5C50 /* UIScrollView+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScrollView+Utils.swift"; sourceTree = "<group>"; };
+		0D47E41323BF203D00C4BFDC /* APExtensions.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = APExtensions.framework; path = ../Carthage/Build/iOS/APExtensions.framework; sourceTree = "<group>"; };
 		0D4DBCCE23BE93B6003D5F8B /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		0D4DBCD323BE9534003D5F8B /* LabelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelVC.swift; sourceTree = "<group>"; };
 		0D4DBCD523BE957E003D5F8B /* Label.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Label.swift; sourceTree = "<group>"; };
@@ -171,6 +173,7 @@
 				0DBC7CBA23B94DEA00CD0EA1 /* BaseClasses.framework in Frameworks */,
 				0DBC7CB923B94D9000CD0EA1 /* StretchScrollView.framework in Frameworks */,
 				456E627369674B079C061094 /* ViewState.framework in Frameworks */,
+				0D47E41523BF20BA00C4BFDC /* APExtensions.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -325,6 +328,7 @@
 			isa = PBXGroup;
 			children = (
 				1834AC72A69DC91E1F3B8EDA /* _Carthage */,
+				0D47E41323BF203D00C4BFDC /* APExtensions.framework */,
 				0491600AEA500A849511DBA7 /* FBSnapshotTestCase.framework */,
 				E2A7396D2260D99900E97D55 /* Nimble.framework */,
 				40B2AC5FE675C1BC6FEA20DC /* Nimble_Snapshots.framework */,
