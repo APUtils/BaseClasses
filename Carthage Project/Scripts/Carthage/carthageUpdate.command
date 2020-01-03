@@ -2,16 +2,6 @@
 
 ### Script to update frameworks ###
 
-# Colors Constants
-red_color='\033[0;31m'
-green_color='\033[0;32m'
-blue_color='\033[0;34m'
-no_color='\033[0m'
-
-# Font Constants
-bold_text=$(tput bold)
-normal_text=$(tput sgr0)
-
 # Xcodeproj is required
 hash xcodeproj 2>/dev/null || { printf >&2 "\n${red_color}Xcodeproj is required. Run 'sudo gem install xcodeproj'${no_color}\n\n"; exit 1; }
 

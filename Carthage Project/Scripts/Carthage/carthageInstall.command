@@ -51,7 +51,7 @@ cartSum=`{ cat Cartfile.resolved; xcrun swift -version; } | md5`
 
 if [ "$prevSum" != "$cartSum" ] || [ ! -d "Carthage/Build/iOS" ]; then
     echo "Carthage frameworks are outdated. Updating..."
-    rm "$cart_sum_file"
+    rm "$cart_sum_file" || :
 
     # Install main app frameworks. Ignore tests frameworks.
     disableTestsFramework
