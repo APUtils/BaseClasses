@@ -21,6 +21,9 @@ set -e
 # Assume scripts are placed in /Scripts/Carthage dir
 base_dir=$(dirname "$0")
 cd "$base_dir"
+
+. "utils.sh"
+
 cd ..
 cd ..
 
