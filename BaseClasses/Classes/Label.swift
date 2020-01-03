@@ -66,7 +66,7 @@ open class Label: UILabel {
                 disappearAnimation.duration = action.duration / 2
                 
                 // Animate from current state to current state to allow text to disappear but meanwhile frame will animate to a new value.
-                let image = _getSnapshotImage().cgImage
+                let image = _getSnapshotImage()?.cgImage
                 let keepCurrentStateAnimation = CABasicAnimation(keyPath: "contents")
                 keepCurrentStateAnimation.timingFunction = CAMediaTimingFunction(name: .easeIn)
                 keepCurrentStateAnimation.fromValue = image
@@ -102,14 +102,22 @@ open class Label: UILabel {
     }
 }
 
-private extension UIView {
-    func _getSnapshotImage() -> UIImage {
-        UIGraphicsBeginImageContextWithOptions(bounds.size, false, 0)
-        defer { UIGraphicsEndImageContext() }
-        
-        layer.render(in: UIGraphicsGetCurrentContext()!)
-        let snapshotImage = UIGraphicsGetImageFromCurrentImageContext()!
-        
-        return snapshotImage
+public extension UIView {
+    /// Creates image from view and adds overlay image at the center if provided
+    func _getSnapshotImage() -> UIImage? {
+        if #available(iOS 10.0, *) {
+            let renderer = UIGraphicsImageRenderer(bounds: bounds)
+            return renderer.image { rendererContext in
+                layer.render(in: rendererContext.cgContext)
+            }
+            
+        } else {
+            UIGraphicsBeginImageContextWithOptions(bounds.size, false, 0)
+            defer { UIGraphicsEndImageContext() }
+            guard let context = UIGraphicsGetCurrentContext() else { return nil }
+            self.layer.render(in: context)
+            guard let snapshotImage = UIGraphicsGetImageFromCurrentImageContext() else { return nil }
+            return snapshotImage
+        }
     }
 }
