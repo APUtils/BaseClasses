@@ -3,6 +3,24 @@ All notable changes to this project will be documented in this file.
 `BaseClasses` adheres to [Semantic Versioning](http://semver.org/).
 
 
+## [4.0.0](https://github.com/APUtils/BaseClasses/releases/tag/4.0.0)
+Released on 01/03/2020.
+
+#### Added
+- Label which uses pulse animation to change content
+- `ScreenSideRelativeConstraint` thats adjust its constant depending on screen side size.
+- `APPLICATION_EXTENSION_API_ONLY` flag to be safe to use in app extensions.
+
+#### Changed
+-  Use top controller for `childForScreenEdgesDeferringSystemGestures` for `NavigationController`
+
+#### Fixed
+- `SelfResizableTableView` , `SelfResizeableCollectionView` and `FullSizeCollectionView` now also reacts on `contentInset` changes.
+- Added round ups to fix case when content becomes scrollable on fractial sizes for `SelfResizeable` classes.
+- Fixed `FullSizeCollectionView` resize bug related to `adjustedContentInset`.
+- Fixed system description of `UIScrollView` subclasses adding `contentInset`.
+
+
 ## [3.1.0](https://github.com/APUtils/BaseClasses/releases/tag/3.1.0)
 Released on 01/14/2019.
 

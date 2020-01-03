@@ -38,4 +38,6 @@ open class SelfResizeableCollectionView: CollectionView {
         
         return intrinsicContentSize
     }
+    
+    // NOTE: Do not add properties setup. It should be usage specific.
 }

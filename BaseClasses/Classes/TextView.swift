@@ -14,7 +14,7 @@ open class TextView: UITextView {
     
     // ******************************* MARK: - IBInspectable
     
-    @IBInspectable public var textSideInset: CGFloat = 0 {
+    @IBInspectable open var textSideInset: CGFloat = 0 {
         didSet {
             configureInsets()
         }

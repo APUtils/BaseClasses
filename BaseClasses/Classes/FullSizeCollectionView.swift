@@ -14,7 +14,25 @@ open class FullSizeCollectionView: CollectionView {
     
     // ******************************* MARK: - UIView Properties
     
-    override open var bounds: CGRect { willSet { configure(newSize: newValue.size) } }
+    override open var bounds: CGRect {
+        willSet {
+            guard bounds.size != newValue.size else { return }
+            configure(newSize: newValue.size)
+        }
+    }
+    
+    open override var contentInset: UIEdgeInsets {
+        didSet {
+            guard oldValue != contentInset else { return }
+            configure(newSize: bounds.size)
+        }
+    }
+    
+    @available(iOSApplicationExtension 11.0, *)
+    open override func adjustedContentInsetDidChange() {
+        super.adjustedContentInsetDidChange()
+        configure(newSize: bounds.size)
+    }
     
     // ******************************* MARK: - Private Properties
     
@@ -42,6 +60,7 @@ open class FullSizeCollectionView: CollectionView {
         
         flowLayout.itemSize = withoutInsetsSize
         collectionViewLayout.invalidateLayout()
+        layoutIfNeeded()
     }
     
     // ******************************* MARK: - UIView Methods

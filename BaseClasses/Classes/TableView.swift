@@ -26,7 +26,7 @@ open class TableView: UITableView {
     // ******************************* MARK: - @IBInspectable
     
     /// Text displayed in the middle of table view when it's content is empty
-    @IBInspectable public var emptyText: String? {
+    @IBInspectable open var emptyText: String? {
         didSet {
             emptyLabel.text = emptyText
             configure()
@@ -37,7 +37,7 @@ open class TableView: UITableView {
     // ******************************* MARK: - Private Properties
     
     /// Label that displays `emptyText` string. You could configure it's params, but it's still better to set text using `emptyText` property.
-    private(set) public lazy var emptyLabel: UILabel = {
+    open lazy var emptyLabel: UILabel = {
         let emptyLabel = UILabel()
         emptyLabel.numberOfLines = 0
         emptyLabel.text = emptyText
@@ -46,7 +46,7 @@ open class TableView: UITableView {
     }()
     
     /// Activity indicator that always stays in center.
-    private(set) public lazy var activityIndicatorView: UIActivityIndicatorView = {
+    open lazy var activityIndicatorView: UIActivityIndicatorView = {
         let activityIndicatorView = UIActivityIndicatorView(style: .gray)
         
         return activityIndicatorView
@@ -125,3 +125,12 @@ open class TableView: UITableView {
         return super.touchesShouldCancel(in: view)
     }
 }
+
+// ******************************* MARK: - CustomStringConvertible
+
+extension TableView {
+    open override var description: String {
+        return fixedDescription
+    }
+}
+

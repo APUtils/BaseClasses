@@ -15,7 +15,7 @@ open class CollectionViewCell: UICollectionViewCell {
     // ******************************* MARK: - Public Properties
     
     /// Increases every time cell was reused. May be used to determine if async update should be performed in this cell.
-    private(set) public var reuseId: UInt = 0
+    private(set) open var reuseId: UInt = 0
     
     // ******************************* MARK: - CollectionViewCell Overrides
     

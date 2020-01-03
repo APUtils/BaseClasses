@@ -1,5 +1,6 @@
-github "APUtils/APExtensions" "e1828a85753c6b43de3768640edcac392ae2ef40"
-github "APUtils/StretchScrollView" "034e56e86cf88d8a204ff671152cd76425e629d9"
+github "APUtils/APExtensions" "0d1ff953cf01c670cc40ad789db983be4d67128e"
+github "APUtils/StretchScrollView" "35759b53a203e806147392633dc94d6c6710c760"
+github "APUtils/ViewState" "1.0.0"
 github "Quick/Nimble" "v8.0.5"
 github "Quick/Quick" "v2.2.0"
 github "ashfurrow/Nimble-Snapshots" "8.0.0"

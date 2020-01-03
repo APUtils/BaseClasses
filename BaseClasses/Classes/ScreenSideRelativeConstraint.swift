@@ -14,15 +14,15 @@ import UIKit
 /// by multiplier and value is set into constraint's constant field.
 /// If constraint is height relative then screen's height is multiplied
 /// by multiplier and value is set into constraint's constant field.
-public final class ScreenSideRelativeConstraint: NSLayoutConstraint {
+open final class ScreenSideRelativeConstraint: NSLayoutConstraint {
     
     // ******************************* MARK: - @IBInspectable
     
     /// Wheter this constraint width relative.
-    @IBInspectable var isWidthRelative: Bool = true
+    @IBInspectable open var isWidthRelative: Bool = true
     
     /// Wheter this constraint width relative.
-    @IBInspectable override public var multiplier: CGFloat {
+    @IBInspectable override open var multiplier: CGFloat {
         get {
             return _multiplier
         }
@@ -33,7 +33,7 @@ public final class ScreenSideRelativeConstraint: NSLayoutConstraint {
     
     // ******************************* MARK: - NSLayoutConstraint Properties Overrides
     
-    override public var constant: CGFloat {
+    override open var constant: CGFloat {
         get {
             if isSetupDone {
                 return super.constant
@@ -57,7 +57,7 @@ public final class ScreenSideRelativeConstraint: NSLayoutConstraint {
     
     // ******************************* MARK: - Initialization and Setup
     
-    override public func awakeFromNib() {
+    override open func awakeFromNib() {
         super.awakeFromNib()
         setup()
     }
