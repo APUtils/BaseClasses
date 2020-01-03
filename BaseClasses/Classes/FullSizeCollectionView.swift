@@ -28,6 +28,7 @@ open class FullSizeCollectionView: CollectionView {
         }
     }
     
+    @available(iOS 11.0, *)
     @available(iOSApplicationExtension 11.0, *)
     open override func adjustedContentInsetDidChange() {
         super.adjustedContentInsetDidChange()
@@ -46,7 +47,7 @@ open class FullSizeCollectionView: CollectionView {
     
     private func configure(newSize: CGSize) {
         var withoutInsetsSize = newSize
-        if #available(iOS 11.0, *) {
+        if #available(iOS 11.0, iOSApplicationExtension 11.0, *) {
             withoutInsetsSize.width -= adjustedContentInset.left + adjustedContentInset.right
             withoutInsetsSize.height -= adjustedContentInset.top + adjustedContentInset.bottom
         } else {

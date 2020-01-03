@@ -14,7 +14,7 @@ import UIKit
 /// by multiplier and value is set into constraint's constant field.
 /// If constraint is height relative then screen's height is multiplied
 /// by multiplier and value is set into constraint's constant field.
-open final class ScreenSideRelativeConstraint: NSLayoutConstraint {
+open class ScreenSideRelativeConstraint: NSLayoutConstraint {
     
     // ******************************* MARK: - @IBInspectable
     

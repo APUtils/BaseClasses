@@ -26,7 +26,7 @@
         <!--MainVC-->
         <scene sceneID="dqe-UK-ez0">
             <objects>
-                <viewController id="CF8-Wa-Mqp" customClass="MainVC" customModule="Example" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="CF8-Wa-Mqp" customClass="MainVC" customModule="BaseClasses_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="QyG-Tf-2Uc"/>
                         <viewControllerLayoutGuide type="bottom" id="fgk-Ad-Fir"/>
@@ -92,7 +92,7 @@
         <!--FSC Height-->
         <scene sceneID="rMe-mv-12x">
             <objects>
-                <viewController id="4oX-Oi-xsd" customClass="FullSizeCollectionExampleViewController" customModule="Example" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="4oX-Oi-xsd" customClass="FullSizeCollectionExampleViewController" customModule="BaseClasses_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="KH9-Ph-ab4"/>
                         <viewControllerLayoutGuide type="bottom" id="fSN-Lb-4PK"/>
@@ -298,7 +298,7 @@
         <!--TableCell-->
         <scene sceneID="pKk-PP-rQh">
             <objects>
-                <viewController id="6Zi-Pk-zjT" customClass="TableViewCellExampleViewController" customModule="Example" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="6Zi-Pk-zjT" customClass="TableViewCellExampleViewController" customModule="BaseClasses_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="W7N-vt-wq4"/>
                         <viewControllerLayoutGuide type="bottom" id="PBu-kh-Edp"/>
@@ -396,7 +396,7 @@
         <!--FSC Aspect Ration-->
         <scene sceneID="tTI-YK-T23">
             <objects>
-                <viewController id="Mjt-wa-2Ns" customClass="FullSizeCollectionExampleViewController" customModule="Example" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Mjt-wa-2Ns" customClass="FullSizeCollectionExampleViewController" customModule="BaseClasses_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="5FS-wb-H9x"/>
                         <viewControllerLayoutGuide type="bottom" id="XK5-pi-4kX"/>
@@ -498,7 +498,7 @@
         <!--LabelVC-->
         <scene sceneID="Uc2-lV-rQo">
             <objects>
-                <viewController id="fWz-WP-Qqz" customClass="LabelVC" customModule="Example" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="fWz-WP-Qqz" customClass="LabelVC" customModule="BaseClasses_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="XUJ-sR-eXp"/>
                         <viewControllerLayoutGuide type="bottom" id="YMQ-bl-21U"/>
@@ -539,7 +539,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="hIa-RS-5bq">
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="abn-Sl-NhD">
+                        <barButtonItem key="rightBarButtonItem" id="abn-Sl-NhD">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="vN8-zy-pvS">
                                 <rect key="frame" x="276" y="7" width="83" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>

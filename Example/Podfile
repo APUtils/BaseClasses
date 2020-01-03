@@ -1,27 +1,40 @@
 # Deployment Target
-platform :ios, '8.0'
-
+platform :ios, '8.1'
 # Add pods as frameworks so we could add obj-c and swift 3.0 pods
 use_frameworks!
 
 target 'BaseClasses_Example' do
-    pod 'APExtensions'
-    pod 'BaseClasses', :path => '../'
-    pod 'StretchScrollView'
-
-    target 'BaseClasses_Tests' do
-        inherit! :search_paths
-
-        pod 'Quick'
-        pod 'Nimble'
-        pod 'FBSnapshotTestCase'
-        pod 'Nimble-Snapshots'
-    end
+  pod 'APExtensions'
+  pod 'BaseClasses', :path => '../'
+  pod 'StretchScrollView'
+  
+  target 'BaseClasses_Tests' do
+    inherit! :search_paths
+    
+    pod 'Quick'
+    pod 'Nimble'
+    pod 'FBSnapshotTestCase'
+    pod 'Nimble-Snapshots'
+  end
 end
 
 post_install do |installer|
-    # Add podInstall.command and podUpdate.command shell scripts to Pods project
-    pods_project = installer.pods_project
-    pods_project.new_file "../podInstall.command"
-    pods_project.new_file "../podUpdate.command"
+  # Add podInstall.command and podUpdate.command shell scripts to Pods project
+  pods_project = installer.pods_project
+  pods_project.new_file "../Scripts/Cocoapods/podInstall.command"
+  pods_project.new_file "../Scripts/Cocoapods/podUpdate.command"
+  
+  
+  installer.pods_project.targets.each do |target|
+    if target.name == "BaseClasses"
+      target.build_configurations.each do |config|
+        config.build_settings['APPLICATION_EXTENSION_API_ONLY'] = 'YES'
+      end
+    end
+  end
+  
+  # Silence Pods project warning
+  installer.pods_project.build_configurations.each do |config|
+    config.build_settings['CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED'] = 'YES'
+  end
 end

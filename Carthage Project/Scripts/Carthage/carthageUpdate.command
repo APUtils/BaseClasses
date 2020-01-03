@@ -24,11 +24,6 @@ cd "$base_dir"
 cd ..
 cd ..
 
-getFrameworks() {
-    file_name="${1}"
-    grep -o -E "^git.*|^binary.*" "${file_name}" | sed -E "s/(github \"|git \"|binary \")//" | sed -e "s/\".*//" | sed -e "s/^.*\///" -e "s/\".*//" -e "s/.json//"
-}
-
 # Try one level up if didn't find Cartfile.
 if [ ! -f "Cartfile" ]; then
     project_dir="${PWD##*/}"
@@ -44,20 +39,7 @@ framework_name=$1
 
 if [ -z $framework_name ]; then
     # Listing available frameworks
-    echo ""
-    echo "Frameworks list:"
-
-    # Blue color
-    printf '\033[0;34m'
-
-    # Frameworks list
-    public_frameworks=$(getFrameworks Cartfile)
-    private_frameworks=$(getFrameworks Cartfile.private)
-    echo -e "${public_frameworks}\n${private_frameworks}" | sort -fu
-
-    # No color
-    printf '\033[0m'
-    echo ""
+	getAllFrameworks
 
     # Asking which one to update
     read -p "Which framework to update? You can enter several separating with space. Press enter to update all: " framework_name

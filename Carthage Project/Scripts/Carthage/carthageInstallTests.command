@@ -36,6 +36,7 @@ cartSum=`{ cat Cartfile.resolved; xcrun swift -version; } | md5`
 
 if [ "$prevSum" != "$cartSum" ] || [ ! -d "Carthage/Build/iOS" ]; then
     echo "Carthage frameworks are outdated. Updating..."
+    rm "$cart_sum_file"
 
     # Install needed frameworks.
     carthage bootstrap --platform iOS --cache-builds --use-ssh
