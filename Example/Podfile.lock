@@ -19,6 +19,8 @@ PODS:
   - iOSSnapshotTestCase/Core (5.0.2)
   - iOSSnapshotTestCase/SwiftSupport (5.0.2):
     - iOSSnapshotTestCase/Core
+  - KeyboardAvoidingView (5.0.0):
+    - ViewState (>= 1.0.0)
   - Nimble (7.3.4)
   - Nimble-Snapshots (6.9.1):
     - Nimble-Snapshots/Core (= 6.9.1)
@@ -34,6 +36,7 @@ DEPENDENCIES:
   - APExtensions (from `https://github.com/APUtils/APExtensions`, branch `master`)
   - BaseClasses (from `../`)
   - FBSnapshotTestCase
+  - KeyboardAvoidingView (from `https://github.com/APUtils/KeyboardAvoidingView`, branch `master`)
   - Nimble
   - Nimble-Snapshots
   - Quick
@@ -54,29 +57,36 @@ EXTERNAL SOURCES:
     :git: https://github.com/APUtils/APExtensions
   BaseClasses:
     :path: "../"
+  KeyboardAvoidingView:
+    :branch: master
+    :git: https://github.com/APUtils/KeyboardAvoidingView
   StretchScrollView:
     :branch: master
     :git: https://github.com/APUtils/StretchScrollView
 
 CHECKOUT OPTIONS:
   APExtensions:
-    :commit: 188393bd2fb316635ade747a5ba092734d06b483
+    :commit: 1765e3339e467fd70c9790cfa424561f3b39931d
     :git: https://github.com/APUtils/APExtensions
+  KeyboardAvoidingView:
+    :commit: a4b4295581f8f8d1415a85d05e46fc2fad5e5fff
+    :git: https://github.com/APUtils/KeyboardAvoidingView
   StretchScrollView:
     :commit: 35759b53a203e806147392633dc94d6c6710c760
     :git: https://github.com/APUtils/StretchScrollView
 
 SPEC CHECKSUMS:
-  APExtensions: 681fbb94d87100ff8eeb74e78ace0ff9612979e9
+  APExtensions: e0377240c9db7bc42c3b864c039ba70c1b4034a3
   BaseClasses: e75a0ee46c79256b63b6ca207b5918720e54d524
   FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
   iOSSnapshotTestCase: 2d51aa06775e95cecb0a1fb9c5c159ccd1dd4596
+  KeyboardAvoidingView: 93c4f709386c998b7b7f6b405a05c5c3585410a7
   Nimble: 051e3d8912d40138fa5591c78594f95fb172af37
   Nimble-Snapshots: bbd1ab264bacc24a9ce24a8363bc05aac783aeb0
   Quick: 7fb19e13be07b5dfb3b90d4f9824c855a11af40e
   StretchScrollView: 24e5bd834c0f439642540e20c2d45ea707e01185
   ViewState: 78aa77483e74e592c22e841619b853bc686843be
 
-PODFILE CHECKSUM: 2ef871e73b345a7d932ea77d7a27b068e593f0a1
+PODFILE CHECKSUM: a0f1fd1f9adc82c750dd723d81ded6862a522bf9
 
 COCOAPODS: 1.8.4
