@@ -11,10 +11,10 @@ import UIKit
 // ******************************* MARK: - Helper Extension
 
 private extension UIView {
-    var allSubviews: [UIView] {
+    var _allSubviews: [UIView] {
         var allSubviews = self.subviews
         
-        allSubviews.forEach { allSubviews.append(contentsOf: $0.allSubviews) }
+        allSubviews.forEach { allSubviews.append(contentsOf: $0._allSubviews) }
         
         return allSubviews
     }
@@ -72,7 +72,7 @@ open class TableViewCell: UITableViewCell {
     
     private func getViewsBackgrounds() -> [UIView: UIColor?] {
         var viewsBackgrounds: [UIView: UIColor?] = [:]
-        contentView.allSubviews.forEach({ viewsBackgrounds[$0] = $0.backgroundColor })
+        contentView._allSubviews.forEach({ viewsBackgrounds[$0] = $0.backgroundColor })
         
         return viewsBackgrounds
     }
