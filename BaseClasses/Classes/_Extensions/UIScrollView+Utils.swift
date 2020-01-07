@@ -8,15 +8,9 @@
 
 import UIKit
 
+// ******************************* MARK: - Description
+
 public extension UIScrollView {
-    /// Returns `adjustedContentInset` on iOS >= 11 and `contentInset` on iOS < 11.
-    private var _fullContentInsets: UIEdgeInsets {
-        if #available(iOS 11.0, *) {
-            return adjustedContentInset
-        } else {
-            return contentInset
-        }
-    }
     
     /// Fixed `UIScrollView` description. Includes info about insets and doesn't include trash info.
     var fixedDescription: String {
@@ -68,5 +62,72 @@ private extension CGFloat {
         } else {
             return String(format: "%.1f", self)
         }
+    }
+}
+
+// ******************************* MARK: - Insets
+
+extension UIScrollView {
+    /// Returns `adjustedContentInset` on iOS >= 11 and `contentInset` on iOS < 11.
+    var _fullContentInsets: UIEdgeInsets {
+        if #available(iOS 11.0, *) {
+            return adjustedContentInset
+        } else {
+            return contentInset
+        }
+    }
+}
+
+// ******************************* MARK: - Scroll
+
+extension UIScrollView {
+    func _scrollToTop(animated: Bool) {
+        func _scrollToTop(animated: Bool) {
+            let topContentOffset: CGPoint = .init(x: 0, y: -_fullContentInsets.top)
+            if animated {
+                setContentOffset(topContentOffset, animated: true)
+            } else {
+                contentOffset = topContentOffset
+            }
+        }
+        
+        _scrollToTop(animated: animated)
+    }
+    
+    func _scrollToBottom(animated: Bool) {
+        func _getBottomContentOffset() -> CGPoint {
+            let height = bounds.size.height
+            var y: CGFloat = _fullContentInsets.bottom
+            if contentSize.height > height {
+                y += contentSize.height - height
+            }
+            
+            let minOffsetY = -_fullContentInsets.top
+            let maxOffsetY = max(contentSize.height - bounds.size.height + _fullContentInsets.bottom, -_fullContentInsets.top)
+            y = min(y, maxOffsetY)
+            y = max(y, minOffsetY)
+            
+            return CGPoint(x: 0, y: y)
+        }
+        
+        func _scrollToBottom(animated: Bool) {
+            let bottomContentOffset = _getBottomContentOffset()
+            
+            if let tableView = self as? UITableView {
+                // Since table view `contentSize` might change when cell become visible
+                // we need to use `UITableView`'s methods instead.
+                tableView.scrollToRow(at: tableView._lastRowIndexPath, at: .bottom, animated: animated)
+                
+            } else {
+                // Use `UIScrollView`'s methods
+                if animated {
+                    setContentOffset(bottomContentOffset, animated: true)
+                } else {
+                    contentOffset = bottomContentOffset
+                }
+            }
+        }
+        
+        _scrollToBottom(animated: animated)
     }
 }

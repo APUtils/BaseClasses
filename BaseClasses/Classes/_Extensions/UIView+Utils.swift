@@ -27,3 +27,13 @@ extension UIView {
         return allSuperviews
     }
 }
+
+extension UIView {
+    
+    /// Checks wheter view is visible in containing window.
+    var _isVisibleInWindow: Bool {
+        guard let window = window else { return false }
+        let viewFrameInWindow = convert(bounds, to: window)
+        return window.bounds.intersects(viewFrameInWindow)
+    }
+}
