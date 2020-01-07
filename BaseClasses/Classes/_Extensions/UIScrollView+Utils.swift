@@ -29,7 +29,7 @@ public extension UIScrollView {
         descriptionComponents.append(classDescription)
         
         // Frame
-        let frameDescription = "(\(frame.minX) \(frame.minY); \(frame.maxX) \(frame.maxY))"
+        let frameDescription = "(\(frame.minX._asString) \(frame.minY._asString); \(frame.maxX._asString) \(frame.maxY._asString))"
         descriptionComponents.append("frame = \(frameDescription)")
         
         // Insets
@@ -38,6 +38,10 @@ public extension UIScrollView {
             let insetsDescription = "{\(fullContentInsets.top._asString), \(fullContentInsets.left._asString), \(fullContentInsets.bottom._asString), \(fullContentInsets.right._asString)}"
             descriptionComponents.append("fullContentInsets = \(insetsDescription)")
         }
+        
+        // Content Size
+        let contentSizeDescription = "(\(contentSize.width._asString), \(contentSize.height._asString))"
+        descriptionComponents.append("; contentSize = \(contentSizeDescription)")
         
         // Offset
         if contentOffset != .zero {
