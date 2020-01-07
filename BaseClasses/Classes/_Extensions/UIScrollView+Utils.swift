@@ -9,15 +9,36 @@
 import UIKit
 
 extension UIScrollView {
+    /// Returns `adjustedContentInset` on iOS >= 11 and `contentInset` on iOS < 11.
+    var _fullContentInsets: UIEdgeInsets {
+        if #available(iOS 11.0, *) {
+            return adjustedContentInset
+        } else {
+            return contentInset
+        }
+    }
+    
     var fixedDescription: String {
-        let contentInsetDescription = "{\(contentInset.top._asString), \(contentInset.left._asString), \(contentInset.bottom._asString), \(contentInset.right._asString)}"
-        var description = super.description.dropLast().appending("; contentInset = \(contentInsetDescription)>")
-        if !description.contains("contentOffset") {
-            let contentOffsetDescription = "{\(contentOffset.x._asString), \(contentOffset.y._asString)}"
-            description = description.dropLast().appending("; contentOffset = \(contentOffsetDescription)>")
+        let description = super.description.dropLast()
+        var descriptionComponents = description.components(separatedBy: "; ")
+        
+        let fullContentInsets = _fullContentInsets
+        if fullContentInsets != .zero {
+            let insetsDescription = "{\(fullContentInsets.top._asString), \(fullContentInsets.left._asString), \(fullContentInsets.bottom._asString), \(fullContentInsets.right._asString)}"
+            descriptionComponents.append("fullContentInsets = \(insetsDescription)")
         }
         
-        return description
+        if contentOffset == .zero && description.contains("contentOffset") {
+            // Remove excessive info
+            descriptionComponents.removeAll(where: { $0.contains("contentOffset") })
+            
+        } else if contentOffset != .zero && !description.contains("contentOffset") {
+            // Add info
+            let contentOffsetDescription = "{\(contentOffset.x._asString), \(contentOffset.y._asString)}"
+            descriptionComponents.append("; contentOffset = \(contentOffsetDescription)")
+        }
+        
+        return descriptionComponents.joined(separator: "; ").appending(">")
     }
 }
 

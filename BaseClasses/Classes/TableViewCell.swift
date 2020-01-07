@@ -28,7 +28,7 @@ open class TableViewCell: UITableViewCell {
     // ******************************* MARK: - Public Properties
     
     /// Increases every time cell was reused. May be used to determine if async update should be performed in this cell.
-    private(set) open var reuseId: UInt = 0
+    private(set) open var reuseID: Int = 0
     
     // ******************************* MARK: - UITableViewCell Overrides
     
@@ -67,7 +67,7 @@ open class TableViewCell: UITableViewCell {
     // ******************************* MARK: - Private Methods
     
     private func changeReuseId() {
-        reuseId = reuseId &+ 1
+        reuseID = reuseID &+ 1
     }
     
     private func getViewsBackgrounds() -> [UIView: UIColor?] {
