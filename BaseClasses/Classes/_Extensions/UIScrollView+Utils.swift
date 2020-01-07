@@ -41,13 +41,13 @@ public extension UIScrollView {
         
         // Content Size
         let contentSizeDescription = "(\(contentSize.width._asString), \(contentSize.height._asString))"
-        descriptionComponents.append("; contentSize = \(contentSizeDescription)")
+        descriptionComponents.append("contentSize = \(contentSizeDescription)")
         
         // Offset
         if contentOffset != .zero {
             // Add info
             let contentOffsetDescription = "{\(contentOffset.x._asString), \(contentOffset.y._asString)}"
-            descriptionComponents.append("; contentOffset = \(contentOffsetDescription)")
+            descriptionComponents.append("contentOffset = \(contentOffsetDescription)")
         }
         
         return "<\(descriptionComponents.joined(separator: "; "))>"
