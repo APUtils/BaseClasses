@@ -30,6 +30,11 @@ final class MainVC: UIViewController {
     
     // ******************************* MARK: - Actions
     
+    @IBAction private func onAnimatableTablveViewTap(_ sender: Any) {
+        let vc = AnimatableTableViewVC.create()
+        navigationController?.pushViewController(vc)
+    }
+    
     // ******************************* MARK: - Notifications
 }
 

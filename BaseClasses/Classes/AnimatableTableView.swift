@@ -86,8 +86,8 @@ open class AnimatableTableView: TableView {
         let sectionsCount = dataSource?.numberOfSections?(in: self) ?? 0
         guard let rowsCount = dataSource?.tableView(self, numberOfRowsInSection: sectionsCount) else { return }
         let lastRowIndexPath = IndexPath(row: rowsCount - 1, section: sectionsCount)
-        let isVisible = bounds.height > contentSize.height
         
+        let isVisible = _visibleFrame.maxY .>= _contentFrame.maxY
         if isVisible {
             insertRows(at: [lastRowIndexPath], with: .fade)
         } else {

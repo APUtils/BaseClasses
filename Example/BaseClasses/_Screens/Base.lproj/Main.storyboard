@@ -29,7 +29,7 @@
         <!--MainVC-->
         <scene sceneID="dqe-UK-ez0">
             <objects>
-                <viewController id="CF8-Wa-Mqp" customClass="MainVC" customModule="BaseClasses_Example" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="CF8-Wa-Mqp" customClass="MainVC" customModule="Example" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="QyG-Tf-2Uc"/>
                         <viewControllerLayoutGuide type="bottom" id="fgk-Ad-Fir"/>
@@ -39,7 +39,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="n6M-6O-UB1">
-                                <rect key="frame" x="1" y="243.5" width="373" height="180"/>
+                                <rect key="frame" x="1" y="228.5" width="373" height="210"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EgY-Z1-Aci">
                                         <rect key="frame" x="0.0" y="0.0" width="373" height="30"/>
@@ -78,9 +78,16 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zUF-Pr-9MA">
                                         <rect key="frame" x="0.0" y="150" width="373" height="30"/>
-                                        <state key="normal" title="Label"/>
+                                        <state key="normal" title="Label Class Animations"/>
                                         <connections>
                                             <segue destination="fWz-WP-Qqz" kind="show" id="a4N-RI-iln"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="784-go-Xp6">
+                                        <rect key="frame" x="0.0" y="180" width="373" height="30"/>
+                                        <state key="normal" title="AnimatableTableView"/>
+                                        <connections>
+                                            <action selector="onAnimatableTablveViewTap:" destination="CF8-Wa-Mqp" eventType="touchUpInside" id="Iwy-0f-d4z"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -102,7 +109,7 @@
         <!--FSC Height-->
         <scene sceneID="rMe-mv-12x">
             <objects>
-                <viewController id="4oX-Oi-xsd" customClass="FullSizeCollectionExampleViewController" customModule="BaseClasses_Example" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="4oX-Oi-xsd" customClass="FullSizeCollectionExampleViewController" customModule="Example" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="KH9-Ph-ab4"/>
                         <viewControllerLayoutGuide type="bottom" id="fSN-Lb-4PK"/>
@@ -214,7 +221,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UIScrollView:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k7K-2M-5gs">
-                                <rect key="frame" x="20" y="52" width="101" height="21"/>
+                                <rect key="frame" x="20" y="52" width="331" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -249,7 +256,7 @@
                                 </constraints>
                             </scrollView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ScrollView:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jdN-op-tlI">
-                                <rect key="frame" x="20" y="135" width="84.5" height="21"/>
+                                <rect key="frame" x="20" y="135" width="331" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -290,9 +297,11 @@
                             <constraint firstItem="8yi-5C-r8h" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="O0A-0S-JTB"/>
                             <constraint firstAttribute="trailing" secondItem="8yi-5C-r8h" secondAttribute="trailing" id="RR1-Vv-Lz1"/>
                             <constraint firstItem="7ft-lM-cgJ" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="Z9R-tj-Xq7"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="k7K-2M-5gs" secondAttribute="trailing" constant="8" id="c7X-e1-beR"/>
                             <constraint firstItem="7ft-lM-cgJ" firstAttribute="top" secondItem="k7K-2M-5gs" secondAttribute="bottom" constant="8" id="hcx-vO-YAa"/>
                             <constraint firstItem="k7K-2M-5gs" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" id="o4b-eh-wS2"/>
                             <constraint firstItem="jdN-op-tlI" firstAttribute="top" secondItem="7ft-lM-cgJ" secondAttribute="bottom" constant="8" id="oz7-tb-ICQ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="jdN-op-tlI" secondAttribute="trailing" constant="8" id="qqc-AL-Bu2"/>
                             <constraint firstItem="k7K-2M-5gs" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="8" id="rq5-N5-5h3"/>
                             <constraint firstItem="8yi-5C-r8h" firstAttribute="top" secondItem="jdN-op-tlI" secondAttribute="bottom" constant="8" id="sKe-vS-swA"/>
                             <constraint firstItem="jdN-op-tlI" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" id="wMB-vS-HLE"/>
@@ -308,7 +317,7 @@
         <!--TableCell-->
         <scene sceneID="pKk-PP-rQh">
             <objects>
-                <viewController id="6Zi-Pk-zjT" customClass="TableViewCellExampleViewController" customModule="BaseClasses_Example" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="6Zi-Pk-zjT" customClass="TableViewCellExampleViewController" customModule="Example" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="W7N-vt-wq4"/>
                         <viewControllerLayoutGuide type="bottom" id="PBu-kh-Edp"/>
@@ -329,7 +338,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UITableViewCell" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pSS-Qq-QnZ">
-                                                    <rect key="frame" x="8" y="19" width="123" height="21"/>
+                                                    <rect key="frame" x="8" y="19" width="359" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -347,6 +356,7 @@
                                                 <constraint firstItem="pSS-Qq-QnZ" firstAttribute="leading" secondItem="3he-g2-6Ym" secondAttribute="leading" constant="8" id="H36-dO-XsO"/>
                                                 <constraint firstItem="wRR-Kn-y9K" firstAttribute="centerY" secondItem="3he-g2-6Ym" secondAttribute="centerY" id="QVU-Mf-AYb"/>
                                                 <constraint firstItem="pSS-Qq-QnZ" firstAttribute="top" secondItem="3he-g2-6Ym" secondAttribute="topMargin" constant="8" id="qeD-mR-RHD"/>
+                                                <constraint firstAttribute="trailing" secondItem="pSS-Qq-QnZ" secondAttribute="trailing" constant="8" id="rFg-a2-IXP"/>
                                                 <constraint firstItem="wRR-Kn-y9K" firstAttribute="centerX" secondItem="3he-g2-6Ym" secondAttribute="centerX" id="uL0-aX-YXA"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -359,7 +369,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TableViewCell" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Suv-iV-W1X">
-                                                    <rect key="frame" x="8" y="8" width="106" height="21"/>
+                                                    <rect key="frame" x="8" y="8" width="359" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -377,6 +387,7 @@
                                                 <constraint firstItem="Suv-iV-W1X" firstAttribute="top" secondItem="Huy-eO-7V0" secondAttribute="top" constant="8" id="Aae-gu-Hdm"/>
                                                 <constraint firstItem="yVG-Fe-Mdz" firstAttribute="centerY" secondItem="Huy-eO-7V0" secondAttribute="centerY" id="Bgy-mo-w9m"/>
                                                 <constraint firstItem="Suv-iV-W1X" firstAttribute="leading" secondItem="Huy-eO-7V0" secondAttribute="leading" constant="8" id="Cds-zh-D6w"/>
+                                                <constraint firstAttribute="trailing" secondItem="Suv-iV-W1X" secondAttribute="trailing" constant="8" id="T4J-0j-MMo"/>
                                                 <constraint firstItem="yVG-Fe-Mdz" firstAttribute="centerX" secondItem="Huy-eO-7V0" secondAttribute="centerX" id="xsX-Yw-sOE"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -409,7 +420,7 @@
         <!--FSC Aspect Ration-->
         <scene sceneID="tTI-YK-T23">
             <objects>
-                <viewController id="Mjt-wa-2Ns" customClass="FullSizeCollectionExampleViewController" customModule="BaseClasses_Example" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Mjt-wa-2Ns" customClass="FullSizeCollectionExampleViewController" customModule="Example" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="5FS-wb-H9x"/>
                         <viewControllerLayoutGuide type="bottom" id="XK5-pi-4kX"/>
@@ -511,7 +522,7 @@
         <!--LabelVC-->
         <scene sceneID="Uc2-lV-rQo">
             <objects>
-                <viewController id="fWz-WP-Qqz" customClass="LabelVC" customModule="BaseClasses_Example" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="fWz-WP-Qqz" customClass="LabelVC" customModule="Example" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="XUJ-sR-eXp"/>
                         <viewControllerLayoutGuide type="bottom" id="YMQ-bl-21U"/>
@@ -574,7 +585,7 @@
         <!--FSC Aspect Ration-->
         <scene sceneID="Rft-AO-V90">
             <objects>
-                <viewController id="0hw-oG-mOO" customClass="FullSizeCollectionExampleViewController" customModule="BaseClasses_Example" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="0hw-oG-mOO" customClass="FullSizeCollectionExampleViewController" customModule="Example" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="wh7-9s-lSo"/>
                         <viewControllerLayoutGuide type="bottom" id="QVj-gw-KMV"/>

@@ -11,8 +11,15 @@
 		0D286EED23C4D2370064398E /* ScreenSideRelativeConstraint.swift in Headers */ = {isa = PBXBuildFile; fileRef = 0DBC7CC823B94E3400CD0EA1 /* ScreenSideRelativeConstraint.swift */; settings = {ATTRIBUTES = (Public, ); }; };
 		0D286EEF23C4D2BF0064398E /* UITableView+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D286EEE23C4D2BF0064398E /* UITableView+Utils.swift */; };
 		0D286EF123C4D3440064398E /* AnimatableTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D286EF023C4D3440064398E /* AnimatableTableView.swift */; };
+		0D286EF923C4D7510064398E /* AnimatableTableView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D286EF323C4D7510064398E /* AnimatableTableView.storyboard */; };
+		0D286EFA23C4D7510064398E /* AnimatableTableViewCellVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D286EF423C4D7510064398E /* AnimatableTableViewCellVM.swift */; };
+		0D286EFB23C4D7510064398E /* AnimatableTableViewVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D286EF523C4D7510064398E /* AnimatableTableViewVM.swift */; };
+		0D286EFC23C4D7510064398E /* AnimatableTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D286EF623C4D7510064398E /* AnimatableTableViewCell.swift */; };
+		0D286EFD23C4D7510064398E /* AnimatableTableViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D286EF723C4D7510064398E /* AnimatableTableViewVC.swift */; };
+		0D286EFE23C4D7510064398E /* AnimatableTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D286EF823C4D7510064398E /* AnimatableTableViewCell.xib */; };
 		0D33EA7923BF0FFD00DE5C50 /* UIScrollView+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D33EA7823BF0FFD00DE5C50 /* UIScrollView+Utils.swift */; };
 		0D47E41523BF20BA00C4BFDC /* APExtensions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D47E41323BF203D00C4BFDC /* APExtensions.framework */; };
+		0D4BC97623C4F9990078E853 /* CGFloat+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4BC97523C4F9990078E853 /* CGFloat+Utils.swift */; };
 		0D4DBCD223BE93BA003D5F8B /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4DBCCE23BE93B6003D5F8B /* MainVC.swift */; };
 		0D4DBCD423BE9534003D5F8B /* LabelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4DBCD323BE9534003D5F8B /* LabelVC.swift */; };
 		0D4DBCD623BE957E003D5F8B /* Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4DBCD523BE957E003D5F8B /* Label.swift */; };
@@ -103,8 +110,16 @@
 		0491600AEA500A849511DBA7 /* FBSnapshotTestCase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSnapshotTestCase.framework; path = Carthage/Build/iOS/FBSnapshotTestCase.framework; sourceTree = "<group>"; };
 		0D286EEE23C4D2BF0064398E /* UITableView+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Utils.swift"; sourceTree = "<group>"; };
 		0D286EF023C4D3440064398E /* AnimatableTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimatableTableView.swift; sourceTree = "<group>"; };
+		0D286EF323C4D7510064398E /* AnimatableTableView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AnimatableTableView.storyboard; sourceTree = "<group>"; };
+		0D286EF423C4D7510064398E /* AnimatableTableViewCellVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatableTableViewCellVM.swift; sourceTree = "<group>"; };
+		0D286EF523C4D7510064398E /* AnimatableTableViewVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatableTableViewVM.swift; sourceTree = "<group>"; };
+		0D286EF623C4D7510064398E /* AnimatableTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatableTableViewCell.swift; sourceTree = "<group>"; };
+		0D286EF723C4D7510064398E /* AnimatableTableViewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatableTableViewVC.swift; sourceTree = "<group>"; };
+		0D286EF823C4D7510064398E /* AnimatableTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnimatableTableViewCell.xib; sourceTree = "<group>"; };
+		0D286F1123C4F8090064398E /* podUpdate.command */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; name = podUpdate.command; path = ../Example/Scripts/Cocoapods/podUpdate.command; sourceTree = "<group>"; };
 		0D33EA7823BF0FFD00DE5C50 /* UIScrollView+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScrollView+Utils.swift"; sourceTree = "<group>"; };
 		0D47E41323BF203D00C4BFDC /* APExtensions.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = APExtensions.framework; path = ../Carthage/Build/iOS/APExtensions.framework; sourceTree = "<group>"; };
+		0D4BC97523C4F9990078E853 /* CGFloat+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGFloat+Utils.swift"; sourceTree = "<group>"; };
 		0D4DBCCE23BE93B6003D5F8B /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		0D4DBCD323BE9534003D5F8B /* LabelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelVC.swift; sourceTree = "<group>"; };
 		0D4DBCD523BE957E003D5F8B /* Label.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Label.swift; sourceTree = "<group>"; };
@@ -197,9 +212,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0D286EF223C4D7360064398E /* AnimatableTableView */ = {
+			isa = PBXGroup;
+			children = (
+				0D286EF323C4D7510064398E /* AnimatableTableView.storyboard */,
+				0D286EF623C4D7510064398E /* AnimatableTableViewCell.swift */,
+				0D286EF823C4D7510064398E /* AnimatableTableViewCell.xib */,
+				0D286EF423C4D7510064398E /* AnimatableTableViewCellVM.swift */,
+				0D286EF723C4D7510064398E /* AnimatableTableViewVC.swift */,
+				0D286EF523C4D7510064398E /* AnimatableTableViewVM.swift */,
+			);
+			path = AnimatableTableView;
+			sourceTree = "<group>";
+		};
 		0D33EA7723BF0FD900DE5C50 /* _Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				0D4BC97523C4F9990078E853 /* CGFloat+Utils.swift */,
 				0D33EA7823BF0FFD00DE5C50 /* UIScrollView+Utils.swift */,
 				0D286EEE23C4D2BF0064398E /* UITableView+Utils.swift */,
 				0DBC7CC723B94E3300CD0EA1 /* UIView+Utils.swift */,
@@ -210,6 +239,7 @@
 		0D4DBCCB23BE9396003D5F8B /* _Screens */ = {
 			isa = PBXGroup;
 			children = (
+				0D286EF223C4D7360064398E /* AnimatableTableView */,
 				E2A7394D2260CFC700E97D55 /* AppDelegate.swift */,
 				E2A7394F2260CFC700E97D55 /* FullSizeCollectionExampleViewController.swift */,
 				0D4DBCD323BE9534003D5F8B /* LabelVC.swift */,
@@ -327,6 +357,7 @@
 				E367FC2E6FA17D26E0C9217B /* checkBuild.command */,
 				1EAA35EED3CD9409FEA72A9E /* podCheck.command */,
 				5F1DE96B710E29706543D5E1 /* podPush.command */,
+				0D286F1123C4F8090064398E /* podUpdate.command */,
 			);
 			name = _;
 			sourceTree = "<group>";
@@ -480,7 +511,9 @@
 			files = (
 				E2A739552260CFC800E97D55 /* Images.xcassets in Resources */,
 				0DBC7CB523B9499E00CD0EA1 /* LaunchScreen.storyboard in Resources */,
+				0D286EF923C4D7510064398E /* AnimatableTableView.storyboard in Resources */,
 				E2A739532260CFC700E97D55 /* Main.storyboard in Resources */,
+				0D286EFE23C4D7510064398E /* AnimatableTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -561,6 +594,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D4BC97623C4F9990078E853 /* CGFloat+Utils.swift in Sources */,
 				0DBC7CCC23B94E3400CD0EA1 /* TableViewCell.swift in Sources */,
 				0DBC7CD723B94E3400CD0EA1 /* CollectionViewCell.swift in Sources */,
 				0DBC7CDB23B94E3400CD0EA1 /* SelfResizeableCollectionView.swift in Sources */,
@@ -590,6 +624,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				0DBC7CB123B9493F00CD0EA1 /* TableViewCellExampleViewController.swift in Sources */,
+				0D286EFA23C4D7510064398E /* AnimatableTableViewCellVM.swift in Sources */,
+				0D286EFD23C4D7510064398E /* AnimatableTableViewVC.swift in Sources */,
+				0D286EFB23C4D7510064398E /* AnimatableTableViewVM.swift in Sources */,
+				0D286EFC23C4D7510064398E /* AnimatableTableViewCell.swift in Sources */,
 				0D4DBCD223BE93BA003D5F8B /* MainVC.swift in Sources */,
 				0DBC7CB223B9493F00CD0EA1 /* NavigationController.swift in Sources */,
 				E2A739502260CFC700E97D55 /* FullSizeCollectionExampleViewController.swift in Sources */,

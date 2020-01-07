@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D286F0623C4E1A30064398E /* AnimatableTableViewVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D286F0023C4E1A30064398E /* AnimatableTableViewVM.swift */; };
+		0D286F0723C4E1A30064398E /* AnimatableTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D286F0123C4E1A30064398E /* AnimatableTableViewCell.swift */; };
+		0D286F0823C4E1A30064398E /* AnimatableTableViewCellVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D286F0223C4E1A30064398E /* AnimatableTableViewCellVM.swift */; };
+		0D286F0923C4E1A30064398E /* AnimatableTableView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D286F0323C4E1A30064398E /* AnimatableTableView.storyboard */; };
+		0D286F0A23C4E1A30064398E /* AnimatableTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D286F0423C4E1A30064398E /* AnimatableTableViewCell.xib */; };
+		0D286F0B23C4E1A30064398E /* AnimatableTableViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D286F0523C4E1A30064398E /* AnimatableTableViewVC.swift */; };
 		0D33EA7023BED5EF00DE5C50 /* FullSizeCollectionExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D33EA6823BED5EF00DE5C50 /* FullSizeCollectionExampleViewController.swift */; };
 		0D33EA7123BED5EF00DE5C50 /* LabelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D33EA6923BED5EF00DE5C50 /* LabelVC.swift */; };
 		0D33EA7223BED5EF00DE5C50 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D33EA6A23BED5EF00DE5C50 /* Main.storyboard */; };
@@ -36,6 +42,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0D286F0023C4E1A30064398E /* AnimatableTableViewVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimatableTableViewVM.swift; sourceTree = "<group>"; };
+		0D286F0123C4E1A30064398E /* AnimatableTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimatableTableViewCell.swift; sourceTree = "<group>"; };
+		0D286F0223C4E1A30064398E /* AnimatableTableViewCellVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimatableTableViewCellVM.swift; sourceTree = "<group>"; };
+		0D286F0323C4E1A30064398E /* AnimatableTableView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AnimatableTableView.storyboard; sourceTree = "<group>"; };
+		0D286F0423C4E1A30064398E /* AnimatableTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AnimatableTableViewCell.xib; sourceTree = "<group>"; };
+		0D286F0523C4E1A30064398E /* AnimatableTableViewVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimatableTableViewVC.swift; sourceTree = "<group>"; };
 		0D33EA6823BED5EF00DE5C50 /* FullSizeCollectionExampleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FullSizeCollectionExampleViewController.swift; sourceTree = "<group>"; };
 		0D33EA6923BED5EF00DE5C50 /* LabelVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LabelVC.swift; sourceTree = "<group>"; };
 		0D33EA6B23BED5EF00DE5C50 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -93,9 +105,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0D286EFF23C4E1A30064398E /* AnimatableTableView */ = {
+			isa = PBXGroup;
+			children = (
+				0D286F0323C4E1A30064398E /* AnimatableTableView.storyboard */,
+				0D286F0123C4E1A30064398E /* AnimatableTableViewCell.swift */,
+				0D286F0423C4E1A30064398E /* AnimatableTableViewCell.xib */,
+				0D286F0223C4E1A30064398E /* AnimatableTableViewCellVM.swift */,
+				0D286F0523C4E1A30064398E /* AnimatableTableViewVC.swift */,
+				0D286F0023C4E1A30064398E /* AnimatableTableViewVM.swift */,
+			);
+			path = AnimatableTableView;
+			sourceTree = "<group>";
+		};
 		0D33EA6723BED5EF00DE5C50 /* _Screens */ = {
 			isa = PBXGroup;
 			children = (
+				0D286EFF23C4E1A30064398E /* AnimatableTableView */,
 				0D33EA6823BED5EF00DE5C50 /* FullSizeCollectionExampleViewController.swift */,
 				0D33EA6923BED5EF00DE5C50 /* LabelVC.swift */,
 				0D33EA6A23BED5EF00DE5C50 /* Main.storyboard */,
@@ -313,9 +339,11 @@
 				B0A072BB1F389C07001B8CC6 /* TableViewCell.gif in Resources */,
 				B0A072AF1F3897D6001B8CC6 /* FullSizeCollection.gif in Resources */,
 				B0A072AB1F388D0C001B8CC6 /* ScrollView.gif in Resources */,
+				0D286F0A23C4E1A30064398E /* AnimatableTableViewCell.xib in Resources */,
 				0D33EA7223BED5EF00DE5C50 /* Main.storyboard in Resources */,
 				B0A072A71F3888D7001B8CC6 /* baseClass.png in Resources */,
 				0DBC7CE023B94F1200CD0EA1 /* LaunchScreen.storyboard in Resources */,
+				0D286F0923C4E1A30064398E /* AnimatableTableView.storyboard in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -424,11 +452,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D286F0623C4E1A30064398E /* AnimatableTableViewVM.swift in Sources */,
+				0D286F0723C4E1A30064398E /* AnimatableTableViewCell.swift in Sources */,
+				0D286F0B23C4E1A30064398E /* AnimatableTableViewVC.swift in Sources */,
 				0D33EA7623BED5EF00DE5C50 /* MainVC.swift in Sources */,
 				0D33EA7423BED5EF00DE5C50 /* TableViewCellExampleViewController.swift in Sources */,
 				0D33EA7523BED5EF00DE5C50 /* NavigationController.swift in Sources */,
 				0D33EA7323BED5EF00DE5C50 /* AppDelegate.swift in Sources */,
 				0D33EA7023BED5EF00DE5C50 /* FullSizeCollectionExampleViewController.swift in Sources */,
+				0D286F0823C4E1A30064398E /* AnimatableTableViewCellVM.swift in Sources */,
 				0D33EA7123BED5EF00DE5C50 /* LabelVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

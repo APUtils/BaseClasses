@@ -82,7 +82,13 @@ extension UIScrollView {
 
 extension UIScrollView {
     func _scrollToTop(animated: Bool) {
-        func _scrollToTop(animated: Bool) {
+        if let tableView = self as? UITableView {
+            // Since table view `contentSize` might change when cell become visible
+            // we need to use `UITableView`'s methods instead.
+            let indexPath = tableView._firstRowIndexPath
+            tableView.scrollToRow(at: indexPath, at: .top, animated: animated)
+            
+        } else {
             let topContentOffset: CGPoint = .init(x: 0, y: -_fullContentInsets.top)
             if animated {
                 setContentOffset(topContentOffset, animated: true)
@@ -90,8 +96,6 @@ extension UIScrollView {
                 contentOffset = topContentOffset
             }
         }
-        
-        _scrollToTop(animated: animated)
     }
     
     func _scrollToBottom(animated: Bool) {
@@ -110,24 +114,44 @@ extension UIScrollView {
             return CGPoint(x: 0, y: y)
         }
         
-        func _scrollToBottom(animated: Bool) {
-            let bottomContentOffset = _getBottomContentOffset()
+        if let tableView = self as? UITableView {
+            // Since table view `contentSize` might change when cell become visible
+            // we need to use `UITableView`'s methods instead.
+            let lastRowIndexPath = tableView._lastRowIndexPath
+            tableView.scrollToRow(at: lastRowIndexPath, at: .bottom, animated: animated)
             
-            if let tableView = self as? UITableView {
-                // Since table view `contentSize` might change when cell become visible
-                // we need to use `UITableView`'s methods instead.
-                tableView.scrollToRow(at: tableView._lastRowIndexPath, at: .bottom, animated: animated)
-                
+        } else {
+            // Use `UIScrollView`'s methods
+            let bottomContentOffset = _getBottomContentOffset()
+            if animated {
+                setContentOffset(bottomContentOffset, animated: true)
             } else {
-                // Use `UIScrollView`'s methods
-                if animated {
-                    setContentOffset(bottomContentOffset, animated: true)
-                } else {
-                    contentOffset = bottomContentOffset
-                }
+                contentOffset = bottomContentOffset
             }
         }
-        
-        _scrollToBottom(animated: animated)
+    }
+}
+
+// ******************************* MARK: - Helper Properties
+
+extension UIScrollView {
+    
+    /// Visible area frame. Equal to bounds.
+    var _visibleFrame: CGRect { bounds }
+    
+    /// Frame of the content.
+    var _contentFrame: CGRect {
+        .init(x: 0,
+              y: 0,
+              width: contentSize.width,
+              height: contentSize.height)
+    }
+    
+    /// Scrollable frame. Equal to content size + fullContentInsets.
+    var _scrollableFrame: CGRect {
+        .init(x: -_fullContentInsets.left,
+              y: -_fullContentInsets.top,
+              width: contentSize.width + _fullContentInsets.right + _fullContentInsets.left,
+              height: contentSize.height + _fullContentInsets.bottom + _fullContentInsets.top)
     }
 }
