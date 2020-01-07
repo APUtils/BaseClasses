@@ -72,6 +72,7 @@ open class AnimatableTableView: TableView {
             UIView.performWithoutAnimation {
                 insertRows(at: [firstRowIndexPath], with: .none)
                 cellForRow(at: firstRowIndexPath)?.alpha = 0
+                layoutIfNeeded()
             }
             
             UIView.animate(withDuration: 0.3) {
@@ -83,13 +84,44 @@ open class AnimatableTableView: TableView {
     }
     
     open func appendRowAndScrollToIt() {
+        // Table view adds cell without animations at the bottom if it outside of visible bounds
+        // So need to animate it manually.
+        
         let sectionsCount = dataSource?.numberOfSections?(in: self) ?? 0
         guard let rowsCount = dataSource?.tableView(self, numberOfRowsInSection: sectionsCount) else { return }
         let lastRowIndexPath = IndexPath(row: rowsCount - 1, section: sectionsCount)
         
-        let isVisible = _visibleFrame.maxY .>= _contentFrame.maxY
-        if isVisible {
-            insertRows(at: [lastRowIndexPath], with: .fade)
+        let canAnimate = _visibleFrame.maxY .>= _contentFrame.maxY
+        if canAnimate {
+            if _visibleFrame.maxY .> _contentFrame.maxY {
+                // Cell will be loaded and animated
+                insertRows(at: [lastRowIndexPath], with: .fade)
+                
+            } else {
+                UIView.performWithoutAnimation {
+                    // Notify table view about new cell and prepare it for a fade in animation.
+                    insertRows(at: [lastRowIndexPath], with: .none)
+                    if let cell = cellForRow(at: lastRowIndexPath) {
+                        // In some cases it might be loaded.
+                        cell.alpha = 0
+                        
+                    } else {
+                        // In some cases it might not be loaded.
+                        // Make added cell visible so it'll be loaded.
+                        // Sadly, we need to do it twice.
+                        contentOffset.y += 1
+                        layoutIfNeeded()
+                        contentOffset.y += 1
+                        cellForRow(at: lastRowIndexPath)?.alpha = 0
+                    }
+                }
+                
+                // Fade in
+                UIView.animate(withDuration: 0.3) {
+                    self.cellForRow(at: lastRowIndexPath)?.alpha = 1
+                }
+            }
+            
         } else {
             insertRows(at: [lastRowIndexPath], with: .none)
         }
