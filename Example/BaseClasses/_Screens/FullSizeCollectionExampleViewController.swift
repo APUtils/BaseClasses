@@ -20,6 +20,12 @@ class FullSizeCollectionExampleViewController: UIViewController {
     
     // ******************************* MARK: - Initialization and Setup
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setup()
+        print(scrollView.fixedDescription)
+    }
+    
     private func setup() {
         scrollView.addFadeViews([pageControl])
     }

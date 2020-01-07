@@ -8,9 +8,9 @@
 
 import UIKit
 
-extension UIScrollView {
+public extension UIScrollView {
     /// Returns `adjustedContentInset` on iOS >= 11 and `contentInset` on iOS < 11.
-    var _fullContentInsets: UIEdgeInsets {
+    private var _fullContentInsets: UIEdgeInsets {
         if #available(iOS 11.0, *) {
             return adjustedContentInset
         } else {
@@ -18,27 +18,35 @@ extension UIScrollView {
         }
     }
     
+    /// Fixed `UIScrollView` description. Includes info about insets and doesn't include trash info.
     var fixedDescription: String {
-        let description = super.description.dropLast()
-        var descriptionComponents = description.components(separatedBy: "; ")
+        var descriptionComponents: [String] = []
         
+        // Class
+        let typeDescription = NSStringFromClass(type(of: self))
+        let pointerDescription = Unmanaged<AnyObject>.passUnretained(self).toOpaque().debugDescription
+        let classDescription = "\(typeDescription): \(pointerDescription)"
+        descriptionComponents.append(classDescription)
+        
+        // Frame
+        let frameDescription = "(\(frame.minX) \(frame.minY); \(frame.maxX) \(frame.maxY))"
+        descriptionComponents.append("frame = \(frameDescription)")
+        
+        // Insets
         let fullContentInsets = _fullContentInsets
         if fullContentInsets != .zero {
             let insetsDescription = "{\(fullContentInsets.top._asString), \(fullContentInsets.left._asString), \(fullContentInsets.bottom._asString), \(fullContentInsets.right._asString)}"
             descriptionComponents.append("fullContentInsets = \(insetsDescription)")
         }
         
-        if contentOffset == .zero && description.contains("contentOffset") {
-            // Remove excessive info
-            descriptionComponents.removeAll(where: { $0.contains("contentOffset") })
-            
-        } else if contentOffset != .zero && !description.contains("contentOffset") {
+        // Offset
+        if contentOffset != .zero {
             // Add info
             let contentOffsetDescription = "{\(contentOffset.x._asString), \(contentOffset.y._asString)}"
             descriptionComponents.append("; contentOffset = \(contentOffsetDescription)")
         }
         
-        return descriptionComponents.joined(separator: "; ").appending(">")
+        return "<\(descriptionComponents.joined(separator: "; "))>"
     }
 }
 
