@@ -51,3 +51,10 @@ extension CGFloat {
         return (lhs .== rhs) || (lhs > rhs)
     }
 }
+
+extension CGFloat {
+    var _roundedToPixel: CGFloat {
+        let scale = UIScreen.main.scale
+        return (self * scale).rounded() / scale
+    }
+}

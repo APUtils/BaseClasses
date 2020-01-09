@@ -66,7 +66,7 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   APExtensions:
-    :commit: af6059b8525ecba08fe4c4d7a5eaa46798cd4d4d
+    :commit: 1e5d39783104c3eebd59f132c3ba7a9ad5546e72
     :git: https://github.com/APUtils/APExtensions
   KeyboardAvoidingView:
     :commit: a4b4295581f8f8d1415a85d05e46fc2fad5e5fff

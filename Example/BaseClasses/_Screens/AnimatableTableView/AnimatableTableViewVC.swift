@@ -34,7 +34,6 @@ final class AnimatableTableViewVC: UIViewController {
     private func setupTableView() {
         tableView.registerNib(class: AnimatableTableViewCell.self)
         tableView.handleEstimatedSizeAutomatically = true
-        tableView.estimatedRowHeight = 44
         tableView.rowHeight = UITableView.automaticDimension
     }
     
