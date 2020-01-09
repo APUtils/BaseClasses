@@ -59,11 +59,14 @@ open class Label: UILabel {
             // Get animation attributes to create proper animations
             if let action = self.action(for: layer, forKey: "backgroundColor") as? CAAnimation {
                 
+                let halfDisappearDuration = action.duration * 0.1
+                
                 // Disappear using opacity
                 let disappearAnimation = CABasicAnimation(keyPath: "opacity")
                 disappearAnimation.timingFunction = CAMediaTimingFunction(name: .easeIn)
                 disappearAnimation.toValue = 0
-                disappearAnimation.duration = action.duration / 2
+                disappearAnimation.duration = action.duration / 2 - halfDisappearDuration
+                disappearAnimation.fillMode = .forwards
                 
                 // Animate from current state to current state to allow text to disappear but meanwhile frame will animate to a new value.
                 let image = _getSnapshotImage()?.cgImage
@@ -77,8 +80,8 @@ open class Label: UILabel {
                 let appearAnimation = CABasicAnimation(keyPath: "opacity")
                 appearAnimation.fromValue = 0
                 appearAnimation.toValue = 1
-                appearAnimation.beginTime = action.duration / 2
-                appearAnimation.duration = action.duration / 2
+                appearAnimation.beginTime = action.duration / 2 + halfDisappearDuration
+                appearAnimation.duration = action.duration / 2 - halfDisappearDuration
                 
                 let animationGroup = CAAnimationGroup()
                 animationGroup.animations = [disappearAnimation, keepCurrentStateAnimation, appearAnimation ]
