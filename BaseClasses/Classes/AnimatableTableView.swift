@@ -8,6 +8,10 @@
 
 import UIKit
 
+public protocol AnimatableTableViewDataSource: UITableViewDataSource {
+    func configureCell(_ cell: UITableViewCell, forRowAt indexPath: IndexPath)
+}
+
 open class AnimatableTableView: TableView {
     
 //    open override var contentOffset: CGPoint {
@@ -55,7 +59,7 @@ open class AnimatableTableView: TableView {
         // We reload cell manually and trigger table view cells height reload
         // so we can animate cell content changes.
         UIView.animate(withDuration: 0.3) {
-            dataSource.tableView(self, configureCell: cell, forRowAt: indexPath)
+            dataSource.configureCell(cell, forRowAt: indexPath)
             self.beginUpdates()
             self.endUpdates()
         }
@@ -196,8 +200,4 @@ open class AnimatableTableView: TableView {
         
         _scrollToBottom(animated: true)
     }
-}
-
-public protocol AnimatableTableViewDataSource: UITableViewDataSource {
-    func tableView(_ tableView: UITableView, configureCell cell: UITableViewCell, forRowAt indexPath: IndexPath)
 }
