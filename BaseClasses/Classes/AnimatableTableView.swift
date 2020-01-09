@@ -109,13 +109,20 @@ open class AnimatableTableView: TableView {
                 setContentOffset(animationStartContentOffset, animated: false)
                 layoutIfNeeded()
                     
-                if animationStartContentOffsetY .!= contentOffset.y {
-                    assertionFailure("Offset was changed during layout")
+                var iteration = 0
+                while animationStartContentOffsetY .!= contentOffset.y && iteration <= 10 {
+                    setContentOffset(animationStartContentOffset, animated: false)
+                    layoutIfNeeded()
+                    iteration += 1
+                }
+                
+                if iteration == 10 {
+                    print("Can't set proper contentOffset")
                 }
                 
             } else if let topCell = topCell, let topCellOriginalOffset = topCellOriginalOffset {
                 if canAnimate {
-                    assertionFailure("Inserted cell is missing, thought, it was assuming possible to be animated.")
+                    print("Inserted cell is missing, thought, it was assuming possible to be animated.")
                 }
                 
                 let contentOffsetFix = topCell.frame.minY - topCellOriginalOffset
@@ -124,12 +131,19 @@ open class AnimatableTableView: TableView {
                 setContentOffset(animationStartContentOffset, animated: false)
                 layoutIfNeeded()
                 
-                if contentOffset.y .!= animationStartContentOffsetY {
-                    assertionFailure("Offset was changed during layout")
+                var iteration = 0
+                while animationStartContentOffsetY .!= contentOffset.y && iteration < 10 {
+                    setContentOffset(animationStartContentOffset, animated: false)
+                    layoutIfNeeded()
+                    iteration += 1
+                }
+                
+                if iteration == 10 {
+                    print("Can't set proper contentOffset")
                 }
                 
             } else {
-                assertionFailure("Unable to restore top offset")
+                print("Unable to restore top offset")
             }
         }
         
