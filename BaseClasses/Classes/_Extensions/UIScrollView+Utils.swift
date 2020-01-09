@@ -154,4 +154,9 @@ extension UIScrollView {
               width: contentSize.width + _fullContentInsets.right + _fullContentInsets.left,
               height: contentSize.height + _fullContentInsets.bottom + _fullContentInsets.top)
     }
+    
+    /// Returns whether scrollable frame is more than visible frame
+    var _isScrollable: Bool {
+        return _scrollableFrame.contains(_visibleFrame)
+    }
 }

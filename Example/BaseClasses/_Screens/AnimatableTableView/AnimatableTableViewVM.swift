@@ -10,7 +10,7 @@ import Foundation
 
 struct AnimatableTableViewVM {
     
-    static let cellsCount: Int = 10
+    static let cellsCount: Int = 0
     
     // ******************************* MARK: - Public Properties
     

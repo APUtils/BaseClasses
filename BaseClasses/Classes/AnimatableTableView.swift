@@ -67,6 +67,14 @@ open class AnimatableTableView: TableView {
     }
     
     open func insertFirstRowAndScrollToIt() {
+        
+        // No need to worry if we can't yet scroll just use system method
+        let firstRowIndexPath = IndexPath(row: 0, section: 0)
+        guard _isScrollable else {
+            insertRows(at: [firstRowIndexPath], with: .fade)
+            return
+        }
+        
         // Several things happening here.
         // 1) .none - is a row animation. Table view still has expand animation with .insertRows call
         // 2) When table scrolled to the top, a new cell just expands from the top but
@@ -83,7 +91,6 @@ open class AnimatableTableView: TableView {
         setContentOffset(contentOffset, animated: false)
         
         let canAnimate = contentOffset.y <= -_fullContentInsets.top
-        let firstRowIndexPath = IndexPath(row: 0, section: 0)
         var insertedCell: UITableViewCell?
         UIView.performWithoutAnimation {
             let originalContentOffset = contentOffset
@@ -109,15 +116,8 @@ open class AnimatableTableView: TableView {
                 setContentOffset(animationStartContentOffset, animated: false)
                 layoutIfNeeded()
                     
-                var iteration = 0
-                while animationStartContentOffsetY .!= contentOffset.y && iteration <= 10 {
-                    setContentOffset(animationStartContentOffset, animated: false)
-                    layoutIfNeeded()
-                    iteration += 1
-                }
-                
-                if iteration == 10 {
-                    print("Can't set proper contentOffset")
+                if animationStartContentOffsetY .!= contentOffset.y {
+                    print("Offset was changed during layout")
                 }
                 
             } else if let topCell = topCell, let topCellOriginalOffset = topCellOriginalOffset {
@@ -131,15 +131,8 @@ open class AnimatableTableView: TableView {
                 setContentOffset(animationStartContentOffset, animated: false)
                 layoutIfNeeded()
                 
-                var iteration = 0
-                while animationStartContentOffsetY .!= contentOffset.y && iteration < 10 {
-                    setContentOffset(animationStartContentOffset, animated: false)
-                    layoutIfNeeded()
-                    iteration += 1
-                }
-                
-                if iteration == 10 {
-                    print("Can't set proper contentOffset")
+                if contentOffset.y .!= animationStartContentOffsetY {
+                    print("Offset was changed during layout")
                 }
                 
             } else {
