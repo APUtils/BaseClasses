@@ -10,7 +10,6 @@
 		0D286EEC23C4D2270064398E /* ScreenSideRelativeConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBC7CC823B94E3400CD0EA1 /* ScreenSideRelativeConstraint.swift */; };
 		0D286EED23C4D2370064398E /* ScreenSideRelativeConstraint.swift in Headers */ = {isa = PBXBuildFile; fileRef = 0DBC7CC823B94E3400CD0EA1 /* ScreenSideRelativeConstraint.swift */; settings = {ATTRIBUTES = (Public, ); }; };
 		0D286EEF23C4D2BF0064398E /* UITableView+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D286EEE23C4D2BF0064398E /* UITableView+Utils.swift */; };
-		0D286EF123C4D3440064398E /* AnimatableTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D286EF023C4D3440064398E /* AnimatableTableView.swift */; };
 		0D33EA7923BF0FFD00DE5C50 /* UIScrollView+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D33EA7823BF0FFD00DE5C50 /* UIScrollView+Utils.swift */; };
 		0D3445FB23CA93DA0053C1C4 /* CGRect+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D3445FA23CA93DA0053C1C4 /* CGRect+Utils.swift */; };
 		0D47E41523BF20BA00C4BFDC /* APExtensions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D47E41323BF203D00C4BFDC /* APExtensions.framework */; };
@@ -104,7 +103,6 @@
 /* Begin PBXFileReference section */
 		0491600AEA500A849511DBA7 /* FBSnapshotTestCase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSnapshotTestCase.framework; path = Carthage/Build/iOS/FBSnapshotTestCase.framework; sourceTree = "<group>"; };
 		0D286EEE23C4D2BF0064398E /* UITableView+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Utils.swift"; sourceTree = "<group>"; };
-		0D286EF023C4D3440064398E /* AnimatableTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimatableTableView.swift; sourceTree = "<group>"; };
 		0D286F1123C4F8090064398E /* podUpdate.command */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; name = podUpdate.command; path = ../Example/Scripts/Cocoapods/podUpdate.command; sourceTree = "<group>"; };
 		0D33EA7823BF0FFD00DE5C50 /* UIScrollView+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScrollView+Utils.swift"; sourceTree = "<group>"; };
 		0D3445FA23CA93DA0053C1C4 /* CGRect+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGRect+Utils.swift"; sourceTree = "<group>"; };
@@ -274,7 +272,6 @@
 			isa = PBXGroup;
 			children = (
 				0D33EA7723BF0FD900DE5C50 /* _Extensions */,
-				0D286EF023C4D3440064398E /* AnimatableTableView.swift */,
 				0DBC7CC923B94E3400CD0EA1 /* CollectionView.swift */,
 				0DBC7CC623B94E3300CD0EA1 /* CollectionViewCell.swift */,
 				0DBC7CC223B94E3300CD0EA1 /* FullSizeCollectionView.swift */,
@@ -574,7 +571,6 @@
 				0DBC7CCC23B94E3400CD0EA1 /* TableViewCell.swift in Sources */,
 				0DBC7CD723B94E3400CD0EA1 /* CollectionViewCell.swift in Sources */,
 				0DBC7CDB23B94E3400CD0EA1 /* SelfResizeableCollectionView.swift in Sources */,
-				0D286EF123C4D3440064398E /* AnimatableTableView.swift in Sources */,
 				0DBC7CDC23B94E3400CD0EA1 /* NavigationController.swift in Sources */,
 				0DBC7CCD23B94E3400CD0EA1 /* NavigationBar.swift in Sources */,
 				0DBC7CCF23B94E3400CD0EA1 /* TableView.swift in Sources */,
