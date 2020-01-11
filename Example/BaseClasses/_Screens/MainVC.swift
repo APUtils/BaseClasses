@@ -31,7 +31,7 @@ final class MainVC: UIViewController {
     // ******************************* MARK: - Actions
     
     @IBAction private func onAnimatableTablveViewTap(_ sender: Any) {
-        let vc = AnimatableTableViewVC.create()
+        let vc = AnimatableTableViewVC.instantiateFromStoryboard()
         navigationController?.pushViewController(vc)
     }
     

@@ -134,29 +134,31 @@ extension UIScrollView {
 
 // ******************************* MARK: - Helper Properties
 
-extension UIScrollView {
-    
-    /// Visible area frame. Equal to bounds.
-    var _visibleFrame: CGRect { bounds }
+public extension UIScrollView {
     
     /// Frame of the content.
     var _contentFrame: CGRect {
-        .init(x: 0,
-              y: 0,
-              width: contentSize.width,
-              height: contentSize.height)
+        CGRect(x: 0,
+               y: 0,
+               width: contentSize.width,
+               height: contentSize.height)
+            ._roundedToPixel
     }
     
     /// Scrollable frame. Equal to content size + fullContentInsets.
     var _scrollableFrame: CGRect {
-        .init(x: -_fullContentInsets.left,
-              y: -_fullContentInsets.top,
-              width: contentSize.width + _fullContentInsets.right + _fullContentInsets.left,
-              height: contentSize.height + _fullContentInsets.bottom + _fullContentInsets.top)
+        CGRect(x: -_fullContentInsets.left,
+               y: -_fullContentInsets.top,
+               width: contentSize.width + _fullContentInsets.right + _fullContentInsets.left,
+               height: contentSize.height + _fullContentInsets.bottom + _fullContentInsets.top)
+            ._roundedToPixel
     }
+    
+    /// Visible area frame. Equal to bounds.
+    var _visibleFrame: CGRect { bounds._roundedToPixel }
     
     /// Returns whether scrollable frame is more than visible frame
     var _isScrollable: Bool {
-        return _scrollableFrame.contains(_visibleFrame)
+        return _scrollableFrame.height .> _visibleFrame.height
     }
 }

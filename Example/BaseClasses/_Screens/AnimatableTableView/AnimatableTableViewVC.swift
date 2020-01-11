@@ -34,7 +34,9 @@ final class AnimatableTableViewVC: UIViewController {
     private func setupTableView() {
         tableView.registerNib(class: AnimatableTableViewCell.self)
         tableView.handleEstimatedSizeAutomatically = true
-        tableView.rowHeight = UITableView.automaticDimension
+        tableView.computeRowHeightAutomatically(cell: AnimatableTableViewCell.instantiateFromXib()) { [weak self] in
+            self?.configureCell($0, forRowAt: $1)
+        }
     }
     
     // ******************************* MARK: - Actions
@@ -71,17 +73,18 @@ extension AnimatableTableViewVC: InstantiatableFromStoryboard {}
 // ******************************* MARK: - UITableViewDelegate, UITableViewDataSource
 
 extension AnimatableTableViewVC: UITableViewDelegate, UITableViewDataSource, AnimatableTableViewDataSource {
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return vm.cellVMs.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeue(AnimatableTableViewCell.self, for: indexPath)
-        self.tableView(tableView, configureCell: cell, forRowAt: indexPath)
+        configureCell(cell, forRowAt: indexPath)
         return cell
     }
     
-    func tableView(_ tableView: UITableView, configureCell cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+    func configureCell(_ cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         guard let cell = cell as? AnimatableTableViewCell else { return }
         let cellVM = vm.cellVMs[indexPath.row]
         cell.configure(vm: cellVM)

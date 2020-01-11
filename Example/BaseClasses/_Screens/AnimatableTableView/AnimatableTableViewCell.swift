@@ -10,7 +10,7 @@ import APExtensions
 import BaseClasses
 import UIKit
 
-final class AnimatableTableViewCell: TableViewCell {
+final class AnimatableTableViewCell: TableViewCell, InstantiatableFromXib {
     
     // ******************************* MARK: - @IBOutlets
     

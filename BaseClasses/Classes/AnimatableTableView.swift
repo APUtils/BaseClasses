@@ -74,6 +74,7 @@ open class AnimatableTableView: TableView {
         
         // No need to worry if we can't yet scroll just use system method
         let firstRowIndexPath = IndexPath(row: 0, section: 0)
+        
         guard _isScrollable else {
             insertRows(at: [firstRowIndexPath], with: .fade)
             return
