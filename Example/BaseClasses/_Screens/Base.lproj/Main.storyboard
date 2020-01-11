@@ -29,7 +29,7 @@
         <!--MainVC-->
         <scene sceneID="dqe-UK-ez0">
             <objects>
-                <viewController id="CF8-Wa-Mqp" customClass="MainVC" customModule="Example" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="CF8-Wa-Mqp" customClass="MainVC" customModule="BaseClasses_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="QyG-Tf-2Uc"/>
                         <viewControllerLayoutGuide type="bottom" id="fgk-Ad-Fir"/>
@@ -39,7 +39,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="n6M-6O-UB1">
-                                <rect key="frame" x="1" y="228.5" width="373" height="210"/>
+                                <rect key="frame" x="1" y="243.5" width="373" height="180"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EgY-Z1-Aci">
                                         <rect key="frame" x="0.0" y="0.0" width="373" height="30"/>
@@ -83,13 +83,6 @@
                                             <segue destination="fWz-WP-Qqz" kind="show" id="a4N-RI-iln"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="784-go-Xp6">
-                                        <rect key="frame" x="0.0" y="180" width="373" height="30"/>
-                                        <state key="normal" title="AnimatableTableView"/>
-                                        <connections>
-                                            <action selector="onAnimatableTablveViewTap:" destination="CF8-Wa-Mqp" eventType="touchUpInside" id="Iwy-0f-d4z"/>
-                                        </connections>
-                                    </button>
                                 </subviews>
                             </stackView>
                         </subviews>
@@ -109,7 +102,7 @@
         <!--FSC Height-->
         <scene sceneID="rMe-mv-12x">
             <objects>
-                <viewController id="4oX-Oi-xsd" customClass="FullSizeCollectionExampleViewController" customModule="Example" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="4oX-Oi-xsd" customClass="FullSizeCollectionExampleViewController" customModule="BaseClasses_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="KH9-Ph-ab4"/>
                         <viewControllerLayoutGuide type="bottom" id="fSN-Lb-4PK"/>
@@ -317,7 +310,7 @@
         <!--TableCell-->
         <scene sceneID="pKk-PP-rQh">
             <objects>
-                <viewController id="6Zi-Pk-zjT" customClass="TableViewCellExampleViewController" customModule="Example" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="6Zi-Pk-zjT" customClass="TableViewCellExampleViewController" customModule="BaseClasses_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="W7N-vt-wq4"/>
                         <viewControllerLayoutGuide type="bottom" id="PBu-kh-Edp"/>
@@ -420,7 +413,7 @@
         <!--FSC Aspect Ration-->
         <scene sceneID="tTI-YK-T23">
             <objects>
-                <viewController id="Mjt-wa-2Ns" customClass="FullSizeCollectionExampleViewController" customModule="Example" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Mjt-wa-2Ns" customClass="FullSizeCollectionExampleViewController" customModule="BaseClasses_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="5FS-wb-H9x"/>
                         <viewControllerLayoutGuide type="bottom" id="XK5-pi-4kX"/>
@@ -522,7 +515,7 @@
         <!--LabelVC-->
         <scene sceneID="Uc2-lV-rQo">
             <objects>
-                <viewController id="fWz-WP-Qqz" customClass="LabelVC" customModule="Example" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="fWz-WP-Qqz" customClass="LabelVC" customModule="BaseClasses_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="XUJ-sR-eXp"/>
                         <viewControllerLayoutGuide type="bottom" id="YMQ-bl-21U"/>
@@ -585,7 +578,7 @@
         <!--FSC Aspect Ration-->
         <scene sceneID="Rft-AO-V90">
             <objects>
-                <viewController id="0hw-oG-mOO" customClass="FullSizeCollectionExampleViewController" customModule="Example" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="0hw-oG-mOO" customClass="FullSizeCollectionExampleViewController" customModule="BaseClasses_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="wh7-9s-lSo"/>
                         <viewControllerLayoutGuide type="bottom" id="QVj-gw-KMV"/>
