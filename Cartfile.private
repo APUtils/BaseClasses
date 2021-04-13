@@ -1,4 +1,5 @@
 github "APUtils/APExtensions" "master"
+github "APUtils/KeyboardAvoidingView" "master"
 github "APUtils/StretchScrollView" "master"
 github "ashfurrow/Nimble-Snapshots"
 github "Quick/Nimble"

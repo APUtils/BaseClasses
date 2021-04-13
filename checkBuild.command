@@ -39,11 +39,10 @@ echo -e "Building Carthage project..."
 . "./Carthage Project/Scripts/Carthage/utils.sh"
 applyXcode12Workaround
 set -o pipefail && xcodebuild -project "Carthage Project/BaseClasses.xcodeproj" -sdk iphonesimulator -target "Example" | xcpretty
-set -o pipefail && xcodebuild -project "Carthage Project/BaseClasses.xcodeproj" -sdk iphonesimulator -target "BaseClasses tvOS" | xcpretty
 echo ""
 
 echo -e "Building with Carthage..."
-carthage build --no-skip-current --platform iOS --cache-builds
+carthage build --no-skip-current --platform iOS,tvOS --cache-builds
 echo ""
 
 echo -e "Performing tests..."

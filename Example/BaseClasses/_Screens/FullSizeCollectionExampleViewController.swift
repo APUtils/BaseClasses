@@ -15,7 +15,7 @@ class FullSizeCollectionExampleViewController: UIViewController {
 
     // ******************************* MARK: - @IBOutlets
     
-    @IBOutlet private weak var scrollView: StretchScrollView!
+    @IBOutlet private weak var scrollView: StretchScrollView?
     @IBOutlet private weak var pageControl: UIPageControl!
     
     // ******************************* MARK: - Initialization and Setup
@@ -23,11 +23,11 @@ class FullSizeCollectionExampleViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
-        print(scrollView.fixedDescription)
+        print(scrollView?.fixedDescription ?? "")
     }
     
     private func setup() {
-        scrollView.addFadeViews([pageControl])
+        scrollView?.addFadeViews([pageControl])
     }
 }
 

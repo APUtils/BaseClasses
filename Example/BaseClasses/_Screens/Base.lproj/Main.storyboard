@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="zlc-J6-aMW">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="zlc-J6-aMW">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -29,7 +30,7 @@
         <!--MainVC-->
         <scene sceneID="dqe-UK-ez0">
             <objects>
-                <viewController id="CF8-Wa-Mqp" customClass="MainVC" customModule="BaseClasses_Example" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="CF8-Wa-Mqp" customClass="MainVC" customModule="Example" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="QyG-Tf-2Uc"/>
                         <viewControllerLayoutGuide type="bottom" id="fgk-Ad-Fir"/>
@@ -41,42 +42,42 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="n6M-6O-UB1">
                                 <rect key="frame" x="1" y="243.5" width="373" height="180"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EgY-Z1-Aci">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EgY-Z1-Aci">
                                         <rect key="frame" x="0.0" y="0.0" width="373" height="30"/>
                                         <state key="normal" title="ScrollView"/>
                                         <connections>
                                             <segue destination="vXZ-lx-hvc" kind="show" id="Kav-ze-Ekj"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pzv-9W-ghb">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pzv-9W-ghb">
                                         <rect key="frame" x="0.0" y="30" width="373" height="30"/>
                                         <state key="normal" title="TableCell"/>
                                         <connections>
                                             <segue destination="6Zi-Pk-zjT" kind="show" id="BD9-Rv-cOG"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sd0-qP-Zvs">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sd0-qP-Zvs">
                                         <rect key="frame" x="0.0" y="60" width="373" height="30"/>
                                         <state key="normal" title="Full Size Collection Height"/>
                                         <connections>
                                             <segue destination="4oX-Oi-xsd" kind="show" id="fM1-ir-G1L"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JB9-Wi-jjB">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JB9-Wi-jjB">
                                         <rect key="frame" x="0.0" y="90" width="373" height="30"/>
                                         <state key="normal" title="Full Size Collection Aspect Ratio"/>
                                         <connections>
                                             <segue destination="Mjt-wa-2Ns" kind="show" id="VLG-8z-5u2"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q0a-wn-Z51">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q0a-wn-Z51">
                                         <rect key="frame" x="0.0" y="120" width="373" height="30"/>
                                         <state key="normal" title="Full Size Collection Keyboard Avoiding"/>
                                         <connections>
                                             <segue destination="0hw-oG-mOO" kind="show" id="wKZ-jP-WZi"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zUF-Pr-9MA">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zUF-Pr-9MA">
                                         <rect key="frame" x="0.0" y="150" width="373" height="30"/>
                                         <state key="normal" title="Label Class Animations"/>
                                         <connections>
@@ -86,7 +87,7 @@
                                 </subviews>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="n6M-6O-UB1" firstAttribute="centerY" secondItem="Lj5-tR-AKM" secondAttribute="centerY" id="KCt-is-cgr"/>
                             <constraint firstItem="n6M-6O-UB1" firstAttribute="leading" secondItem="Lj5-tR-AKM" secondAttribute="leading" constant="1" id="N1r-9Y-Jmj"/>
@@ -102,7 +103,7 @@
         <!--FSC Height-->
         <scene sceneID="rMe-mv-12x">
             <objects>
-                <viewController id="4oX-Oi-xsd" customClass="FullSizeCollectionExampleViewController" customModule="BaseClasses_Example" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="4oX-Oi-xsd" customClass="FullSizeCollectionExampleViewController" customModule="Example" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="KH9-Ph-ab4"/>
                         <viewControllerLayoutGuide type="bottom" id="fSN-Lb-4PK"/>
@@ -156,7 +157,7 @@
                                                 </connections>
                                             </collectionView>
                                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="0Yv-Ws-eAv">
-                                                <rect key="frame" x="168" y="163" width="39" height="37"/>
+                                                <rect key="frame" x="126.5" y="172.5" width="122.5" height="27.5"/>
                                             </pageControl>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -225,7 +226,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="da7-XS-vxa" userLabel="Content View">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="46"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZuH-jj-aA3">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZuH-jj-aA3">
                                                 <rect key="frame" x="164.5" y="8" width="46" height="30"/>
                                                 <state key="normal" title="Button"/>
                                             </button>
@@ -260,7 +261,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pby-4I-sul" userLabel="Content View">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="46"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RTK-Wj-W2R">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RTK-Wj-W2R">
                                                 <rect key="frame" x="164.5" y="8" width="46" height="30"/>
                                                 <state key="normal" title="Button"/>
                                             </button>
@@ -310,7 +311,7 @@
         <!--TableCell-->
         <scene sceneID="pKk-PP-rQh">
             <objects>
-                <viewController id="6Zi-Pk-zjT" customClass="TableViewCellExampleViewController" customModule="BaseClasses_Example" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="6Zi-Pk-zjT" customClass="TableViewCellExampleViewController" customModule="Example" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="W7N-vt-wq4"/>
                         <viewControllerLayoutGuide type="bottom" id="PBu-kh-Edp"/>
@@ -413,7 +414,7 @@
         <!--FSC Aspect Ration-->
         <scene sceneID="tTI-YK-T23">
             <objects>
-                <viewController id="Mjt-wa-2Ns" customClass="FullSizeCollectionExampleViewController" customModule="BaseClasses_Example" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Mjt-wa-2Ns" customClass="FullSizeCollectionExampleViewController" customModule="Example" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="5FS-wb-H9x"/>
                         <viewControllerLayoutGuide type="bottom" id="XK5-pi-4kX"/>
@@ -467,7 +468,7 @@
                                                 </connections>
                                             </collectionView>
                                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="WT7-lZ-P4v">
-                                                <rect key="frame" x="168" y="163" width="39" height="37"/>
+                                                <rect key="frame" x="126.5" y="172.5" width="122.5" height="27.5"/>
                                             </pageControl>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -515,7 +516,7 @@
         <!--LabelVC-->
         <scene sceneID="Uc2-lV-rQo">
             <objects>
-                <viewController id="fWz-WP-Qqz" customClass="LabelVC" customModule="BaseClasses_Example" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="fWz-WP-Qqz" customClass="LabelVC" customModule="Example" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="XUJ-sR-eXp"/>
                         <viewControllerLayoutGuide type="bottom" id="YMQ-bl-21U"/>
@@ -548,7 +549,7 @@
                                 </subviews>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="NX0-nC-0Uh" firstAttribute="leading" secondItem="kG2-jI-fFX" secondAttribute="leading" constant="16" id="1z4-zk-lGd"/>
                             <constraint firstAttribute="trailing" secondItem="NX0-nC-0Uh" secondAttribute="trailing" constant="16" id="ahG-b9-9ho"/>
@@ -557,7 +558,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="hIa-RS-5bq">
                         <barButtonItem key="rightBarButtonItem" id="abn-Sl-NhD">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="vN8-zy-pvS">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="vN8-zy-pvS">
                                 <rect key="frame" x="276" y="7" width="83" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Animate"/>
@@ -578,7 +579,7 @@
         <!--FSC Aspect Ration-->
         <scene sceneID="Rft-AO-V90">
             <objects>
-                <viewController id="0hw-oG-mOO" customClass="FullSizeCollectionExampleViewController" customModule="BaseClasses_Example" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="0hw-oG-mOO" customClass="FullSizeCollectionExampleViewController" customModule="Example" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="wh7-9s-lSo"/>
                         <viewControllerLayoutGuide type="bottom" id="QVj-gw-KMV"/>
@@ -626,7 +627,7 @@
                                         </connections>
                                     </collectionView>
                                     <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="Exr-N0-4pT">
-                                        <rect key="frame" x="168" y="586" width="39" height="37"/>
+                                        <rect key="frame" x="126.5" y="595.5" width="122.5" height="27.5"/>
                                     </pageControl>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -667,4 +668,9 @@
             <point key="canvasLocation" x="-226" y="1771"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

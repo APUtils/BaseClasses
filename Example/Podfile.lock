@@ -28,7 +28,7 @@ PODS:
     - iOSSnapshotTestCase (~> 5.0)
     - Nimble (~> 7.0)
   - Quick (3.1.2)
-  - StretchScrollView (5.0.0):
+  - StretchScrollView (6.0.0):
     - ViewState (>= 1.0.0)
   - ViewState (1.2.1)
 
@@ -73,7 +73,7 @@ CHECKOUT OPTIONS:
     :commit: 6f680cad9688486f4a6dfd062d455849e64bb1da
     :git: https://github.com/APUtils/KeyboardAvoidingView
   StretchScrollView:
-    :commit: 35759b53a203e806147392633dc94d6c6710c760
+    :commit: 8e4f593556a7475bf8849d5f159cc8ded087612c
     :git: https://github.com/APUtils/StretchScrollView
 
 SPEC CHECKSUMS:
@@ -86,7 +86,7 @@ SPEC CHECKSUMS:
   Nimble: 051e3d8912d40138fa5591c78594f95fb172af37
   Nimble-Snapshots: bbd1ab264bacc24a9ce24a8363bc05aac783aeb0
   Quick: 60f0ea3b8e0cfc0df3259a5c06a238ad8b3c46e0
-  StretchScrollView: 24e5bd834c0f439642540e20c2d45ea707e01185
+  StretchScrollView: 715aacf8437aa3598cafbee671116663bcee27d8
   ViewState: 2875f1b9e168a05ba14d3df1884e29333b65fe36
 
 PODFILE CHECKSUM: 63d728d37e4794986a99d84595bdd8b0aa102aa8

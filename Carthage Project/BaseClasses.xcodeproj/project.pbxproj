@@ -30,6 +30,16 @@
 		0D19EB1D26257AFE004850BC /* CGRect+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D3445FA23CA93DA0053C1C4 /* CGRect+Utils.swift */; };
 		0D19EB1E26257AFE004850BC /* UITableView+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D286EEE23C4D2BF0064398E /* UITableView+Utils.swift */; };
 		0D19EB1F26257AFE004850BC /* UIView+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBC7CC723B94E3300CD0EA1 /* UIView+Utils.swift */; };
+		0D19EB4D26259B02004850BC /* RoutableLogger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D19EB4C26259B02004850BC /* RoutableLogger.framework */; };
+		0D19EB4E26259B21004850BC /* APExtensions.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0D47E41323BF203D00C4BFDC /* APExtensions.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0D19EB4F26259B21004850BC /* StretchScrollView.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0DBC7CB823B94D9000CD0EA1 /* StretchScrollView.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0D19EB5026259B21004850BC /* ViewState.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = ACF4A61A4E8240ABC3E59379 /* ViewState.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0D19EB5126259B21004850BC /* RoutableLogger.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0D19EB4C26259B02004850BC /* RoutableLogger.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0D19EB5226259B2D004850BC /* BaseClasses.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E202681322117D03004CC28A /* BaseClasses.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0D19EB5326259B56004850BC /* TableView.swift in Headers */ = {isa = PBXBuildFile; fileRef = 0DBC7CBE23B94E3300CD0EA1 /* TableView.swift */; settings = {ATTRIBUTES = (Public, ); }; };
+		0D19EB5426259B67004850BC /* ScreenSideRelativeConstraint.swift in Headers */ = {isa = PBXBuildFile; fileRef = 0DBC7CC823B94E3400CD0EA1 /* ScreenSideRelativeConstraint.swift */; settings = {ATTRIBUTES = (Public, ); }; };
+		0D19EB5826259FC8004850BC /* KeyboardAvoidingView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D19EB5726259FC8004850BC /* KeyboardAvoidingView.framework */; };
+		0D19EB5926259FCE004850BC /* KeyboardAvoidingView.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0D19EB5726259FC8004850BC /* KeyboardAvoidingView.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0D286EEC23C4D2270064398E /* ScreenSideRelativeConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBC7CC823B94E3400CD0EA1 /* ScreenSideRelativeConstraint.swift */; };
 		0D286EED23C4D2370064398E /* ScreenSideRelativeConstraint.swift in Headers */ = {isa = PBXBuildFile; fileRef = 0DBC7CC823B94E3400CD0EA1 /* ScreenSideRelativeConstraint.swift */; settings = {ATTRIBUTES = (Public, ); }; };
 		0D286EEF23C4D2BF0064398E /* UITableView+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D286EEE23C4D2BF0064398E /* UITableView+Utils.swift */; };
@@ -117,6 +127,12 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				0D19EB5226259B2D004850BC /* BaseClasses.framework in Embed Frameworks */,
+				0D19EB4E26259B21004850BC /* APExtensions.framework in Embed Frameworks */,
+				0D19EB4F26259B21004850BC /* StretchScrollView.framework in Embed Frameworks */,
+				0D19EB5926259FCE004850BC /* KeyboardAvoidingView.framework in Embed Frameworks */,
+				0D19EB5026259B21004850BC /* ViewState.framework in Embed Frameworks */,
+				0D19EB5126259B21004850BC /* RoutableLogger.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -128,6 +144,8 @@
 		0D19EB0226257AB1004850BC /* BaseClasses.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BaseClasses.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D19EB0426257AB1004850BC /* BaseClasses_tvOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseClasses_tvOS.h; sourceTree = "<group>"; };
 		0D19EB0526257AB1004850BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0D19EB4C26259B02004850BC /* RoutableLogger.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RoutableLogger.framework; path = ../Carthage/Build/iOS/RoutableLogger.framework; sourceTree = "<group>"; };
+		0D19EB5726259FC8004850BC /* KeyboardAvoidingView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KeyboardAvoidingView.framework; path = ../Carthage/Build/iOS/KeyboardAvoidingView.framework; sourceTree = "<group>"; };
 		0D286EEE23C4D2BF0064398E /* UITableView+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Utils.swift"; sourceTree = "<group>"; };
 		0D286F1123C4F8090064398E /* podUpdate.command */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; name = podUpdate.command; path = ../Example/Scripts/Cocoapods/podUpdate.command; sourceTree = "<group>"; };
 		0D33EA7823BF0FFD00DE5C50 /* UIScrollView+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScrollView+Utils.swift"; sourceTree = "<group>"; };
@@ -214,6 +232,8 @@
 			files = (
 				0DBC7CBA23B94DEA00CD0EA1 /* BaseClasses.framework in Frameworks */,
 				0DBC7CB923B94D9000CD0EA1 /* StretchScrollView.framework in Frameworks */,
+				0D19EB4D26259B02004850BC /* RoutableLogger.framework in Frameworks */,
+				0D19EB5826259FC8004850BC /* KeyboardAvoidingView.framework in Frameworks */,
 				456E627369674B079C061094 /* ViewState.framework in Frameworks */,
 				0D47E41523BF20BA00C4BFDC /* APExtensions.framework in Frameworks */,
 			);
@@ -391,8 +411,10 @@
 				E2A7396D2260D99900E97D55 /* Nimble.framework */,
 				40B2AC5FE675C1BC6FEA20DC /* Nimble_Snapshots.framework */,
 				E2A7396C2260D99900E97D55 /* Quick.framework */,
+				0D19EB5726259FC8004850BC /* KeyboardAvoidingView.framework */,
 				0DBC7CB823B94D9000CD0EA1 /* StretchScrollView.framework */,
 				ACF4A61A4E8240ABC3E59379 /* ViewState.framework */,
+				0D19EB4C26259B02004850BC /* RoutableLogger.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -405,6 +427,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				0D19EB0626257AB1004850BC /* BaseClasses_tvOS.h in Headers */,
+				0D19EB5326259B56004850BC /* TableView.swift in Headers */,
+				0D19EB5426259B67004850BC /* ScreenSideRelativeConstraint.swift in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -465,7 +489,6 @@
 				E2A739472260CFC700E97D55 /* Sources */,
 				E2A739482260CFC700E97D55 /* Frameworks */,
 				E2A739492260CFC700E97D55 /* Resources */,
-				7A78314AEA7299684D67A83C /* Carthage Copy */,
 				E275E08722A03A8900E9900C /* Embed Frameworks */,
 			);
 			buildRules = (
@@ -600,30 +623,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/bash;
 			shellScript = "source ~/.bash_profile\nenv -i GITHUB_ACCESS_TOKEN=\"$GITHUB_ACCESS_TOKEN\" DEVELOPER_DIR=\"$DEVELOPER_DIR\" PATH=\"$PATH\" bash \"Scripts/Carthage/carthageInstall.command\"\n";
-		};
-		7A78314AEA7299684D67A83C /* Carthage Copy */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/APExtensions.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/StretchScrollView.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/ViewState.framework",
-			);
-			name = "Carthage Copy";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/APExtensions.framework",
-				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/StretchScrollView.framework",
-				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/ViewState.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
 		};
 		E67432110B43CFE285604644 /* Carthage Install */ = {
 			isa = PBXShellScriptBuildPhase;
