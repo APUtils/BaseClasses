@@ -26,7 +26,8 @@ open class Label: UILabel {
                 return
             }
             
-            layer.setValue(newValue, forKey: Constants.pulseTransitionKey)
+            layer.setValue(UUID(), forKey: Constants.pulseTransitionKey)
+            
             super.text = newValue
         }
         
@@ -108,7 +109,7 @@ open class Label: UILabel {
 public extension UIView {
     /// Creates image from view and adds overlay image at the center if provided
     func _getSnapshotImage() -> UIImage? {
-        if #available(iOS 10.0, *) {
+        if #available(iOS 10.0, tvOS 10.0, *) {
             let renderer = UIGraphicsImageRenderer(bounds: bounds)
             return renderer.image { rendererContext in
                 layer.render(in: rendererContext.cgContext)

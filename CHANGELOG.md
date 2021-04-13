@@ -3,6 +3,17 @@ All notable changes to this project will be documented in this file.
 `BaseClasses` adheres to [Semantic Versioning](http://semver.org/).
 
 
+## [5.0.0](https://github.com/APUtils/BaseClasses/releases/tag/5.0.0)
+Released on 04/13/2020.
+
+#### Added
+- SPM support
+- tvOS support
+
+#### Fixed
+- Label animation wasn't triggered when previous animation was with the same text
+
+
 ## [4.0.0](https://github.com/APUtils/BaseClasses/releases/tag/4.0.0)
 Released on 01/03/2020.
 

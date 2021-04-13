@@ -47,9 +47,15 @@ open class CollectionView: UICollectionView {
     
     /// Activity indicator that always stays in center.
     open lazy var activityIndicatorView: UIActivityIndicatorView = {
-        let activityIndicatorView = UIActivityIndicatorView(style: .gray)
-        
-        return activityIndicatorView
+        if #available(tvOS 13.0, iOS 13.0, *) {
+            return UIActivityIndicatorView(style: .medium)
+        } else {
+            #if os(tvOS)
+            return UIActivityIndicatorView(style: .white)
+            #else
+            return UIActivityIndicatorView(style: .gray)
+            #endif
+        }
     }()
     
     // ******************************* MARK: - Initialization and Setup

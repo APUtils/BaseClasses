@@ -70,7 +70,7 @@ private extension CGFloat {
 extension UIScrollView {
     /// Returns `adjustedContentInset` on iOS >= 11 and `contentInset` on iOS < 11.
     var _fullContentInsets: UIEdgeInsets {
-        if #available(iOS 11.0, *) {
+        if #available(iOS 11.0, *, tvOS 11.0, *) {
             return adjustedContentInset
         } else {
             return contentInset

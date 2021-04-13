@@ -7,7 +7,7 @@
 //
 
 import Foundation
-
+import UIKit
 
 open class SelfResizeableCollectionView: CollectionView {
     

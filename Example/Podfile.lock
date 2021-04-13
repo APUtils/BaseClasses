@@ -1,14 +1,13 @@
 PODS:
-  - APExtensions (7.0.1):
-    - APExtensions/Abstractions (= 7.0.1)
-    - APExtensions/Core (= 7.0.1)
-    - APExtensions/Storyboard (= 7.0.1)
-    - APExtensions/ViewConfiguration (= 7.0.1)
-  - APExtensions/Abstractions (7.0.1)
-  - APExtensions/Core (7.0.1)
-  - APExtensions/Storyboard (7.0.1)
-  - APExtensions/ViewConfiguration (7.0.1)
-  - BaseClasses (4.0.0)
+  - APExtensions (10.0.0):
+    - APExtensions/Core (= 10.0.0)
+    - APExtensions/Storyboard (= 10.0.0)
+    - APExtensions/ViewConfiguration (= 10.0.0)
+  - APExtensions/Core (10.0.0):
+    - LogsManager/RoutableLogger (>= 9.1.5)
+  - APExtensions/Storyboard (10.0.0)
+  - APExtensions/ViewConfiguration (10.0.0)
+  - BaseClasses (5.0.0)
   - FBSnapshotTestCase (2.1.4):
     - FBSnapshotTestCase/SwiftSupport (= 2.1.4)
   - FBSnapshotTestCase/Core (2.1.4)
@@ -19,18 +18,19 @@ PODS:
   - iOSSnapshotTestCase/Core (5.0.2)
   - iOSSnapshotTestCase/SwiftSupport (5.0.2):
     - iOSSnapshotTestCase/Core
-  - KeyboardAvoidingView (5.0.0):
-    - ViewState (>= 1.0.0)
+  - KeyboardAvoidingView (5.1.0):
+    - ViewState (>= 1.2.1)
+  - LogsManager/RoutableLogger (9.1.5)
   - Nimble (7.3.4)
   - Nimble-Snapshots (6.9.1):
     - Nimble-Snapshots/Core (= 6.9.1)
   - Nimble-Snapshots/Core (6.9.1):
     - iOSSnapshotTestCase (~> 5.0)
     - Nimble (~> 7.0)
-  - Quick (2.2.0)
+  - Quick (3.1.2)
   - StretchScrollView (5.0.0):
     - ViewState (>= 1.0.0)
-  - ViewState (1.0.0)
+  - ViewState (1.2.1)
 
 DEPENDENCIES:
   - APExtensions (from `https://github.com/APUtils/APExtensions`, branch `master`)
@@ -46,6 +46,7 @@ SPEC REPOS:
   trunk:
     - FBSnapshotTestCase
     - iOSSnapshotTestCase
+    - LogsManager
     - Nimble
     - Nimble-Snapshots
     - Quick
@@ -66,27 +67,28 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   APExtensions:
-    :commit: bbb1b025c937b9c638d91813a2f50889863a7056
+    :commit: ae784925e948a39dbc9d521e538a32bef9544936
     :git: https://github.com/APUtils/APExtensions
   KeyboardAvoidingView:
-    :commit: a4b4295581f8f8d1415a85d05e46fc2fad5e5fff
+    :commit: 6f680cad9688486f4a6dfd062d455849e64bb1da
     :git: https://github.com/APUtils/KeyboardAvoidingView
   StretchScrollView:
     :commit: 35759b53a203e806147392633dc94d6c6710c760
     :git: https://github.com/APUtils/StretchScrollView
 
 SPEC CHECKSUMS:
-  APExtensions: e0377240c9db7bc42c3b864c039ba70c1b4034a3
-  BaseClasses: e75a0ee46c79256b63b6ca207b5918720e54d524
+  APExtensions: b46cab78fe5d291e1157838fd78962a886e627df
+  BaseClasses: 0d8fbc96d911cea8e59a894bd11f82a9f0199c97
   FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
   iOSSnapshotTestCase: 2d51aa06775e95cecb0a1fb9c5c159ccd1dd4596
-  KeyboardAvoidingView: 93c4f709386c998b7b7f6b405a05c5c3585410a7
+  KeyboardAvoidingView: f0321f6a297b0db778e34a1bf19ffaaad447e72b
+  LogsManager: e821cea87e608e96cf39a68009d830579098a2cb
   Nimble: 051e3d8912d40138fa5591c78594f95fb172af37
   Nimble-Snapshots: bbd1ab264bacc24a9ce24a8363bc05aac783aeb0
-  Quick: 7fb19e13be07b5dfb3b90d4f9824c855a11af40e
+  Quick: 60f0ea3b8e0cfc0df3259a5c06a238ad8b3c46e0
   StretchScrollView: 24e5bd834c0f439642540e20c2d45ea707e01185
-  ViewState: 78aa77483e74e592c22e841619b853bc686843be
+  ViewState: 2875f1b9e168a05ba14d3df1884e29333b65fe36
 
-PODFILE CHECKSUM: a0f1fd1f9adc82c750dd723d81ded6862a522bf9
+PODFILE CHECKSUM: 63d728d37e4794986a99d84595bdd8b0aa102aa8
 
-COCOAPODS: 1.8.4
+COCOAPODS: 1.10.1

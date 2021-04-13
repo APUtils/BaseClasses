@@ -10,6 +10,7 @@ import UIKit
 
 
 /// NavigationControler that pays attantion to its child controlers for status bar style
+#if !os(tvOS)
 open class NavigationController: UINavigationController {
     
     // ******************************* MARK: - UIViewController Methods
@@ -22,3 +23,4 @@ open class NavigationController: UINavigationController {
         return topViewController
     }
 }
+#endif

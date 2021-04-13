@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'BaseClasses'
-  s.version          = '4.0.0'
+  s.version          = '5.0.0'
   s.summary          = 'Default configuration for some UI classes through inheritance'
 
 # This description is used to generate tags and improve search results.
@@ -28,7 +28,8 @@ Default configuration for some UI classes through inheritance.
   s.source           = { :git => 'https://github.com/APUtils/BaseClasses.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '8.1'
+  s.ios.deployment_target = '9.0'
+  s.tvos.deployment_target = '9.0'
   s.swift_versions = ['5.1']
 
   s.source_files = 'BaseClasses/Classes/**/*'
