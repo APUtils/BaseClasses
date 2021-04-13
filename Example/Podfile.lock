@@ -70,7 +70,7 @@ CHECKOUT OPTIONS:
     :commit: ae784925e948a39dbc9d521e538a32bef9544936
     :git: https://github.com/APUtils/APExtensions
   KeyboardAvoidingView:
-    :commit: 6f680cad9688486f4a6dfd062d455849e64bb1da
+    :commit: 5f85be8f39a7328c3f8c8c822c6874c268a1ea14
     :git: https://github.com/APUtils/KeyboardAvoidingView
   StretchScrollView:
     :commit: 8e4f593556a7475bf8849d5f159cc8ded087612c

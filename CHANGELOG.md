@@ -10,8 +10,14 @@ Released on 04/13/2020.
 - SPM support
 - tvOS support
 
+#### Changed
+- Added gap between disappear and appear Label animation so they won't overlap
+- UIScrollView fixedDescription adjust
+- TableViewCell reuseID type change
+
 #### Fixed
 - Label animation wasn't triggered when previous animation was with the same text
+- Possible crash fix during label animation
 
 
 ## [4.0.0](https://github.com/APUtils/BaseClasses/releases/tag/4.0.0)
