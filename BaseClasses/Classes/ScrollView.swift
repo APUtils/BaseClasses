@@ -119,7 +119,8 @@ open class ScrollView: UIScrollView {
     // ******************************* MARK: - UIScrollView Methods
     
     override open func touchesShouldCancel(in view: UIView) -> Bool {
-        if view is UIButton {
+        // Allow scroll on `UIControl` touches like for buttons or switches
+        if view is UIControl {
             return true
         }
         
