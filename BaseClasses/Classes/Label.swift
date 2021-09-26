@@ -106,6 +106,8 @@ open class Label: UILabel {
             let newSize = newValue.size
             let previousSize = currentBounds.size
             
+            // TODO: Animate width change because there is still a possibility of text placement change without height change.
+            
             // Animate number of lines change if needed.
             // Default animation is bad and we need to sustain consistency with other labels animation.
             let heightChange = newSize.height - previousSize.height
