@@ -22,10 +22,33 @@ open class Label: UILabel {
         static let pulseTransitionKey = "pulseTransitionKey"
     }
     
+    // ******************************* MARK: - Initialization and Setup
+    
+    public override init(frame: CGRect) {
+        super.init(frame: frame)
+        setup()
+    }
+    
+    required public init?(coder: NSCoder) {
+        super.init(coder: coder)
+    }
+    
+    open override func awakeFromNib() {
+        super.awakeFromNib()
+        setup()
+    }
+    
+    private func setup() {
+        currentBounds = bounds
+    }
+    
+    // ******************************* MARK: - Animation
+    
     private static var warnEmited = false
     
+    private var capturingSnapshotImage = false
     private var snapshotImage: UIImage?
-    private var perviousBounds: CGRect = .zero
+    private var currentBounds: CGRect = .zero
     
     override open var text: String? {
         set {
@@ -39,6 +62,12 @@ open class Label: UILabel {
                     Self.warnEmited = true
                 }
                 
+                // We need to capture image as soon as possible because
+                // bounds might change before we can prepare animation.
+                if layer.animation(forKey: Constants.pulseTransitionKey) == nil {
+                    captureSnapshotImageInCurrentBounds()
+                }
+                
                 layer.setValue(UUID(), forKey: Constants.pulseTransitionKey)
             }
             
@@ -50,10 +79,32 @@ open class Label: UILabel {
         }
     }
     
+    override open var attributedText: NSAttributedString? {
+        set {
+            guard super.attributedText != newValue else { return }
+            
+            if UIView.inheritedAnimationDuration > 0 {
+                // We need to capture image as soon as possible because
+                // bounds might change before we can prepare animation.
+                if layer.animation(forKey: Constants.pulseTransitionKey) == nil {
+                    captureSnapshotImageInCurrentBounds()
+                }
+                
+                layer.setValue(newValue, forKey: Constants.pulseTransitionKey)
+            }
+            
+            super.attributedText = newValue
+        }
+        
+        get {
+            return super.attributedText
+        }
+    }
+    
     open override var bounds: CGRect {
         set {
             let newSize = newValue.size
-            let previousSize = perviousBounds.size
+            let previousSize = currentBounds.size
             
             // Animate number of lines change if needed.
             // Default animation is bad and we need to sustain consistency with other labels animation.
@@ -65,13 +116,21 @@ open class Label: UILabel {
                 // We need to capture image as soon as possible because
                 // bounds might change before we can prepare animation.
                 if layer.animation(forKey: Constants.pulseTransitionKey) == nil {
-                    snapshotImage = _getSnapshotImage(bounds: perviousBounds)
+                    snapshotImage = _getSnapshotImage(bounds: currentBounds)
                 }
                 
                 layer.setValue(UUID(), forKey: Constants.pulseTransitionKey)
+                
+            } else if capturingSnapshotImage {
+                // It is possible that bounds set will be called more than once
+                // but we need to capture only the first snapshot.
+                let snapshotImage = _getSnapshotImage(bounds: currentBounds)
+                if self.snapshotImage == nil {
+                    self.snapshotImage = snapshotImage
+                }
             }
             
-            self.perviousBounds = newValue
+            self.currentBounds = newValue
             
             super.bounds = newValue
         }
@@ -81,22 +140,15 @@ open class Label: UILabel {
         }
     }
     
-    override open var attributedText: NSAttributedString? {
-        set {
-            guard super.attributedText != newValue else { return }
-            
-            // Just set text if not animated
-            guard UIView.inheritedAnimationDuration > 0 else {
-                super.attributedText = newValue
-                return
-            }
-            
-            layer.setValue(newValue, forKey: Constants.pulseTransitionKey)
-            super.attributedText = newValue
-        }
+    private func captureSnapshotImageInCurrentBounds() {
+        // It's possible that bounds will change during snapshot capture
+        // so we need to capture snapshot before change is occured in `bounds`.
+        capturingSnapshotImage = true
+        layer.layoutIfNeeded()
+        capturingSnapshotImage = false
         
-        get {
-            return super.attributedText
+        if snapshotImage == nil {
+            snapshotImage = _getSnapshotImage(bounds: currentBounds)
         }
     }
     
