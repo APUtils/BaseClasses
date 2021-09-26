@@ -41,5 +41,5 @@ Default configuration for some UI classes through inheritance.
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   s.frameworks = 'Foundation', 'UIKit'
-  s.dependency 'LogsManager/RoutableLogger', '>= 9.1.7'
+  s.dependency 'LogsManager/RoutableLogger', '>= 9.1.6'
 end

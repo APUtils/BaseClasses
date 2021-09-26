@@ -8,7 +8,7 @@ PODS:
   - APExtensions/Storyboard (10.0.0)
   - APExtensions/ViewConfiguration (10.0.0)
   - BaseClasses (5.0.0):
-    - LogsManager/RoutableLogger (>= 9.1.7)
+    - LogsManager/RoutableLogger (>= 9.1.6)
   - iOSSnapshotTestCase (5.0.2):
     - iOSSnapshotTestCase/SwiftSupport (= 5.0.2)
   - iOSSnapshotTestCase/Core (5.0.2)
@@ -72,7 +72,7 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   APExtensions: b46cab78fe5d291e1157838fd78962a886e627df
-  BaseClasses: c3f50cffccc786d0dc2e73c3e02741ace1291d4c
+  BaseClasses: ff8afca538a8a9f9a566189895e59f5d03f41ced
   iOSSnapshotTestCase: 2d51aa06775e95cecb0a1fb9c5c159ccd1dd4596
   KeyboardAvoidingView: f0321f6a297b0db778e34a1bf19ffaaad447e72b
   LogsManager: a67328a23264062ef8dafdd9efdeaf523826bd1a
