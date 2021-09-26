@@ -15,7 +15,6 @@ target 'BaseClasses_Example' do
     
     pod 'Quick'
     pod 'Nimble'
-    pod 'FBSnapshotTestCase'
     pod 'Nimble-Snapshots'
   end
 end
@@ -25,14 +24,6 @@ post_install do |installer|
   pods_project = installer.pods_project
   pods_project.new_file "../Scripts/Cocoapods/podInstall.command"
   pods_project.new_file "../Scripts/Cocoapods/podUpdate.command"
-  
-  installer.pods_project.targets.each do |target|
-    if target.name == "BaseClasses"
-      target.build_configurations.each do |config|
-        config.build_settings['APPLICATION_EXTENSION_API_ONLY'] = 'YES'
-      end
-    end
-  end
   
   installer.pods_project.targets.each do |target|
     target.build_configurations.each do |config|

@@ -7,12 +7,8 @@ PODS:
     - LogsManager/RoutableLogger (>= 9.1.5)
   - APExtensions/Storyboard (10.0.0)
   - APExtensions/ViewConfiguration (10.0.0)
-  - BaseClasses (5.0.0)
-  - FBSnapshotTestCase (2.1.4):
-    - FBSnapshotTestCase/SwiftSupport (= 2.1.4)
-  - FBSnapshotTestCase/Core (2.1.4)
-  - FBSnapshotTestCase/SwiftSupport (2.1.4):
-    - FBSnapshotTestCase/Core
+  - BaseClasses (5.0.0):
+    - LogsManager/RoutableLogger (>= 9.1.7)
   - iOSSnapshotTestCase (5.0.2):
     - iOSSnapshotTestCase/SwiftSupport (= 5.0.2)
   - iOSSnapshotTestCase/Core (5.0.2)
@@ -20,14 +16,14 @@ PODS:
     - iOSSnapshotTestCase/Core
   - KeyboardAvoidingView (5.1.0):
     - ViewState (>= 1.2.1)
-  - LogsManager/RoutableLogger (9.1.5)
+  - LogsManager/RoutableLogger (9.1.7)
   - Nimble (7.3.4)
   - Nimble-Snapshots (6.9.1):
     - Nimble-Snapshots/Core (= 6.9.1)
   - Nimble-Snapshots/Core (6.9.1):
     - iOSSnapshotTestCase (~> 5.0)
     - Nimble (~> 7.0)
-  - Quick (3.1.2)
+  - Quick (4.0.0)
   - StretchScrollView (6.0.0):
     - ViewState (>= 1.0.0)
   - ViewState (1.2.1)
@@ -35,7 +31,6 @@ PODS:
 DEPENDENCIES:
   - APExtensions (from `https://github.com/APUtils/APExtensions`, branch `master`)
   - BaseClasses (from `../`)
-  - FBSnapshotTestCase
   - KeyboardAvoidingView (from `https://github.com/APUtils/KeyboardAvoidingView`, branch `master`)
   - Nimble
   - Nimble-Snapshots
@@ -44,7 +39,6 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
-    - FBSnapshotTestCase
     - iOSSnapshotTestCase
     - LogsManager
     - Nimble
@@ -67,10 +61,10 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   APExtensions:
-    :commit: ae784925e948a39dbc9d521e538a32bef9544936
+    :commit: fa5cbedb82db880d4dbbc7991eeb661b1f59f40e
     :git: https://github.com/APUtils/APExtensions
   KeyboardAvoidingView:
-    :commit: 5f85be8f39a7328c3f8c8c822c6874c268a1ea14
+    :commit: bb148486d2b9b5160ee83252f0485fbca661d033
     :git: https://github.com/APUtils/KeyboardAvoidingView
   StretchScrollView:
     :commit: 8e4f593556a7475bf8849d5f159cc8ded087612c
@@ -78,17 +72,16 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   APExtensions: b46cab78fe5d291e1157838fd78962a886e627df
-  BaseClasses: 0d8fbc96d911cea8e59a894bd11f82a9f0199c97
-  FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
+  BaseClasses: c3f50cffccc786d0dc2e73c3e02741ace1291d4c
   iOSSnapshotTestCase: 2d51aa06775e95cecb0a1fb9c5c159ccd1dd4596
   KeyboardAvoidingView: f0321f6a297b0db778e34a1bf19ffaaad447e72b
-  LogsManager: e821cea87e608e96cf39a68009d830579098a2cb
+  LogsManager: a67328a23264062ef8dafdd9efdeaf523826bd1a
   Nimble: 051e3d8912d40138fa5591c78594f95fb172af37
   Nimble-Snapshots: bbd1ab264bacc24a9ce24a8363bc05aac783aeb0
-  Quick: 60f0ea3b8e0cfc0df3259a5c06a238ad8b3c46e0
+  Quick: 6473349e43b9271a8d43839d9ba1c442ed1b7ac4
   StretchScrollView: 715aacf8437aa3598cafbee671116663bcee27d8
   ViewState: 2875f1b9e168a05ba14d3df1884e29333b65fe36
 
-PODFILE CHECKSUM: 63d728d37e4794986a99d84595bdd8b0aa102aa8
+PODFILE CHECKSUM: 7817e8e5da06f9fb5358cf1cb262d31bba997444
 
-COCOAPODS: 1.10.1
+COCOAPODS: 1.11.2

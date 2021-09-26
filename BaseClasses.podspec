@@ -31,6 +31,7 @@ Default configuration for some UI classes through inheritance.
   s.ios.deployment_target = '9.0'
   s.tvos.deployment_target = '9.0'
   s.swift_versions = ['5.1']
+  s.pod_target_xcconfig = { 'APPLICATION_EXTENSION_API_ONLY' => 'YES' }
 
   s.source_files = 'BaseClasses/Classes/**/*'
   
@@ -40,5 +41,5 @@ Default configuration for some UI classes through inheritance.
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   s.frameworks = 'Foundation', 'UIKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  s.dependency 'LogsManager/RoutableLogger', '>= 9.1.7'
 end

@@ -8,6 +8,12 @@
 
 import UIKit
 
+#if COCOAPODS
+import LogsManager
+#else
+import RoutableLogger
+#endif
+
 @available(iOS 9.0, *)
 @available(iOSApplicationExtension 9.0, *)
 open class Label: UILabel {
@@ -16,23 +22,62 @@ open class Label: UILabel {
         static let pulseTransitionKey = "pulseTransitionKey"
     }
     
+    private static var warnEmited = false
+    
+    private var snapshotImage: UIImage?
+    private var perviousBounds: CGRect = .zero
+    
     override open var text: String? {
         set {
             guard super.text != newValue else { return }
             
-            // Just set text if not animated
-            guard UIView.inheritedAnimationDuration > 0 else {
-                super.text = newValue
-                return
+            // Animate if needed.
+            if UIView.inheritedAnimationDuration > 0 {
+                // TODO: Routable logger
+                if !Self.warnEmited && (newValue == nil || newValue == "") {
+                    RoutableLogger.logWarning("WARNING ONCE: It is not recommended to assign `nil` or `\"\"` value for a `text` because fade in or fade out animation won't work. Please use `\" \"` instead.")
+                    Self.warnEmited = true
+                }
+                
+                layer.setValue(UUID(), forKey: Constants.pulseTransitionKey)
             }
-            
-            layer.setValue(UUID(), forKey: Constants.pulseTransitionKey)
             
             super.text = newValue
         }
         
         get {
             return super.text
+        }
+    }
+    
+    open override var bounds: CGRect {
+        set {
+            let newSize = newValue.size
+            let previousSize = perviousBounds.size
+            
+            // Animate number of lines change if needed.
+            // Default animation is bad and we need to sustain consistency with other labels animation.
+            let heightChange = newSize.height - previousSize.height
+            if UIView.inheritedAnimationDuration > 0,
+               numberOfLines != 1,
+               abs(heightChange) >= font.pointSize / 2 {
+                
+                // We need to capture image as soon as possible because
+                // bounds might change before we can prepare animation.
+                if layer.animation(forKey: Constants.pulseTransitionKey) == nil {
+                    snapshotImage = _getSnapshotImage(bounds: perviousBounds)
+                }
+                
+                layer.setValue(UUID(), forKey: Constants.pulseTransitionKey)
+            }
+            
+            self.perviousBounds = newValue
+            
+            super.bounds = newValue
+        }
+        
+        get {
+            return super.bounds
         }
     }
     
@@ -57,8 +102,14 @@ open class Label: UILabel {
     
     override open func action(for layer: CALayer, forKey event: String) -> CAAction? {
         if event == Constants.pulseTransitionKey {
+            
+            // Do not update animation if there is already ongoing
+            if layer.animation(forKey: event) != nil {
+                return super.action(for: layer, forKey: event)
+            }
+            
             // Get animation attributes to create proper animations
-            if let action = self.action(for: layer, forKey: "backgroundColor") as? CAAnimation {
+            if let action = super.action(for: layer, forKey: "backgroundColor") as? CAAnimation {
                 
                 let halfDisappearDuration = action.duration * 0.1
                 
@@ -70,11 +121,15 @@ open class Label: UILabel {
                 disappearAnimation.fillMode = .forwards
                 
                 // Animate from current state to current state to allow text to disappear but meanwhile frame will animate to a new value.
-                let image = _getSnapshotImage()?.cgImage
                 let keepCurrentStateAnimation = CABasicAnimation(keyPath: "contents")
                 keepCurrentStateAnimation.timingFunction = CAMediaTimingFunction(name: .easeIn)
-                keepCurrentStateAnimation.fromValue = image
-                keepCurrentStateAnimation.toValue = image
+                
+                // Use previously captured image or capture new right now
+                let snapshotImage = self.snapshotImage?.cgImage ?? _getSnapshotImage(bounds: bounds)?.cgImage
+                self.snapshotImage = nil
+                
+                keepCurrentStateAnimation.fromValue = snapshotImage
+                keepCurrentStateAnimation.toValue = snapshotImage
                 keepCurrentStateAnimation.duration = action.duration / 2
                 
                 // Appear using opacity
@@ -108,7 +163,7 @@ open class Label: UILabel {
 
 public extension UIView {
     /// Creates image from view and adds overlay image at the center if provided
-    func _getSnapshotImage() -> UIImage? {
+    func _getSnapshotImage(bounds: CGRect) -> UIImage? {
         if #available(iOS 10.0, tvOS 10.0, *) {
             let renderer = UIGraphicsImageRenderer(bounds: bounds)
             return renderer.image { rendererContext in
@@ -119,7 +174,7 @@ public extension UIView {
             UIGraphicsBeginImageContextWithOptions(bounds.size, false, 0)
             defer { UIGraphicsEndImageContext() }
             guard let context = UIGraphicsGetCurrentContext() else { return nil }
-            self.layer.render(in: context)
+            layer.render(in: context)
             guard let snapshotImage = UIGraphicsGetImageFromCurrentImageContext() else { return nil }
             return snapshotImage
         }
