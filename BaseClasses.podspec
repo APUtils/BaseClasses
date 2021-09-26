@@ -31,7 +31,6 @@ Default configuration for some UI classes through inheritance.
   s.ios.deployment_target = '9.0'
   s.tvos.deployment_target = '9.0'
   s.swift_versions = ['5.1']
-  s.pod_target_xcconfig = { 'APPLICATION_EXTENSION_API_ONLY' => 'YES' }
 
   s.source_files = 'BaseClasses/Classes/**/*'
   
