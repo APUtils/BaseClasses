@@ -56,7 +56,6 @@ open class Label: UILabel {
             
             // Animate if needed.
             if UIView.inheritedAnimationDuration > 0 {
-                // TODO: Routable logger
                 if !Self.warnEmited && (newValue == nil || newValue == "") {
                     RoutableLogger.logWarning("WARNING ONCE: It is not recommended to assign `nil` or `\"\"` value for a `text` because fade in or fade out animation won't work. Please use `\" \"` instead.")
                     Self.warnEmited = true
