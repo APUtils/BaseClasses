@@ -4,11 +4,11 @@ PODS:
     - APExtensions/Storyboard (= 10.0.0)
     - APExtensions/ViewConfiguration (= 10.0.0)
   - APExtensions/Core (10.0.0):
-    - LogsManager/RoutableLogger (>= 9.1.5)
+    - RoutableLogger
   - APExtensions/Storyboard (10.0.0)
   - APExtensions/ViewConfiguration (10.0.0)
   - BaseClasses (5.0.0):
-    - LogsManager/RoutableLogger (>= 9.1.6)
+    - RoutableLogger (>= 9.1.6)
   - iOSSnapshotTestCase (5.0.2):
     - iOSSnapshotTestCase/SwiftSupport (= 5.0.2)
   - iOSSnapshotTestCase/Core (5.0.2)
@@ -16,7 +16,6 @@ PODS:
     - iOSSnapshotTestCase/Core
   - KeyboardAvoidingView (5.1.0):
     - ViewState (>= 1.2.1)
-  - LogsManager/RoutableLogger (9.1.7)
   - Nimble (7.3.4)
   - Nimble-Snapshots (6.9.1):
     - Nimble-Snapshots/Core (= 6.9.1)
@@ -24,6 +23,7 @@ PODS:
     - iOSSnapshotTestCase (~> 5.0)
     - Nimble (~> 7.0)
   - Quick (4.0.0)
+  - RoutableLogger (9.1.12)
   - StretchScrollView (6.0.0):
     - ViewState (>= 1.0.0)
   - ViewState (1.2.1)
@@ -40,10 +40,10 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - iOSSnapshotTestCase
-    - LogsManager
     - Nimble
     - Nimble-Snapshots
     - Quick
+    - RoutableLogger
     - ViewState
 
 EXTERNAL SOURCES:
@@ -61,7 +61,7 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   APExtensions:
-    :commit: fa5cbedb82db880d4dbbc7991eeb661b1f59f40e
+    :commit: a35dbd86153c87ea10f7e88b757f49e2743e34e8
     :git: https://github.com/APUtils/APExtensions
   KeyboardAvoidingView:
     :commit: bb148486d2b9b5160ee83252f0485fbca661d033
@@ -71,14 +71,14 @@ CHECKOUT OPTIONS:
     :git: https://github.com/APUtils/StretchScrollView
 
 SPEC CHECKSUMS:
-  APExtensions: b46cab78fe5d291e1157838fd78962a886e627df
-  BaseClasses: ff8afca538a8a9f9a566189895e59f5d03f41ced
+  APExtensions: 61ac6903670be0a2dba70dacbc4bd39f768e47af
+  BaseClasses: 0e65068bc5f776b9a26ba38859a79a34620eca6c
   iOSSnapshotTestCase: 2d51aa06775e95cecb0a1fb9c5c159ccd1dd4596
   KeyboardAvoidingView: f0321f6a297b0db778e34a1bf19ffaaad447e72b
-  LogsManager: a67328a23264062ef8dafdd9efdeaf523826bd1a
   Nimble: 051e3d8912d40138fa5591c78594f95fb172af37
   Nimble-Snapshots: bbd1ab264bacc24a9ce24a8363bc05aac783aeb0
   Quick: 6473349e43b9271a8d43839d9ba1c442ed1b7ac4
+  RoutableLogger: 9ad367e9a79df59c3cf5a1707ba9598ffbae8784
   StretchScrollView: 715aacf8437aa3598cafbee671116663bcee27d8
   ViewState: 2875f1b9e168a05ba14d3df1884e29333b65fe36
 
