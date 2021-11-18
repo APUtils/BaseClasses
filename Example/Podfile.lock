@@ -9,19 +9,19 @@ PODS:
   - APExtensions/ViewConfiguration (10.1.6)
   - BaseClasses (6.0.0):
     - RoutableLogger (>= 9.1.6)
-  - iOSSnapshotTestCase (5.0.2):
-    - iOSSnapshotTestCase/SwiftSupport (= 5.0.2)
-  - iOSSnapshotTestCase/Core (5.0.2)
-  - iOSSnapshotTestCase/SwiftSupport (5.0.2):
+  - iOSSnapshotTestCase (8.0.0):
+    - iOSSnapshotTestCase/SwiftSupport (= 8.0.0)
+  - iOSSnapshotTestCase/Core (8.0.0)
+  - iOSSnapshotTestCase/SwiftSupport (8.0.0):
     - iOSSnapshotTestCase/Core
   - KeyboardAvoidingView (5.2.0):
     - ViewState (>= 1.2.1)
-  - Nimble (7.3.4)
-  - Nimble-Snapshots (6.9.1):
-    - Nimble-Snapshots/Core (= 6.9.1)
-  - Nimble-Snapshots/Core (6.9.1):
-    - iOSSnapshotTestCase (~> 5.0)
-    - Nimble (~> 7.0)
+  - Nimble (9.2.1)
+  - Nimble-Snapshots (9.3.0):
+    - Nimble-Snapshots/Core (= 9.3.0)
+  - Nimble-Snapshots/Core (9.3.0):
+    - iOSSnapshotTestCase (~> 8.0)
+    - Nimble
   - Quick (4.0.0)
   - RoutableLogger (9.1.12)
   - StretchScrollView (6.0.0):
@@ -68,21 +68,21 @@ CHECKOUT OPTIONS:
     :commit: 8e517c8fca4b107ea4388c5d8d817d66b08da856
     :git: https://github.com/APUtils/KeyboardAvoidingView
   StretchScrollView:
-    :commit: dee2bff750e557d6910f1f28b1f7597bb65709ee
+    :commit: c66c6d66b6a3d0d08d9da823b103a3484556a592
     :git: https://github.com/APUtils/StretchScrollView
 
 SPEC CHECKSUMS:
   APExtensions: 63f9f31f09a8b43a52c2207774568756e3bd489f
   BaseClasses: c9c3c7532dedbc7bf839917fbbff8234ede087b2
-  iOSSnapshotTestCase: 2d51aa06775e95cecb0a1fb9c5c159ccd1dd4596
+  iOSSnapshotTestCase: a670511f9ee3829c2b9c23e6e68f315fd7b6790f
   KeyboardAvoidingView: acc530b2435bba760b2270e722cb7132cf1c4d31
-  Nimble: 051e3d8912d40138fa5591c78594f95fb172af37
-  Nimble-Snapshots: bbd1ab264bacc24a9ce24a8363bc05aac783aeb0
+  Nimble: e7e615c0335ee4bf5b0d786685451e62746117d5
+  Nimble-Snapshots: 97270cd48f0e6eebd6c80ccf7dd35d4e57fb9997
   Quick: 6473349e43b9271a8d43839d9ba1c442ed1b7ac4
   RoutableLogger: 9ad367e9a79df59c3cf5a1707ba9598ffbae8784
   StretchScrollView: 715aacf8437aa3598cafbee671116663bcee27d8
   ViewState: d6492d0434d2ee6013c270c1431dbe73cc895b75
 
-PODFILE CHECKSUM: 2cc3c8875476f0cab2ade3eb974c959d8ac718ba
+PODFILE CHECKSUM: 087c6c0899f2578aeac6b2e5bff3a4cb74a944d4
 
 COCOAPODS: 1.11.2
