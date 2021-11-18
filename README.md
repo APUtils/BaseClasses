@@ -20,8 +20,10 @@ Please check [official guide](https://github.com/Carthage/Carthage#if-youre-buil
 Cartfile:
 
 ```
-github "APUtils/BaseClasses" ~> 5.0
+github "APUtils/BaseClasses" ~> 6.0
 ```
+
+Install command: `carthage bootstrap --use-xcframeworks`
 
 #### CocoaPods
 
@@ -29,7 +31,19 @@ BaseClasses is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod 'BaseClasses', '~> 5.0'
+pod 'BaseClasses', '~> 6.0'
+```
+
+#### Swift Package Manager
+
+The Swift Package Manager is a tool for automating the distribution of Swift code and is integrated into the swift compiler.
+
+Once you have your Swift package set up, adding `ViewState` as a dependency is as easy as adding it to the dependencies value of your `Package.swift`.
+
+```swift
+dependencies: [
+    .package(url: "https://github.com/APUtils/BaseClasses.git", .upToNextMajor(from: "6.0.0"))
+]
 ```
 
 ## Usage

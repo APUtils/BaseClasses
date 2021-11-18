@@ -42,7 +42,7 @@ set -o pipefail && xcodebuild -project "Carthage Project/BaseClasses.xcodeproj" 
 echo ""
 
 echo -e "Building with Carthage..."
-carthage build --no-skip-current --platform iOS,tvOS --cache-builds
+carthage build --use-xcframeworks --no-skip-current --platform iOS,tvOS --cache-builds
 echo ""
 
 echo -e "Performing tests..."

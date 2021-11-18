@@ -1,20 +1,20 @@
 PODS:
-  - APExtensions (10.0.0):
-    - APExtensions/Core (= 10.0.0)
-    - APExtensions/Storyboard (= 10.0.0)
-    - APExtensions/ViewConfiguration (= 10.0.0)
-  - APExtensions/Core (10.0.0):
+  - APExtensions (10.1.6):
+    - APExtensions/Core (= 10.1.6)
+    - APExtensions/Storyboard (= 10.1.6)
+    - APExtensions/ViewConfiguration (= 10.1.6)
+  - APExtensions/Core (10.1.6):
     - RoutableLogger
-  - APExtensions/Storyboard (10.0.0)
-  - APExtensions/ViewConfiguration (10.0.0)
-  - BaseClasses (5.0.0):
+  - APExtensions/Storyboard (10.1.6)
+  - APExtensions/ViewConfiguration (10.1.6)
+  - BaseClasses (6.0.0):
     - RoutableLogger (>= 9.1.6)
   - iOSSnapshotTestCase (5.0.2):
     - iOSSnapshotTestCase/SwiftSupport (= 5.0.2)
   - iOSSnapshotTestCase/Core (5.0.2)
   - iOSSnapshotTestCase/SwiftSupport (5.0.2):
     - iOSSnapshotTestCase/Core
-  - KeyboardAvoidingView (5.1.0):
+  - KeyboardAvoidingView (5.2.0):
     - ViewState (>= 1.2.1)
   - Nimble (7.3.4)
   - Nimble-Snapshots (6.9.1):
@@ -26,7 +26,8 @@ PODS:
   - RoutableLogger (9.1.12)
   - StretchScrollView (6.0.0):
     - ViewState (>= 1.0.0)
-  - ViewState (1.2.1)
+  - ViewState (1.2.3):
+    - RoutableLogger (>= 9.1.11)
 
 DEPENDENCIES:
   - APExtensions (from `https://github.com/APUtils/APExtensions`, branch `master`)
@@ -61,27 +62,27 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   APExtensions:
-    :commit: a35dbd86153c87ea10f7e88b757f49e2743e34e8
+    :commit: 085a41c04626378c75bc5d4887784121465adc9c
     :git: https://github.com/APUtils/APExtensions
   KeyboardAvoidingView:
-    :commit: bb148486d2b9b5160ee83252f0485fbca661d033
+    :commit: 8e517c8fca4b107ea4388c5d8d817d66b08da856
     :git: https://github.com/APUtils/KeyboardAvoidingView
   StretchScrollView:
-    :commit: 8e4f593556a7475bf8849d5f159cc8ded087612c
+    :commit: dee2bff750e557d6910f1f28b1f7597bb65709ee
     :git: https://github.com/APUtils/StretchScrollView
 
 SPEC CHECKSUMS:
-  APExtensions: 61ac6903670be0a2dba70dacbc4bd39f768e47af
-  BaseClasses: 0e65068bc5f776b9a26ba38859a79a34620eca6c
+  APExtensions: 63f9f31f09a8b43a52c2207774568756e3bd489f
+  BaseClasses: c9c3c7532dedbc7bf839917fbbff8234ede087b2
   iOSSnapshotTestCase: 2d51aa06775e95cecb0a1fb9c5c159ccd1dd4596
-  KeyboardAvoidingView: f0321f6a297b0db778e34a1bf19ffaaad447e72b
+  KeyboardAvoidingView: acc530b2435bba760b2270e722cb7132cf1c4d31
   Nimble: 051e3d8912d40138fa5591c78594f95fb172af37
   Nimble-Snapshots: bbd1ab264bacc24a9ce24a8363bc05aac783aeb0
   Quick: 6473349e43b9271a8d43839d9ba1c442ed1b7ac4
   RoutableLogger: 9ad367e9a79df59c3cf5a1707ba9598ffbae8784
   StretchScrollView: 715aacf8437aa3598cafbee671116663bcee27d8
-  ViewState: 2875f1b9e168a05ba14d3df1884e29333b65fe36
+  ViewState: d6492d0434d2ee6013c270c1431dbe73cc895b75
 
-PODFILE CHECKSUM: 7817e8e5da06f9fb5358cf1cb262d31bba997444
+PODFILE CHECKSUM: 2cc3c8875476f0cab2ade3eb974c959d8ac718ba
 
 COCOAPODS: 1.11.2

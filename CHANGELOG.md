@@ -3,6 +3,21 @@ All notable changes to this project will be documented in this file.
 `BaseClasses` adheres to [Semantic Versioning](http://semver.org/).
 
 
+## [6.0.0](https://github.com/APUtils/BaseClasses/releases/tag/6.0.0)
+Released on 11/18/2021.
+
+#### Added
+- Added RoutableLogger for logs
+- Label edge cases animation
+- Warn about broken opacity animation
+
+#### Changed
+- Animate height change with the same text for multiple lanes label
+
+#### Fixed
+- Proper scroll for all UIControls
+
+
 ## [5.0.0](https://github.com/APUtils/BaseClasses/releases/tag/5.0.0)
 Released on 04/13/2020.
 

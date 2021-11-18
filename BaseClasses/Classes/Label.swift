@@ -7,12 +7,7 @@
 //
 
 import UIKit
-
-#if COCOAPODS
-import LogsManager
-#else
 import RoutableLogger
-#endif
 
 @available(iOS 9.0, *)
 @available(iOSApplicationExtension 9.0, *)
