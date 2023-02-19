@@ -32,9 +32,19 @@ open class TextView: UITextView {
     open private(set) lazy var placeholderLabel: UILabel = {
         let l = UILabel()
         l.textColor = UIColor(red: 199/255, green: 199/255, blue: 205/255, alpha: 1)
+        l.isHidden = !text.isEmpty
         
         return l
     }()
+    
+    open override var text: String! {
+        get { super.text }
+        set {
+            guard super.text != newValue else { return }
+            super.text = newValue
+            updatePlaceholderVisibility()
+        }
+    }
     
     // ******************************* MARK: - Initialization and Setup
     
@@ -84,14 +94,17 @@ open class TextView: UITextView {
             placeholderLabel.frame.origin = .zero
         }
         
+        updatePlaceholderVisibility()
+    }
+    
+    private func updatePlaceholderVisibility() {
+        guard placeholder != nil else { return }
         placeholderLabel.isHidden = !text.isEmpty
     }
     
     // ******************************* MARK: - Notifications
     
     @objc fileprivate func onTextChange(_ sender: Any) {
-        if placeholder != nil {
-            placeholderLabel.isHidden = !text.isEmpty
-        }
+        updatePlaceholderVisibility()
     }
 }
