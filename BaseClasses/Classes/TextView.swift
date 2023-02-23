@@ -33,6 +33,10 @@ open class TextView: UITextView {
         let l = UILabel()
         l.textColor = UIColor(red: 199/255, green: 199/255, blue: 205/255, alpha: 1)
         l.isHidden = !text.isEmpty
+        l.translatesAutoresizingMaskIntoConstraints = false
+        l.contentMode = .top
+        l.textAlignment = .left
+        l.numberOfLines = 0
         
         return l
     }()
@@ -85,15 +89,23 @@ open class TextView: UITextView {
     // ******************************* MARK: - Update
     
     private func updatePlaceholder() {
-        addSubview(placeholderLabel)
-        
-        placeholderLabel.text = placeholder
-        if let pointSize = font?.pointSize {
-            placeholderLabel.font = .italicSystemFont(ofSize: pointSize)
-            placeholderLabel.sizeToFit()
-            placeholderLabel.frame.origin = .zero
+        if let superview = placeholderLabel.superview {
+            superview.bringSubviewToFront(placeholderLabel)
+        } else {
+            addSubview(placeholderLabel)
+            NSLayoutConstraint.activate([
+                frameLayoutGuide.bottomAnchor.constraint(greaterThanOrEqualTo: placeholderLabel.bottomAnchor),
+                placeholderLabel.leadingAnchor.constraint(equalTo: frameLayoutGuide.leadingAnchor),
+                frameLayoutGuide.trailingAnchor.constraint(equalTo: placeholderLabel.trailingAnchor),
+                placeholderLabel.topAnchor.constraint(equalTo: frameLayoutGuide.topAnchor)
+            ])
         }
         
+        if let pointSize = font?.pointSize {
+            placeholderLabel.font = .italicSystemFont(ofSize: pointSize)
+        }
+        
+        placeholderLabel.text = placeholder
         updatePlaceholderVisibility()
     }
     
