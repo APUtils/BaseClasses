@@ -63,9 +63,6 @@ open class SelfResizableTextView: TextView {
         return contentSize
     }
     
-    // Disabling autoscroll
-    override open func scrollRectToVisible(_ rect: CGRect, animated: Bool) {}
-    
     // ******************************* MARK: - Private Methods - didSet/willSet
     
     private func didSetContentSize() {
@@ -74,34 +71,6 @@ open class SelfResizableTextView: TextView {
         
         previousContentSize = contentSize
         invalidateIntrinsicContentSize()
-        animateChanges()
         onContentSizeDidChange?(contentSize)
-    }
-    
-    private func animateChanges() {
-        let rootView = self._rootView
-        let tableView = self._allSuperviews.compactMap { $0 as? UITableView }.first
-        let changes: () -> Void = {
-            // Update table view cell sizes
-            tableView?.beginUpdates()
-            tableView?.endUpdates()
-            
-            // Update layout
-            rootView.layoutIfNeeded()
-            
-            // Update content offset
-            self.contentOffset = CGPoint(x: 0, y: self.contentSize.height - self.bounds.size.height)
-        }
-        
-        let animated = window != nil
-        if animated {
-            // Animating to new size
-            UIView.animate(withDuration: 0.05, delay: 0, options: .beginFromCurrentState, animations: {
-                changes()
-            }, completion: nil)
-        } else {
-            // Just set new size
-            changes()
-        }
     }
 }
