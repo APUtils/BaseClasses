@@ -41,6 +41,8 @@ open class TextView: UITextView {
         return l
     }()
     
+    private lazy var placeholderZeroHeight: NSLayoutConstraint = placeholderLabel.heightAnchor.constraint(equalToConstant: 0)
+    
     open override var text: String! {
         get { super.text }
         set {
@@ -112,6 +114,7 @@ open class TextView: UITextView {
     private func updatePlaceholderVisibility() {
         guard placeholder != nil else { return }
         placeholderLabel.isHidden = !text.isEmpty
+        placeholderZeroHeight.isActive = placeholderLabel.isHidden
     }
     
     // ******************************* MARK: - Notifications
